@@ -73,7 +73,7 @@ $is
     $dopipeline $depth 7 $buffering 1
     $fullrate 
     $merge $entry $loopback 
-    $phi count_down := 			  ($bitcast ($uint<16>) 0  ) $on   $entry 			  next_count_down $on   $loopback 
+    $phi count_down := 			  next_count_down $on   $loopback 			  ($bitcast ($uint<16>) 0  ) $on   $entry 
     // type of target is $uint<16>
     $phi input_word := 			  in_data_1 $on   $entry ,   $loopback 
     // type of target is $uint<32>
@@ -209,12 +209,12 @@ $out ( next_active_packet : $uint<3>   next_pkt_priority : $uint<3>  )
 $is
 {
   d0 := (down_counter == 0 ) $buffering 1
-  select_1 := ((d0 & p1_valid) & ((pkt_priority == 1 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p3_valid )))) $buffering 1
-  select_2 := ((d0 & p2_valid) & ((pkt_priority == 2 ) | ((( ~ p4_valid ) & ( ~ p1_valid )) & ( ~ p3_valid )))) $buffering 1
-  select_3 := ((d0 & p3_valid) & ((pkt_priority == 3 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p1_valid )))) $buffering 1
-  select_4 := ((d0 & p4_valid) & ((pkt_priority == 4 ) | ((( ~ p1_valid ) & ( ~ p2_valid )) & ( ~ p3_valid )))) $buffering 1
+  select_1 := ((d0 & p1_valid) & (((pkt_priority == 1 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p3_valid ))) | ((((pkt_priority == 3 ) & ( ~ p3_valid )) & ( ~ p4_valid )) | ((pkt_priority == 4 ) & ( ~ p4_valid ))))) $buffering 1
+  select_2 := ((d0 & p2_valid) & (((pkt_priority == 2 ) | ((( ~ p4_valid ) & ( ~ p1_valid )) & ( ~ p3_valid ))) | ((((pkt_priority == 4 ) & ( ~ p4_valid )) & ( ~ p1_valid )) | ((pkt_priority == 1 ) & ( ~ p1_valid ))))) $buffering 1
+  select_3 := ((d0 & p3_valid) & (((pkt_priority == 3 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p1_valid ))) | ((((pkt_priority == 1 ) & ( ~ p1_valid )) & ( ~ p2_valid )) | ((pkt_priority == 2 ) & ( ~ p2_valid ))))) $buffering 1
+  select_4 := ((d0 & p4_valid) & (((pkt_priority == 4 ) | ((( ~ p1_valid ) & ( ~ p2_valid )) & ( ~ p3_valid ))) | ((((pkt_priority == 2 ) & ( ~ p2_valid )) & ( ~ p3_valid )) | ((pkt_priority == 3 ) & ( ~ p3_valid ))))) $buffering 1
   next_active_packet := (((( $mux ( ~ d0 ) active_packet  _b0  )  | ( $mux select_1 1   _b0  ) ) | ( $mux select_2 2   _b0  ) ) | ((( $mux select_3 3   _b0  )  | ( $mux select_4 4   _b0  ) ) | ( $mux ((( ~ select_1 ) & ( ~ select_2 )) & (( ~ select_3 ) & ( ~ select_4 ))) active_packet  _b0  ) )) $buffering 1
-  next_pkt_priority := (((( $mux ( ~ d0 ) active_packet  _b0  )  | ( $mux select_1 2   _b0  ) ) | ( $mux select_2 3   _b0  ) ) | (( $mux select_3 4   _b0  )  | ( $mux select_4 1   _b0  ) )) $buffering 1
+  next_pkt_priority := (((( $mux ( ~ d0 ) pkt_priority  _b0  )  | ( $mux select_1 2   _b0  ) ) | ( $mux select_2 3   _b0  ) ) | (( $mux select_3 4   _b0  )  | ( $mux select_4 1   _b0  ) )) $buffering 1
 }
 $module [outputPort_1_Daemon]
 $in ()
@@ -238,7 +238,7 @@ $is
     // type of target is $uint<33>
     $phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
     // type of target is $uint<3>
-    $phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+    $phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
     // type of target is $uint<3>
     $endmerge
     $volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
@@ -247,13 +247,12 @@ $is
     $volatile p4_valid := (pkt_4_e_word [] 32 ) $buffering 1
     $volatile valid_active_pkt_word_read := ((( $mux (active_packet == 1 ) p1_valid  _b0  )  | ( $mux (active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (active_packet == 3 ) p3_valid  _b0  )  | ( $mux (active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
     $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
-    $volatile started_new_packet := ((next_active_packet != 0 ) & (down_counter == 0 )) $buffering 1
+    $volatile started_new_packet := (((p1_valid | p2_valid) | (p3_valid | p4_valid)) & (down_counter == 0 )) $buffering 1
     $volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
     $volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
     $volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
     $volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
     $volatile read_from_4 := (( ~ p4_valid ) | (next_active_packet == 4 )) $buffering 1
-    $report (outputPort_1_Daemon state_summary 			 p1_valid p1_valid 			 p2_valid p2_valid 			 p3_valid p3_valid 			 p4_valid p4_valid 			 read_from_1 read_from_1 			 read_from_2 read_from_2 			 read_from_3 read_from_3 			 read_from_4 read_from_4 			 down_counter down_counter 			 next_active_packet next_active_packet )
     $volatile data_to_out := ((( $mux (next_active_packet == 1 ) ( $slice pkt_1_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 2 ) ( $slice pkt_2_e_word 31 0 )   _b0  ) ) | (( $mux (next_active_packet == 3 ) ( $slice pkt_3_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 4 ) ( $slice pkt_4_e_word 31 0 )   _b0  ) )) $buffering 1
     $volatile send_flag := ((( $mux (next_active_packet == 1 ) p1_valid  _b0  )  | ( $mux (next_active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (next_active_packet == 3 ) p3_valid  _b0  )  | ( $mux (next_active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
     $guard (send_flag) out_data_1 := data_to_out $buffering 1// bits of buffering = 32. 
@@ -282,7 +281,7 @@ $is
     // type of target is $uint<33>
     $phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
     // type of target is $uint<3>
-    $phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+    $phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
     // type of target is $uint<3>
     $endmerge
     $volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
@@ -291,13 +290,12 @@ $is
     $volatile p4_valid := (pkt_4_e_word [] 32 ) $buffering 1
     $volatile valid_active_pkt_word_read := ((( $mux (active_packet == 1 ) p1_valid  _b0  )  | ( $mux (active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (active_packet == 3 ) p3_valid  _b0  )  | ( $mux (active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
     $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
-    $volatile started_new_packet := ((next_active_packet != 0 ) & (down_counter == 0 )) $buffering 1
+    $volatile started_new_packet := (((p1_valid | p2_valid) | (p3_valid | p4_valid)) & (down_counter == 0 )) $buffering 1
     $volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
     $volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
     $volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
     $volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
     $volatile read_from_4 := (( ~ p4_valid ) | (next_active_packet == 4 )) $buffering 1
-    $report (outputPort_2_Daemon state_summary 			 p1_valid p1_valid 			 p2_valid p2_valid 			 p3_valid p3_valid 			 p4_valid p4_valid 			 read_from_1 read_from_1 			 read_from_2 read_from_2 			 read_from_3 read_from_3 			 read_from_4 read_from_4 			 down_counter down_counter 			 next_active_packet next_active_packet )
     $volatile data_to_out := ((( $mux (next_active_packet == 1 ) ( $slice pkt_1_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 2 ) ( $slice pkt_2_e_word 31 0 )   _b0  ) ) | (( $mux (next_active_packet == 3 ) ( $slice pkt_3_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 4 ) ( $slice pkt_4_e_word 31 0 )   _b0  ) )) $buffering 1
     $volatile send_flag := ((( $mux (next_active_packet == 1 ) p1_valid  _b0  )  | ( $mux (next_active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (next_active_packet == 3 ) p3_valid  _b0  )  | ( $mux (next_active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
     $guard (send_flag) out_data_2 := data_to_out $buffering 1// bits of buffering = 32. 
@@ -326,7 +324,7 @@ $is
     // type of target is $uint<33>
     $phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
     // type of target is $uint<3>
-    $phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+    $phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
     // type of target is $uint<3>
     $endmerge
     $volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
@@ -335,13 +333,12 @@ $is
     $volatile p4_valid := (pkt_4_e_word [] 32 ) $buffering 1
     $volatile valid_active_pkt_word_read := ((( $mux (active_packet == 1 ) p1_valid  _b0  )  | ( $mux (active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (active_packet == 3 ) p3_valid  _b0  )  | ( $mux (active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
     $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
-    $volatile started_new_packet := ((next_active_packet != 0 ) & (down_counter == 0 )) $buffering 1
+    $volatile started_new_packet := (((p1_valid | p2_valid) | (p3_valid | p4_valid)) & (down_counter == 0 )) $buffering 1
     $volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
     $volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
     $volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
     $volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
     $volatile read_from_4 := (( ~ p4_valid ) | (next_active_packet == 4 )) $buffering 1
-    $report (outputPort_3_Daemon state_summary 			 p1_valid p1_valid 			 p2_valid p2_valid 			 p3_valid p3_valid 			 p4_valid p4_valid 			 read_from_1 read_from_1 			 read_from_2 read_from_2 			 read_from_3 read_from_3 			 read_from_4 read_from_4 			 down_counter down_counter 			 next_active_packet next_active_packet )
     $volatile data_to_out := ((( $mux (next_active_packet == 1 ) ( $slice pkt_1_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 2 ) ( $slice pkt_2_e_word 31 0 )   _b0  ) ) | (( $mux (next_active_packet == 3 ) ( $slice pkt_3_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 4 ) ( $slice pkt_4_e_word 31 0 )   _b0  ) )) $buffering 1
     $volatile send_flag := ((( $mux (next_active_packet == 1 ) p1_valid  _b0  )  | ( $mux (next_active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (next_active_packet == 3 ) p3_valid  _b0  )  | ( $mux (next_active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
     $guard (send_flag) out_data_3 := data_to_out $buffering 1// bits of buffering = 32. 
@@ -370,7 +367,7 @@ $is
     // type of target is $uint<33>
     $phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
     // type of target is $uint<3>
-    $phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+    $phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
     // type of target is $uint<3>
     $endmerge
     $volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
@@ -379,13 +376,12 @@ $is
     $volatile p4_valid := (pkt_4_e_word [] 32 ) $buffering 1
     $volatile valid_active_pkt_word_read := ((( $mux (active_packet == 1 ) p1_valid  _b0  )  | ( $mux (active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (active_packet == 3 ) p3_valid  _b0  )  | ( $mux (active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
     $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
-    $volatile started_new_packet := ((next_active_packet != 0 ) & (down_counter == 0 )) $buffering 1
+    $volatile started_new_packet := (((p1_valid | p2_valid) | (p3_valid | p4_valid)) & (down_counter == 0 )) $buffering 1
     $volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
     $volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
     $volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
     $volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
     $volatile read_from_4 := (( ~ p4_valid ) | (next_active_packet == 4 )) $buffering 1
-    $report (outputPort_4_Daemon state_summary 			 p1_valid p1_valid 			 p2_valid p2_valid 			 p3_valid p3_valid 			 p4_valid p4_valid 			 read_from_1 read_from_1 			 read_from_2 read_from_2 			 read_from_3 read_from_3 			 read_from_4 read_from_4 			 down_counter down_counter 			 next_active_packet next_active_packet )
     $volatile data_to_out := ((( $mux (next_active_packet == 1 ) ( $slice pkt_1_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 2 ) ( $slice pkt_2_e_word 31 0 )   _b0  ) ) | (( $mux (next_active_packet == 3 ) ( $slice pkt_3_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 4 ) ( $slice pkt_4_e_word 31 0 )   _b0  ) )) $buffering 1
     $volatile send_flag := ((( $mux (next_active_packet == 1 ) p1_valid  _b0  )  | ( $mux (next_active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (next_active_packet == 3 ) p3_valid  _b0  )  | ( $mux (next_active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
     $guard (send_flag) out_data_4 := data_to_out $buffering 1// bits of buffering = 32. 

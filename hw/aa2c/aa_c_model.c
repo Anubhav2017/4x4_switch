@@ -126,7 +126,7 @@ do_while_loopback_flag = 0;
 while(1) {
 // merge  file .Aa/switch2x2.linked.aa, line 75
 _inputPort_1_Daemon_merge_stmt_66_c_preamble_macro_; 
-// 			$phi count_down := 			  ($bitcast ($uint<16>) 0  ) $on   $entry 			  next_count_down $on   $loopback 
+// 			$phi count_down := 			  next_count_down $on   $loopback 			  ($bitcast ($uint<16>) 0  ) $on   $entry 
  // type of target is $uint<16>
 _inputPort_1_Daemon_phi_stmt_67_c_macro_; 
 // 			$phi input_word := 			  in_data_1 $on   $entry ,   $loopback 
@@ -425,88 +425,86 @@ _inputPort_4_Daemon_outer_op_xfer_macro__;
 
 void _outputPort_1_Daemon_()
 {
-MUTEX_DECL(_outputPort_1_Daemon_series_block_stmt_601_c_mutex_);
-MUTEX_LOCK(_outputPort_1_Daemon_series_block_stmt_601_c_mutex_);
+MUTEX_DECL(_outputPort_1_Daemon_series_block_stmt_669_c_mutex_);
+MUTEX_LOCK(_outputPort_1_Daemon_series_block_stmt_669_c_mutex_);
 _outputPort_1_Daemon_inner_inarg_prep_macro__; 
-_outputPort_1_Daemon_branch_block_stmt_602_c_export_decl_macro_; 
+_outputPort_1_Daemon_branch_block_stmt_670_c_export_decl_macro_; 
 {
 {
 // do-while:   file .Aa/switch2x2.linked.aa, line 226
-__declare_static_bit_vector(konst_827,1);\
-bit_vector_clear(&konst_827);\
-konst_827.val.byte_array[0] = 1;\
+__declare_static_bit_vector(konst_888,1);\
+bit_vector_clear(&konst_888);\
+konst_888.val.byte_array[0] = 1;\
 uint8_t do_while_entry_flag;
 do_while_entry_flag = 1;
 uint8_t do_while_loopback_flag;
 do_while_loopback_flag = 0;
 while(1) {
 // merge  file .Aa/switch2x2.linked.aa, line 228
-_outputPort_1_Daemon_merge_stmt_604_c_preamble_macro_; 
+_outputPort_1_Daemon_merge_stmt_672_c_preamble_macro_; 
 // 			$phi down_counter := 			  ZERO_8 $on   $entry 			  next_down_counter $on   $loopback 
  // type of target is $uint<8>
-_outputPort_1_Daemon_phi_stmt_605_c_macro_; 
+_outputPort_1_Daemon_phi_stmt_673_c_macro_; 
 // 			$phi pkt_1_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_1) noblock_obuf_1_1 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_1_Daemon_phi_stmt_609_c_macro_; 
+_outputPort_1_Daemon_phi_stmt_677_c_macro_; 
 // 			$phi pkt_2_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_2) noblock_obuf_2_1 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_1_Daemon_phi_stmt_614_c_macro_; 
+_outputPort_1_Daemon_phi_stmt_682_c_macro_; 
 // 			$phi pkt_3_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_3) noblock_obuf_3_1 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_1_Daemon_phi_stmt_619_c_macro_; 
+_outputPort_1_Daemon_phi_stmt_687_c_macro_; 
 // 			$phi pkt_4_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_4) noblock_obuf_4_1 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_1_Daemon_phi_stmt_624_c_macro_; 
+_outputPort_1_Daemon_phi_stmt_692_c_macro_; 
 // 			$phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
  // type of target is $uint<3>
-_outputPort_1_Daemon_phi_stmt_629_c_macro_; 
-// 			$phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+_outputPort_1_Daemon_phi_stmt_697_c_macro_; 
+// 			$phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
  // type of target is $uint<3>
-_outputPort_1_Daemon_phi_stmt_633_c_macro_; 
-_outputPort_1_Daemon_merge_stmt_604_c_postamble_macro_; 
+_outputPort_1_Daemon_phi_stmt_701_c_macro_; 
+_outputPort_1_Daemon_merge_stmt_672_c_postamble_macro_; 
 // 			$volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
-_outputPort_1_Daemon_assign_stmt_642_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_710_c_macro_; 
 // 			$volatile p2_valid := (pkt_2_e_word [] 32 ) $buffering 1
-_outputPort_1_Daemon_assign_stmt_647_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_715_c_macro_; 
 // 			$volatile p3_valid := (pkt_3_e_word [] 32 ) $buffering 1
-_outputPort_1_Daemon_assign_stmt_652_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_720_c_macro_; 
 // 			$volatile p4_valid := (pkt_4_e_word [] 32 ) $buffering 1
-_outputPort_1_Daemon_assign_stmt_657_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_725_c_macro_; 
 // 			$volatile valid_active_pkt_word_read := ((( $mux (active_packet == 1 ) p1_valid  _b0  )  | ( $mux (active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (active_packet == 3 ) p3_valid  _b0  )  | ( $mux (active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
-_outputPort_1_Daemon_assign_stmt_686_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_754_c_macro_; 
 //  $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
-_outputPort_1_Daemon_call_stmt_696_c_macro_; 
-// 			$volatile started_new_packet := ((next_active_packet != 0 ) & (down_counter == 0 )) $buffering 1
-_outputPort_1_Daemon_assign_stmt_705_c_macro_; 
+_outputPort_1_Daemon_call_stmt_764_c_macro_; 
+// 			$volatile started_new_packet := (((p1_valid | p2_valid) | (p3_valid | p4_valid)) & (down_counter == 0 )) $buffering 1
+_outputPort_1_Daemon_assign_stmt_777_c_macro_; 
 // 			$volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
-_outputPort_1_Daemon_assign_stmt_716_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_788_c_macro_; 
 // 			$volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
-_outputPort_1_Daemon_assign_stmt_724_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_796_c_macro_; 
 // 			$volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
-_outputPort_1_Daemon_assign_stmt_732_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_804_c_macro_; 
 // 			$volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
-_outputPort_1_Daemon_assign_stmt_740_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_812_c_macro_; 
 // 			$volatile read_from_4 := (( ~ p4_valid ) | (next_active_packet == 4 )) $buffering 1
-_outputPort_1_Daemon_assign_stmt_748_c_macro_; 
-// $report (outputPort_1_Daemon state_summary 			 p1_valid p1_valid 			 p2_valid p2_valid 			 p3_valid p3_valid 			 p4_valid p4_valid 			 read_from_1 read_from_1 			 read_from_2 read_from_2 			 read_from_3 read_from_3 			 read_from_4 read_from_4 			 down_counter down_counter 			 next_active_packet next_active_packet )
-_outputPort_1_Daemon_stmt_759_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_820_c_macro_; 
 // 			$volatile data_to_out := ((( $mux (next_active_packet == 1 ) ( $slice pkt_1_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 2 ) ( $slice pkt_2_e_word 31 0 )   _b0  ) ) | (( $mux (next_active_packet == 3 ) ( $slice pkt_3_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 4 ) ( $slice pkt_4_e_word 31 0 )   _b0  ) )) $buffering 1
-_outputPort_1_Daemon_assign_stmt_792_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_853_c_macro_; 
 // 			$volatile send_flag := ((( $mux (next_active_packet == 1 ) p1_valid  _b0  )  | ( $mux (next_active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (next_active_packet == 3 ) p3_valid  _b0  )  | ( $mux (next_active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
-_outputPort_1_Daemon_assign_stmt_821_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_882_c_macro_; 
 // 			$guard (send_flag) out_data_1 := data_to_out $buffering 1// bits of buffering = 32. 
-_outputPort_1_Daemon_assign_stmt_825_c_macro_; 
+_outputPort_1_Daemon_assign_stmt_886_c_macro_; 
 do_while_entry_flag = 0;
 do_while_loopback_flag = 1;
-bit_vector_clear(&konst_827);\
-konst_827.val.byte_array[0] = 1;\
-if (!bit_vector_to_uint64(0, &konst_827)) break;
+bit_vector_clear(&konst_888);\
+konst_888.val.byte_array[0] = 1;\
+if (!bit_vector_to_uint64(0, &konst_888)) break;
 } 
 }
-_outputPort_1_Daemon_branch_block_stmt_602_c_export_apply_macro_;
+_outputPort_1_Daemon_branch_block_stmt_670_c_export_apply_macro_;
 }
 _outputPort_1_Daemon_inner_outarg_prep_macro__; 
-MUTEX_UNLOCK(_outputPort_1_Daemon_series_block_stmt_601_c_mutex_);
+MUTEX_UNLOCK(_outputPort_1_Daemon_series_block_stmt_669_c_mutex_);
 }
 void outputPort_1_Daemon()
 {
@@ -518,88 +516,86 @@ _outputPort_1_Daemon_outer_op_xfer_macro__;
 
 void _outputPort_2_Daemon_()
 {
-MUTEX_DECL(_outputPort_2_Daemon_series_block_stmt_830_c_mutex_);
-MUTEX_LOCK(_outputPort_2_Daemon_series_block_stmt_830_c_mutex_);
+MUTEX_DECL(_outputPort_2_Daemon_series_block_stmt_891_c_mutex_);
+MUTEX_LOCK(_outputPort_2_Daemon_series_block_stmt_891_c_mutex_);
 _outputPort_2_Daemon_inner_inarg_prep_macro__; 
-_outputPort_2_Daemon_branch_block_stmt_831_c_export_decl_macro_; 
+_outputPort_2_Daemon_branch_block_stmt_892_c_export_decl_macro_; 
 {
 {
-// do-while:   file .Aa/switch2x2.linked.aa, line 270
-__declare_static_bit_vector(konst_1056,1);\
-bit_vector_clear(&konst_1056);\
-konst_1056.val.byte_array[0] = 1;\
+// do-while:   file .Aa/switch2x2.linked.aa, line 269
+__declare_static_bit_vector(konst_1110,1);\
+bit_vector_clear(&konst_1110);\
+konst_1110.val.byte_array[0] = 1;\
 uint8_t do_while_entry_flag;
 do_while_entry_flag = 1;
 uint8_t do_while_loopback_flag;
 do_while_loopback_flag = 0;
 while(1) {
-// merge  file .Aa/switch2x2.linked.aa, line 272
-_outputPort_2_Daemon_merge_stmt_833_c_preamble_macro_; 
+// merge  file .Aa/switch2x2.linked.aa, line 271
+_outputPort_2_Daemon_merge_stmt_894_c_preamble_macro_; 
 // 			$phi down_counter := 			  ZERO_8 $on   $entry 			  next_down_counter $on   $loopback 
  // type of target is $uint<8>
-_outputPort_2_Daemon_phi_stmt_834_c_macro_; 
+_outputPort_2_Daemon_phi_stmt_895_c_macro_; 
 // 			$phi pkt_1_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_1) noblock_obuf_1_2 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_2_Daemon_phi_stmt_838_c_macro_; 
+_outputPort_2_Daemon_phi_stmt_899_c_macro_; 
 // 			$phi pkt_2_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_2) noblock_obuf_2_2 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_2_Daemon_phi_stmt_843_c_macro_; 
+_outputPort_2_Daemon_phi_stmt_904_c_macro_; 
 // 			$phi pkt_3_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_3) noblock_obuf_3_2 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_2_Daemon_phi_stmt_848_c_macro_; 
+_outputPort_2_Daemon_phi_stmt_909_c_macro_; 
 // 			$phi pkt_4_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_4) noblock_obuf_4_2 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_2_Daemon_phi_stmt_853_c_macro_; 
+_outputPort_2_Daemon_phi_stmt_914_c_macro_; 
 // 			$phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
  // type of target is $uint<3>
-_outputPort_2_Daemon_phi_stmt_858_c_macro_; 
-// 			$phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+_outputPort_2_Daemon_phi_stmt_919_c_macro_; 
+// 			$phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
  // type of target is $uint<3>
-_outputPort_2_Daemon_phi_stmt_862_c_macro_; 
-_outputPort_2_Daemon_merge_stmt_833_c_postamble_macro_; 
+_outputPort_2_Daemon_phi_stmt_923_c_macro_; 
+_outputPort_2_Daemon_merge_stmt_894_c_postamble_macro_; 
 // 			$volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
-_outputPort_2_Daemon_assign_stmt_871_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_932_c_macro_; 
 // 			$volatile p2_valid := (pkt_2_e_word [] 32 ) $buffering 1
-_outputPort_2_Daemon_assign_stmt_876_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_937_c_macro_; 
 // 			$volatile p3_valid := (pkt_3_e_word [] 32 ) $buffering 1
-_outputPort_2_Daemon_assign_stmt_881_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_942_c_macro_; 
 // 			$volatile p4_valid := (pkt_4_e_word [] 32 ) $buffering 1
-_outputPort_2_Daemon_assign_stmt_886_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_947_c_macro_; 
 // 			$volatile valid_active_pkt_word_read := ((( $mux (active_packet == 1 ) p1_valid  _b0  )  | ( $mux (active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (active_packet == 3 ) p3_valid  _b0  )  | ( $mux (active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
-_outputPort_2_Daemon_assign_stmt_915_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_976_c_macro_; 
 //  $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
-_outputPort_2_Daemon_call_stmt_925_c_macro_; 
-// 			$volatile started_new_packet := ((next_active_packet != 0 ) & (down_counter == 0 )) $buffering 1
-_outputPort_2_Daemon_assign_stmt_934_c_macro_; 
+_outputPort_2_Daemon_call_stmt_986_c_macro_; 
+// 			$volatile started_new_packet := (((p1_valid | p2_valid) | (p3_valid | p4_valid)) & (down_counter == 0 )) $buffering 1
+_outputPort_2_Daemon_assign_stmt_999_c_macro_; 
 // 			$volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
-_outputPort_2_Daemon_assign_stmt_945_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_1010_c_macro_; 
 // 			$volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
-_outputPort_2_Daemon_assign_stmt_953_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_1018_c_macro_; 
 // 			$volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
-_outputPort_2_Daemon_assign_stmt_961_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_1026_c_macro_; 
 // 			$volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
-_outputPort_2_Daemon_assign_stmt_969_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_1034_c_macro_; 
 // 			$volatile read_from_4 := (( ~ p4_valid ) | (next_active_packet == 4 )) $buffering 1
-_outputPort_2_Daemon_assign_stmt_977_c_macro_; 
-// $report (outputPort_2_Daemon state_summary 			 p1_valid p1_valid 			 p2_valid p2_valid 			 p3_valid p3_valid 			 p4_valid p4_valid 			 read_from_1 read_from_1 			 read_from_2 read_from_2 			 read_from_3 read_from_3 			 read_from_4 read_from_4 			 down_counter down_counter 			 next_active_packet next_active_packet )
-_outputPort_2_Daemon_stmt_988_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_1042_c_macro_; 
 // 			$volatile data_to_out := ((( $mux (next_active_packet == 1 ) ( $slice pkt_1_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 2 ) ( $slice pkt_2_e_word 31 0 )   _b0  ) ) | (( $mux (next_active_packet == 3 ) ( $slice pkt_3_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 4 ) ( $slice pkt_4_e_word 31 0 )   _b0  ) )) $buffering 1
-_outputPort_2_Daemon_assign_stmt_1021_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_1075_c_macro_; 
 // 			$volatile send_flag := ((( $mux (next_active_packet == 1 ) p1_valid  _b0  )  | ( $mux (next_active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (next_active_packet == 3 ) p3_valid  _b0  )  | ( $mux (next_active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
-_outputPort_2_Daemon_assign_stmt_1050_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_1104_c_macro_; 
 // 			$guard (send_flag) out_data_2 := data_to_out $buffering 1// bits of buffering = 32. 
-_outputPort_2_Daemon_assign_stmt_1054_c_macro_; 
+_outputPort_2_Daemon_assign_stmt_1108_c_macro_; 
 do_while_entry_flag = 0;
 do_while_loopback_flag = 1;
-bit_vector_clear(&konst_1056);\
-konst_1056.val.byte_array[0] = 1;\
-if (!bit_vector_to_uint64(0, &konst_1056)) break;
+bit_vector_clear(&konst_1110);\
+konst_1110.val.byte_array[0] = 1;\
+if (!bit_vector_to_uint64(0, &konst_1110)) break;
 } 
 }
-_outputPort_2_Daemon_branch_block_stmt_831_c_export_apply_macro_;
+_outputPort_2_Daemon_branch_block_stmt_892_c_export_apply_macro_;
 }
 _outputPort_2_Daemon_inner_outarg_prep_macro__; 
-MUTEX_UNLOCK(_outputPort_2_Daemon_series_block_stmt_830_c_mutex_);
+MUTEX_UNLOCK(_outputPort_2_Daemon_series_block_stmt_891_c_mutex_);
 }
 void outputPort_2_Daemon()
 {
@@ -611,88 +607,86 @@ _outputPort_2_Daemon_outer_op_xfer_macro__;
 
 void _outputPort_3_Daemon_()
 {
-MUTEX_DECL(_outputPort_3_Daemon_series_block_stmt_1059_c_mutex_);
-MUTEX_LOCK(_outputPort_3_Daemon_series_block_stmt_1059_c_mutex_);
+MUTEX_DECL(_outputPort_3_Daemon_series_block_stmt_1113_c_mutex_);
+MUTEX_LOCK(_outputPort_3_Daemon_series_block_stmt_1113_c_mutex_);
 _outputPort_3_Daemon_inner_inarg_prep_macro__; 
-_outputPort_3_Daemon_branch_block_stmt_1060_c_export_decl_macro_; 
+_outputPort_3_Daemon_branch_block_stmt_1114_c_export_decl_macro_; 
 {
 {
-// do-while:   file .Aa/switch2x2.linked.aa, line 314
-__declare_static_bit_vector(konst_1285,1);\
-bit_vector_clear(&konst_1285);\
-konst_1285.val.byte_array[0] = 1;\
+// do-while:   file .Aa/switch2x2.linked.aa, line 312
+__declare_static_bit_vector(konst_1332,1);\
+bit_vector_clear(&konst_1332);\
+konst_1332.val.byte_array[0] = 1;\
 uint8_t do_while_entry_flag;
 do_while_entry_flag = 1;
 uint8_t do_while_loopback_flag;
 do_while_loopback_flag = 0;
 while(1) {
-// merge  file .Aa/switch2x2.linked.aa, line 316
-_outputPort_3_Daemon_merge_stmt_1062_c_preamble_macro_; 
+// merge  file .Aa/switch2x2.linked.aa, line 314
+_outputPort_3_Daemon_merge_stmt_1116_c_preamble_macro_; 
 // 			$phi down_counter := 			  ZERO_8 $on   $entry 			  next_down_counter $on   $loopback 
  // type of target is $uint<8>
-_outputPort_3_Daemon_phi_stmt_1063_c_macro_; 
+_outputPort_3_Daemon_phi_stmt_1117_c_macro_; 
 // 			$phi pkt_1_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_1) noblock_obuf_1_3 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_3_Daemon_phi_stmt_1067_c_macro_; 
+_outputPort_3_Daemon_phi_stmt_1121_c_macro_; 
 // 			$phi pkt_2_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_2) noblock_obuf_2_3 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_3_Daemon_phi_stmt_1072_c_macro_; 
+_outputPort_3_Daemon_phi_stmt_1126_c_macro_; 
 // 			$phi pkt_3_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_3) noblock_obuf_3_3 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_3_Daemon_phi_stmt_1077_c_macro_; 
+_outputPort_3_Daemon_phi_stmt_1131_c_macro_; 
 // 			$phi pkt_4_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_4) noblock_obuf_4_3 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_3_Daemon_phi_stmt_1082_c_macro_; 
+_outputPort_3_Daemon_phi_stmt_1136_c_macro_; 
 // 			$phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
  // type of target is $uint<3>
-_outputPort_3_Daemon_phi_stmt_1087_c_macro_; 
-// 			$phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+_outputPort_3_Daemon_phi_stmt_1141_c_macro_; 
+// 			$phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
  // type of target is $uint<3>
-_outputPort_3_Daemon_phi_stmt_1091_c_macro_; 
-_outputPort_3_Daemon_merge_stmt_1062_c_postamble_macro_; 
+_outputPort_3_Daemon_phi_stmt_1145_c_macro_; 
+_outputPort_3_Daemon_merge_stmt_1116_c_postamble_macro_; 
 // 			$volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1100_c_macro_; 
+_outputPort_3_Daemon_assign_stmt_1154_c_macro_; 
 // 			$volatile p2_valid := (pkt_2_e_word [] 32 ) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1105_c_macro_; 
+_outputPort_3_Daemon_assign_stmt_1159_c_macro_; 
 // 			$volatile p3_valid := (pkt_3_e_word [] 32 ) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1110_c_macro_; 
+_outputPort_3_Daemon_assign_stmt_1164_c_macro_; 
 // 			$volatile p4_valid := (pkt_4_e_word [] 32 ) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1115_c_macro_; 
+_outputPort_3_Daemon_assign_stmt_1169_c_macro_; 
 // 			$volatile valid_active_pkt_word_read := ((( $mux (active_packet == 1 ) p1_valid  _b0  )  | ( $mux (active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (active_packet == 3 ) p3_valid  _b0  )  | ( $mux (active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1144_c_macro_; 
-//  $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
-_outputPort_3_Daemon_call_stmt_1154_c_macro_; 
-// 			$volatile started_new_packet := ((next_active_packet != 0 ) & (down_counter == 0 )) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1163_c_macro_; 
-// 			$volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
-_outputPort_3_Daemon_assign_stmt_1174_c_macro_; 
-// 			$volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1182_c_macro_; 
-// 			$volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1190_c_macro_; 
-// 			$volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
 _outputPort_3_Daemon_assign_stmt_1198_c_macro_; 
+//  $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
+_outputPort_3_Daemon_call_stmt_1208_c_macro_; 
+// 			$volatile started_new_packet := (((p1_valid | p2_valid) | (p3_valid | p4_valid)) & (down_counter == 0 )) $buffering 1
+_outputPort_3_Daemon_assign_stmt_1221_c_macro_; 
+// 			$volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
+_outputPort_3_Daemon_assign_stmt_1232_c_macro_; 
+// 			$volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
+_outputPort_3_Daemon_assign_stmt_1240_c_macro_; 
+// 			$volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
+_outputPort_3_Daemon_assign_stmt_1248_c_macro_; 
+// 			$volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
+_outputPort_3_Daemon_assign_stmt_1256_c_macro_; 
 // 			$volatile read_from_4 := (( ~ p4_valid ) | (next_active_packet == 4 )) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1206_c_macro_; 
-// $report (outputPort_3_Daemon state_summary 			 p1_valid p1_valid 			 p2_valid p2_valid 			 p3_valid p3_valid 			 p4_valid p4_valid 			 read_from_1 read_from_1 			 read_from_2 read_from_2 			 read_from_3 read_from_3 			 read_from_4 read_from_4 			 down_counter down_counter 			 next_active_packet next_active_packet )
-_outputPort_3_Daemon_stmt_1217_c_macro_; 
+_outputPort_3_Daemon_assign_stmt_1264_c_macro_; 
 // 			$volatile data_to_out := ((( $mux (next_active_packet == 1 ) ( $slice pkt_1_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 2 ) ( $slice pkt_2_e_word 31 0 )   _b0  ) ) | (( $mux (next_active_packet == 3 ) ( $slice pkt_3_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 4 ) ( $slice pkt_4_e_word 31 0 )   _b0  ) )) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1250_c_macro_; 
+_outputPort_3_Daemon_assign_stmt_1297_c_macro_; 
 // 			$volatile send_flag := ((( $mux (next_active_packet == 1 ) p1_valid  _b0  )  | ( $mux (next_active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (next_active_packet == 3 ) p3_valid  _b0  )  | ( $mux (next_active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
-_outputPort_3_Daemon_assign_stmt_1279_c_macro_; 
+_outputPort_3_Daemon_assign_stmt_1326_c_macro_; 
 // 			$guard (send_flag) out_data_3 := data_to_out $buffering 1// bits of buffering = 32. 
-_outputPort_3_Daemon_assign_stmt_1283_c_macro_; 
+_outputPort_3_Daemon_assign_stmt_1330_c_macro_; 
 do_while_entry_flag = 0;
 do_while_loopback_flag = 1;
-bit_vector_clear(&konst_1285);\
-konst_1285.val.byte_array[0] = 1;\
-if (!bit_vector_to_uint64(0, &konst_1285)) break;
+bit_vector_clear(&konst_1332);\
+konst_1332.val.byte_array[0] = 1;\
+if (!bit_vector_to_uint64(0, &konst_1332)) break;
 } 
 }
-_outputPort_3_Daemon_branch_block_stmt_1060_c_export_apply_macro_;
+_outputPort_3_Daemon_branch_block_stmt_1114_c_export_apply_macro_;
 }
 _outputPort_3_Daemon_inner_outarg_prep_macro__; 
-MUTEX_UNLOCK(_outputPort_3_Daemon_series_block_stmt_1059_c_mutex_);
+MUTEX_UNLOCK(_outputPort_3_Daemon_series_block_stmt_1113_c_mutex_);
 }
 void outputPort_3_Daemon()
 {
@@ -704,88 +698,86 @@ _outputPort_3_Daemon_outer_op_xfer_macro__;
 
 void _outputPort_4_Daemon_()
 {
-MUTEX_DECL(_outputPort_4_Daemon_series_block_stmt_1288_c_mutex_);
-MUTEX_LOCK(_outputPort_4_Daemon_series_block_stmt_1288_c_mutex_);
+MUTEX_DECL(_outputPort_4_Daemon_series_block_stmt_1335_c_mutex_);
+MUTEX_LOCK(_outputPort_4_Daemon_series_block_stmt_1335_c_mutex_);
 _outputPort_4_Daemon_inner_inarg_prep_macro__; 
-_outputPort_4_Daemon_branch_block_stmt_1289_c_export_decl_macro_; 
+_outputPort_4_Daemon_branch_block_stmt_1336_c_export_decl_macro_; 
 {
 {
-// do-while:   file .Aa/switch2x2.linked.aa, line 358
-__declare_static_bit_vector(konst_1514,1);\
-bit_vector_clear(&konst_1514);\
-konst_1514.val.byte_array[0] = 1;\
+// do-while:   file .Aa/switch2x2.linked.aa, line 355
+__declare_static_bit_vector(konst_1554,1);\
+bit_vector_clear(&konst_1554);\
+konst_1554.val.byte_array[0] = 1;\
 uint8_t do_while_entry_flag;
 do_while_entry_flag = 1;
 uint8_t do_while_loopback_flag;
 do_while_loopback_flag = 0;
 while(1) {
-// merge  file .Aa/switch2x2.linked.aa, line 360
-_outputPort_4_Daemon_merge_stmt_1291_c_preamble_macro_; 
+// merge  file .Aa/switch2x2.linked.aa, line 357
+_outputPort_4_Daemon_merge_stmt_1338_c_preamble_macro_; 
 // 			$phi down_counter := 			  ZERO_8 $on   $entry 			  next_down_counter $on   $loopback 
  // type of target is $uint<8>
-_outputPort_4_Daemon_phi_stmt_1292_c_macro_; 
+_outputPort_4_Daemon_phi_stmt_1339_c_macro_; 
 // 			$phi pkt_1_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_1) noblock_obuf_1_4 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_4_Daemon_phi_stmt_1296_c_macro_; 
+_outputPort_4_Daemon_phi_stmt_1343_c_macro_; 
 // 			$phi pkt_2_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_2) noblock_obuf_2_4 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_4_Daemon_phi_stmt_1301_c_macro_; 
+_outputPort_4_Daemon_phi_stmt_1348_c_macro_; 
 // 			$phi pkt_3_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_3) noblock_obuf_3_4 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_4_Daemon_phi_stmt_1306_c_macro_; 
+_outputPort_4_Daemon_phi_stmt_1353_c_macro_; 
 // 			$phi pkt_4_e_word := 			  ZERO_33 $on   $entry 			  $guard (read_from_4) noblock_obuf_4_4 $on   $loopback 
  // type of target is $uint<33>
-_outputPort_4_Daemon_phi_stmt_1311_c_macro_; 
+_outputPort_4_Daemon_phi_stmt_1358_c_macro_; 
 // 			$phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
  // type of target is $uint<3>
-_outputPort_4_Daemon_phi_stmt_1316_c_macro_; 
-// 			$phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+_outputPort_4_Daemon_phi_stmt_1363_c_macro_; 
+// 			$phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
  // type of target is $uint<3>
-_outputPort_4_Daemon_phi_stmt_1320_c_macro_; 
-_outputPort_4_Daemon_merge_stmt_1291_c_postamble_macro_; 
+_outputPort_4_Daemon_phi_stmt_1367_c_macro_; 
+_outputPort_4_Daemon_merge_stmt_1338_c_postamble_macro_; 
 // 			$volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1329_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1376_c_macro_; 
 // 			$volatile p2_valid := (pkt_2_e_word [] 32 ) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1334_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1381_c_macro_; 
 // 			$volatile p3_valid := (pkt_3_e_word [] 32 ) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1339_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1386_c_macro_; 
 // 			$volatile p4_valid := (pkt_4_e_word [] 32 ) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1344_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1391_c_macro_; 
 // 			$volatile valid_active_pkt_word_read := ((( $mux (active_packet == 1 ) p1_valid  _b0  )  | ( $mux (active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (active_packet == 3 ) p3_valid  _b0  )  | ( $mux (active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1373_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1420_c_macro_; 
 //  $volatile 			$call prioritySelect (down_counter active_packet pkt_priority p1_valid p2_valid p3_valid p4_valid ) (next_active_packet next_pkt_priority ) 
-_outputPort_4_Daemon_call_stmt_1383_c_macro_; 
-// 			$volatile started_new_packet := ((next_active_packet != 0 ) & (down_counter == 0 )) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1392_c_macro_; 
+_outputPort_4_Daemon_call_stmt_1430_c_macro_; 
+// 			$volatile started_new_packet := (((p1_valid | p2_valid) | (p3_valid | p4_valid)) & (down_counter == 0 )) $buffering 1
+_outputPort_4_Daemon_assign_stmt_1443_c_macro_; 
 // 			$volatile next_down_counter := ( $mux started_new_packet 63   ( $mux valid_active_pkt_word_read (down_counter - 1 )  down_counter )  )  $buffering 1
-_outputPort_4_Daemon_assign_stmt_1403_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1454_c_macro_; 
 // 			$volatile read_from_1 := (( ~ p1_valid ) | (next_active_packet == 1 )) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1411_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1462_c_macro_; 
 // 			$volatile read_from_2 := (( ~ p2_valid ) | (next_active_packet == 2 )) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1419_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1470_c_macro_; 
 // 			$volatile read_from_3 := (( ~ p3_valid ) | (next_active_packet == 3 )) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1427_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1478_c_macro_; 
 // 			$volatile read_from_4 := (( ~ p4_valid ) | (next_active_packet == 4 )) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1435_c_macro_; 
-// $report (outputPort_4_Daemon state_summary 			 p1_valid p1_valid 			 p2_valid p2_valid 			 p3_valid p3_valid 			 p4_valid p4_valid 			 read_from_1 read_from_1 			 read_from_2 read_from_2 			 read_from_3 read_from_3 			 read_from_4 read_from_4 			 down_counter down_counter 			 next_active_packet next_active_packet )
-_outputPort_4_Daemon_stmt_1446_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1486_c_macro_; 
 // 			$volatile data_to_out := ((( $mux (next_active_packet == 1 ) ( $slice pkt_1_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 2 ) ( $slice pkt_2_e_word 31 0 )   _b0  ) ) | (( $mux (next_active_packet == 3 ) ( $slice pkt_3_e_word 31 0 )   _b0  )  | ( $mux (next_active_packet == 4 ) ( $slice pkt_4_e_word 31 0 )   _b0  ) )) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1479_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1519_c_macro_; 
 // 			$volatile send_flag := ((( $mux (next_active_packet == 1 ) p1_valid  _b0  )  | ( $mux (next_active_packet == 2 ) p2_valid  _b0  ) ) | (( $mux (next_active_packet == 3 ) p3_valid  _b0  )  | ( $mux (next_active_packet == 4 ) p4_valid  _b0  ) )) $buffering 1
-_outputPort_4_Daemon_assign_stmt_1508_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1548_c_macro_; 
 // 			$guard (send_flag) out_data_4 := data_to_out $buffering 1// bits of buffering = 32. 
-_outputPort_4_Daemon_assign_stmt_1512_c_macro_; 
+_outputPort_4_Daemon_assign_stmt_1552_c_macro_; 
 do_while_entry_flag = 0;
 do_while_loopback_flag = 1;
-bit_vector_clear(&konst_1514);\
-konst_1514.val.byte_array[0] = 1;\
-if (!bit_vector_to_uint64(0, &konst_1514)) break;
+bit_vector_clear(&konst_1554);\
+konst_1554.val.byte_array[0] = 1;\
+if (!bit_vector_to_uint64(0, &konst_1554)) break;
 } 
 }
-_outputPort_4_Daemon_branch_block_stmt_1289_c_export_apply_macro_;
+_outputPort_4_Daemon_branch_block_stmt_1336_c_export_apply_macro_;
 }
 _outputPort_4_Daemon_inner_outarg_prep_macro__; 
-MUTEX_UNLOCK(_outputPort_4_Daemon_series_block_stmt_1288_c_mutex_);
+MUTEX_UNLOCK(_outputPort_4_Daemon_series_block_stmt_1335_c_mutex_);
 }
 void outputPort_4_Daemon()
 {
@@ -802,18 +794,18 @@ MUTEX_LOCK(_prioritySelect_series_block_stmt_444_c_mutex_);
 _prioritySelect_inner_inarg_prep_macro__; 
 // 	d0 := (down_counter == 0 ) $buffering 1
 _prioritySelect_assign_stmt_458_c_macro_; 
-// 	select_1 := ((d0 & p1_valid) & ((pkt_priority == 1 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p3_valid )))) $buffering 1
-_prioritySelect_assign_stmt_476_c_macro_; 
-// 	select_2 := ((d0 & p2_valid) & ((pkt_priority == 2 ) | ((( ~ p4_valid ) & ( ~ p1_valid )) & ( ~ p3_valid )))) $buffering 1
-_prioritySelect_assign_stmt_494_c_macro_; 
-// 	select_3 := ((d0 & p3_valid) & ((pkt_priority == 3 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p1_valid )))) $buffering 1
-_prioritySelect_assign_stmt_512_c_macro_; 
-// 	select_4 := ((d0 & p4_valid) & ((pkt_priority == 4 ) | ((( ~ p1_valid ) & ( ~ p2_valid )) & ( ~ p3_valid )))) $buffering 1
-_prioritySelect_assign_stmt_530_c_macro_; 
+// 	select_1 := ((d0 & p1_valid) & (((pkt_priority == 1 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p3_valid ))) | ((((pkt_priority == 3 ) & ( ~ p3_valid )) & ( ~ p4_valid )) | ((pkt_priority == 4 ) & ( ~ p4_valid ))))) $buffering 1
+_prioritySelect_assign_stmt_493_c_macro_; 
+// 	select_2 := ((d0 & p2_valid) & (((pkt_priority == 2 ) | ((( ~ p4_valid ) & ( ~ p1_valid )) & ( ~ p3_valid ))) | ((((pkt_priority == 4 ) & ( ~ p4_valid )) & ( ~ p1_valid )) | ((pkt_priority == 1 ) & ( ~ p1_valid ))))) $buffering 1
+_prioritySelect_assign_stmt_528_c_macro_; 
+// 	select_3 := ((d0 & p3_valid) & (((pkt_priority == 3 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p1_valid ))) | ((((pkt_priority == 1 ) & ( ~ p1_valid )) & ( ~ p2_valid )) | ((pkt_priority == 2 ) & ( ~ p2_valid ))))) $buffering 1
+_prioritySelect_assign_stmt_563_c_macro_; 
+// 	select_4 := ((d0 & p4_valid) & (((pkt_priority == 4 ) | ((( ~ p1_valid ) & ( ~ p2_valid )) & ( ~ p3_valid ))) | ((((pkt_priority == 2 ) & ( ~ p2_valid )) & ( ~ p3_valid )) | ((pkt_priority == 3 ) & ( ~ p3_valid ))))) $buffering 1
+_prioritySelect_assign_stmt_598_c_macro_; 
 // 	next_active_packet := (((( $mux ( ~ d0 ) active_packet  _b0  )  | ( $mux select_1 1   _b0  ) ) | ( $mux select_2 2   _b0  ) ) | ((( $mux select_3 3   _b0  )  | ( $mux select_4 4   _b0  ) ) | ( $mux ((( ~ select_1 ) & ( ~ select_2 )) & (( ~ select_3 ) & ( ~ select_4 ))) active_packet  _b0  ) )) $buffering 1
-_prioritySelect_assign_stmt_572_c_macro_; 
-// 	next_pkt_priority := (((( $mux ( ~ d0 ) active_packet  _b0  )  | ( $mux select_1 2   _b0  ) ) | ( $mux select_2 3   _b0  ) ) | (( $mux select_3 4   _b0  )  | ( $mux select_4 1   _b0  ) )) $buffering 1
-_prioritySelect_assign_stmt_599_c_macro_; 
+_prioritySelect_assign_stmt_640_c_macro_; 
+// 	next_pkt_priority := (((( $mux ( ~ d0 ) pkt_priority  _b0  )  | ( $mux select_1 2   _b0  ) ) | ( $mux select_2 3   _b0  ) ) | (( $mux select_3 4   _b0  )  | ( $mux select_4 1   _b0  ) )) $buffering 1
+_prioritySelect_assign_stmt_667_c_macro_; 
 _prioritySelect_inner_outarg_prep_macro__; 
 MUTEX_UNLOCK(_prioritySelect_series_block_stmt_444_c_mutex_);
 }

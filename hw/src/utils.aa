@@ -11,38 +11,38 @@ $is
 	select_1 := ($reduce & 
 			d0
 			p1_valid
-			($reduce | (pkt_priority == 1)   
-			($reduce & (pkt_priority == 2) (~p2_valid) (~p3_valid) (~p4_valid)) 
-			($reduce & (pkt_priority == 3) (~p3_valid) (~p4_valid))
-			($reduce & (pkt_priority == 4) (~p4_valid))) 
-			)
+			($reduce | (pkt_priority == 1)
+                                  ($reduce & (~p4_valid) (~p2_valid) (~p3_valid))
+                                  ($reduce & (pkt_priority == 3) (~p3_valid) (~p4_valid))
+                                  ($reduce & (pkt_priority == 4) (~p4_valid)))
+                         )
 
 	select_2 := ($reduce & 
 			d0
 			p2_valid
 			($reduce | (pkt_priority == 2) 
-			($reduce & (pkt_priority == 3) (~p3_valid) (~p4_valid) (~p1_valid))
-			($reduce & (pkt_priority == 4) (~p4_valid) (~p1_valid))
-			($reduce & (pkt_priority == 1) (~p1_valid)))
-			) 
-	
+                                   ($reduce & (~p4_valid) (~p1_valid) (~p3_valid))
+                                   ($reduce & (pkt_priority == 4) (~p4_valid) (~p1_valid))
+                                   ($reduce & (pkt_priority == 1) (~p1_valid)))
+                     )
+
 	select_3 := ($reduce & 
 			d0
 			p3_valid
-			($reduce | (pkt_priority == 3)   
-			($reduce & (pkt_priority == 4) (~p4_valid) (~p1_valid) (~p2_valid)) 
-			($reduce & (pkt_priority == 1) (~p1_valid) (~p2_valid)) 
-			($reduce & (pkt_priority == 2) (~p2_valid))) 
-			)
+			($reduce | (pkt_priority == 3)
+                                   ($reduce & (~p4_valid) (~p2_valid) (~p1_valid))
+                                   ($reduce & (pkt_priority == 1) (~p1_valid) (~p2_valid))
+                                   ($reduce & (pkt_priority == 2) (~p2_valid)))
+                        )
 
 	select_4 := ($reduce & 
 			d0
 			p4_valid
-			($reduce | (pkt_priority == 4)   
-			($reduce & (pkt_priority == 1) (~p1_valid) (~p2_valid) (~p3_valid)) 
-			($reduce & (pkt_priority == 2) (~p2_valid) (~p3_valid)) 
-			($reduce & (pkt_priority == 3) (~p3_valid))) 
-			)
+			($reduce | (pkt_priority == 4) 
+                                 ($reduce & (~p1_valid) (~p2_valid) (~p3_valid))
+                                 ($reduce & (pkt_priority == 2) (~p2_valid) (~p3_valid))
+                                 ($reduce & (pkt_priority == 3) (~p3_valid)))
+                        )
 
 	next_active_packet := ($excmux 
 					(~d0)	active_packet 
@@ -60,7 +60,7 @@ $is
 	//next_pkt_priority := ($prioritymux select_4 pkt_1_has_priority select_1 pkt_2_has_priority select_2 pkt_3_has_priority
     //             $default((~pkt_1_has_priority) & ((~pkt_2_has_priority) & (~pkt_3_has_priority))))
     next_pkt_priority := ($excmux 
-                         (~d0)	active_packet
+                         (~d0)	pkt_priority
                          select_1 2 
                          select_2 3 
                          select_3 4 
