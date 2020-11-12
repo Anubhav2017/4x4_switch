@@ -1,0 +1,17 @@
+run 
+	. compile.sh
+to build the Aa->C model.
+
+run
+	. build_aa2c_tb.sh
+to build the Aa->C testbench
+
+
+you can now run
+
+	./bin/testbench_aa2c 
+
+to see if things work. 
+
+If not, we have to debug!
+
