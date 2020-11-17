@@ -59,12 +59,12 @@ $is
 	//                          $mux select_2 pkt_3_has_priority 1))
 	//next_pkt_priority := ($prioritymux select_4 pkt_1_has_priority select_1 pkt_2_has_priority select_2 pkt_3_has_priority
     //             $default((~pkt_1_has_priority) & ((~pkt_2_has_priority) & (~pkt_3_has_priority))))
-    next_pkt_priority := ($excmux 
-                         (~d0)	pkt_priority
+    next_pkt_priority := ($prioritymux 
                          select_1 2 
                          select_2 3 
                          select_3 4 
                          select_4 1 
+                         $default pkt_priority
                      )
 
 }

@@ -8,53 +8,53 @@ $constant  ZERO_2 : $uint<2>:= 0
 $constant  ZERO_3 : $uint<3>:= 0  
 $constant  ZERO_33 : $uint<33>:= 0  
 $constant  ZERO_8 : $uint<8>:= 0  
-$pipe  in_data_1 : $uint<32>  $depth 4 
+$pipe  in_data_1 : $uint<32>  $depth 2 
 // can point into 
-$pipe  in_data_2 : $uint<32>  $depth 4 
+$pipe  in_data_2 : $uint<32>  $depth 2 
 // can point into 
-$pipe  in_data_3 : $uint<32>  $depth 4 
+$pipe  in_data_3 : $uint<32>  $depth 2 
 // can point into 
-$pipe  in_data_4 : $uint<32>  $depth 4 
+$pipe  in_data_4 : $uint<32>  $depth 2 
 // can point into 
-$noblock $pipe  noblock_obuf_1_1 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_1_1 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_1_2 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_1_2 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_1_3 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_1_3 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_1_4 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_1_4 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_2_1 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_2_1 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_2_2 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_2_2 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_2_3 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_2_3 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_2_4 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_2_4 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_3_1 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_3_1 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_3_2 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_3_2 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_3_3 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_3_3 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_3_4 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_3_4 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_4_1 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_4_1 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_4_2 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_4_2 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_4_3 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_4_3 : $uint<33>  $depth 128 
 // can point into 
-$noblock $pipe  noblock_obuf_4_4 : $uint<33>  $depth 256 
+$noblock $pipe  noblock_obuf_4_4 : $uint<33>  $depth 128 
 // can point into 
-$pipe  out_data_1 : $uint<32>  $depth 4 
+$pipe  out_data_1 : $uint<32>  $depth 2 
 // can point into 
-$pipe  out_data_2 : $uint<32>  $depth 4 
+$pipe  out_data_2 : $uint<32>  $depth 2 
 // can point into 
-$pipe  out_data_3 : $uint<32>  $depth 4 
+$pipe  out_data_3 : $uint<32>  $depth 2 
 // can point into 
-$pipe  out_data_4 : $uint<32>  $depth 4 
+$pipe  out_data_4 : $uint<32>  $depth 2 
 // can point into 
 $module [global_storage_initializer_]
 $in ()
@@ -73,7 +73,7 @@ $is
     $dopipeline $depth 7 $buffering 1
     $fullrate 
     $merge $entry $loopback 
-    $phi count_down := 			  next_count_down $on   $loopback 			  ($bitcast ($uint<16>) 0  ) $on   $entry 
+    $phi count_down := 			  ($bitcast ($uint<16>) 0  ) $on   $entry 			  next_count_down $on   $loopback 
     // type of target is $uint<16>
     $phi input_word := 			  in_data_1 $on   $entry ,   $loopback 
     // type of target is $uint<32>
@@ -210,7 +210,7 @@ $is
   select_3 := ((d0 & p3_valid) & (((pkt_priority == 3 ) | ((( ~ p4_valid ) & ( ~ p2_valid )) & ( ~ p1_valid ))) | ((((pkt_priority == 1 ) & ( ~ p1_valid )) & ( ~ p2_valid )) | ((pkt_priority == 2 ) & ( ~ p2_valid ))))) $buffering 1
   select_4 := ((d0 & p4_valid) & (((pkt_priority == 4 ) | ((( ~ p1_valid ) & ( ~ p2_valid )) & ( ~ p3_valid ))) | ((((pkt_priority == 2 ) & ( ~ p2_valid )) & ( ~ p3_valid )) | ((pkt_priority == 3 ) & ( ~ p3_valid ))))) $buffering 1
   next_active_packet := (((( $mux ( ~ d0 ) active_packet  _b0  )  | ( $mux select_1 1   _b0  ) ) | ( $mux select_2 2   _b0  ) ) | ((( $mux select_3 3   _b0  )  | ( $mux select_4 4   _b0  ) ) | ( $mux ((( ~ select_1 ) & ( ~ select_2 )) & (( ~ select_3 ) & ( ~ select_4 ))) active_packet  _b0  ) )) $buffering 1
-  next_pkt_priority := (((( $mux ( ~ d0 ) pkt_priority  _b0  )  | ( $mux select_1 2   _b0  ) ) | ( $mux select_2 3   _b0  ) ) | (( $mux select_3 4   _b0  )  | ( $mux select_4 1   _b0  ) )) $buffering 1
+  next_pkt_priority := ( $mux select_1 2   ( $mux select_2 3   ( $mux select_3 4   ( $mux select_4 1   pkt_priority )  )  )  )  $buffering 1
 }
 $module [outputPort_1_Daemon]
 $in ()
@@ -234,7 +234,7 @@ $is
     // type of target is $uint<33>
     $phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
     // type of target is $uint<3>
-    $phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+    $phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
     // type of target is $uint<3>
     $endmerge
     $volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
@@ -277,7 +277,7 @@ $is
     // type of target is $uint<33>
     $phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
     // type of target is $uint<3>
-    $phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+    $phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
     // type of target is $uint<3>
     $endmerge
     $volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
@@ -320,7 +320,7 @@ $is
     // type of target is $uint<33>
     $phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
     // type of target is $uint<3>
-    $phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+    $phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
     // type of target is $uint<3>
     $endmerge
     $volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1
@@ -363,7 +363,7 @@ $is
     // type of target is $uint<33>
     $phi active_packet := 			  ZERO_3 $on   $entry 			  next_active_packet $on   $loopback 
     // type of target is $uint<3>
-    $phi pkt_priority := 			  ZERO_3 $on   $entry 			  next_pkt_priority $on   $loopback 
+    $phi pkt_priority := 			  ONE_3 $on   $entry 			  next_pkt_priority $on   $loopback 
     // type of target is $uint<3>
     $endmerge
     $volatile p1_valid := (pkt_1_e_word [] 32 ) $buffering 1

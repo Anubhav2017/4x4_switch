@@ -35,21 +35,21 @@ merge_stmt_66_entry_flag = do_while_entry_flag;\
 goto merge_stmt_66_run;\
 merge_stmt_66_run: ;\
 
-#define _inputPort_1_Daemon_phi_stmt_67_c_macro_ __declare_static_bit_vector(konst_71,16);\
-bit_vector_clear(&konst_71);\
-__declare_static_bit_vector(type_cast_72,16);\
-bit_vector_clear(&type_cast_72);\
+#define _inputPort_1_Daemon_phi_stmt_67_c_macro_ __declare_static_bit_vector(konst_70,16);\
+bit_vector_clear(&konst_70);\
+__declare_static_bit_vector(type_cast_71,16);\
+bit_vector_clear(&type_cast_71);\
 if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(count_down), &(next_count_down));\
 }\
 else {\
-__declare_static_bit_vector(konst_71,16);\
-bit_vector_clear(&konst_71);\
-__declare_static_bit_vector(type_cast_72,16);\
-bit_vector_clear(&type_cast_72);\
-bit_vector_clear(&konst_71);\
-bit_vector_bitcast_to_bit_vector( &(type_cast_72), &(konst_71));\
-bit_vector_cast_to_bit_vector(0, &(count_down), &(type_cast_72));\
+__declare_static_bit_vector(konst_70,16);\
+bit_vector_clear(&konst_70);\
+__declare_static_bit_vector(type_cast_71,16);\
+bit_vector_clear(&type_cast_71);\
+bit_vector_clear(&konst_70);\
+bit_vector_bitcast_to_bit_vector( &(type_cast_71), &(konst_70));\
+bit_vector_cast_to_bit_vector(0, &(count_down), &(type_cast_71));\
 }\
 ;
 
@@ -802,7 +802,7 @@ write_bit_vector_to_pipe("noblock_obuf_4_4",&(data_to_outport));\
 #define _inputPort_4_Daemon_outer_op_xfer_macro__ ;
 
 #define _outputPort_1_Daemon_inner_inarg_prep_macro__ 
-#define _outputPort_1_Daemon_branch_block_stmt_670_c_export_decl_macro_ __declare_static_bit_vector(down_counter,8);\
+#define _outputPort_1_Daemon_branch_block_stmt_658_c_export_decl_macro_ __declare_static_bit_vector(down_counter,8);\
 __declare_static_bit_vector(pkt_1_e_word,33);\
 __declare_static_bit_vector(pkt_2_e_word,33);\
 __declare_static_bit_vector(pkt_3_e_word,33);\
@@ -826,12 +826,12 @@ __declare_static_bit_vector(data_to_out,32);\
 __declare_static_bit_vector(send_flag,1);\
 
 
-#define _outputPort_1_Daemon_merge_stmt_672_c_preamble_macro_ uint8_t merge_stmt_672_entry_flag;\
-merge_stmt_672_entry_flag = do_while_entry_flag;\
-goto merge_stmt_672_run;\
-merge_stmt_672_run: ;\
+#define _outputPort_1_Daemon_merge_stmt_660_c_preamble_macro_ uint8_t merge_stmt_660_entry_flag;\
+merge_stmt_660_entry_flag = do_while_entry_flag;\
+goto merge_stmt_660_run;\
+merge_stmt_660_run: ;\
 
-#define _outputPort_1_Daemon_phi_stmt_673_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_1_Daemon_phi_stmt_661_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(down_counter), &(next_down_counter));\
 }\
 else {\
@@ -839,11 +839,11 @@ bit_vector_cast_to_bit_vector(0, &(down_counter), &(ZERO_8));\
 }\
 ;
 
-#define _outputPort_1_Daemon_phi_stmt_677_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_1_1_681,33);\
+#define _outputPort_1_Daemon_phi_stmt_665_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_1_1_669,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_1)) {\
-read_bit_vector_from_pipe("noblock_obuf_1_1",&(RPIPE_noblock_obuf_1_1_681));\
-bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(RPIPE_noblock_obuf_1_1_681));\
+read_bit_vector_from_pipe("noblock_obuf_1_1",&(RPIPE_noblock_obuf_1_1_669));\
+bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(RPIPE_noblock_obuf_1_1_669));\
 }\
 }\
 else {\
@@ -851,11 +851,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_1_Daemon_phi_stmt_682_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_2_1_686,33);\
+#define _outputPort_1_Daemon_phi_stmt_670_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_2_1_674,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_2)) {\
-read_bit_vector_from_pipe("noblock_obuf_2_1",&(RPIPE_noblock_obuf_2_1_686));\
-bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(RPIPE_noblock_obuf_2_1_686));\
+read_bit_vector_from_pipe("noblock_obuf_2_1",&(RPIPE_noblock_obuf_2_1_674));\
+bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(RPIPE_noblock_obuf_2_1_674));\
 }\
 }\
 else {\
@@ -863,11 +863,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_1_Daemon_phi_stmt_687_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_3_1_691,33);\
+#define _outputPort_1_Daemon_phi_stmt_675_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_3_1_679,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_3)) {\
-read_bit_vector_from_pipe("noblock_obuf_3_1",&(RPIPE_noblock_obuf_3_1_691));\
-bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(RPIPE_noblock_obuf_3_1_691));\
+read_bit_vector_from_pipe("noblock_obuf_3_1",&(RPIPE_noblock_obuf_3_1_679));\
+bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(RPIPE_noblock_obuf_3_1_679));\
 }\
 }\
 else {\
@@ -875,11 +875,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_1_Daemon_phi_stmt_692_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_4_1_696,33);\
+#define _outputPort_1_Daemon_phi_stmt_680_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_4_1_684,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_4)) {\
-read_bit_vector_from_pipe("noblock_obuf_4_1",&(RPIPE_noblock_obuf_4_1_696));\
-bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(RPIPE_noblock_obuf_4_1_696));\
+read_bit_vector_from_pipe("noblock_obuf_4_1",&(RPIPE_noblock_obuf_4_1_684));\
+bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(RPIPE_noblock_obuf_4_1_684));\
 }\
 }\
 else {\
@@ -887,7 +887,7 @@ bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_1_Daemon_phi_stmt_697_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_1_Daemon_phi_stmt_685_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(active_packet), &(next_active_packet));\
 }\
 else {\
@@ -895,366 +895,366 @@ bit_vector_cast_to_bit_vector(0, &(active_packet), &(ZERO_3));\
 }\
 ;
 
-#define _outputPort_1_Daemon_phi_stmt_701_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_1_Daemon_phi_stmt_689_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(next_pkt_priority));\
 }\
 else {\
-bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(ZERO_3));\
+bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(ONE_3));\
 }\
 ;
 ;
 
-#define _outputPort_1_Daemon_merge_stmt_672_c_postamble_macro_ merge_stmt_672_entry_flag = 0;
+#define _outputPort_1_Daemon_merge_stmt_660_c_postamble_macro_ merge_stmt_660_entry_flag = 0;
 
-#define _outputPort_1_Daemon_assign_stmt_710_c_macro_ __declare_static_bit_vector(konst_708,33);\
-bit_vector_clear(&konst_708);\
-konst_708.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_709,1);\
-bit_vector_clear(&konst_708);\
-konst_708.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_1_e_word), &(konst_708), &(BITSEL_u33_u1_709));\
-bit_vector_cast_to_bit_vector(0, &(p1_valid), &(BITSEL_u33_u1_709));\
+#define _outputPort_1_Daemon_assign_stmt_698_c_macro_ __declare_static_bit_vector(konst_696,33);\
+bit_vector_clear(&konst_696);\
+konst_696.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_697,1);\
+bit_vector_clear(&konst_696);\
+konst_696.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_1_e_word), &(konst_696), &(BITSEL_u33_u1_697));\
+bit_vector_cast_to_bit_vector(0, &(p1_valid), &(BITSEL_u33_u1_697));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_715_c_macro_ __declare_static_bit_vector(konst_713,33);\
-bit_vector_clear(&konst_713);\
-konst_713.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_714,1);\
-bit_vector_clear(&konst_713);\
-konst_713.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_2_e_word), &(konst_713), &(BITSEL_u33_u1_714));\
-bit_vector_cast_to_bit_vector(0, &(p2_valid), &(BITSEL_u33_u1_714));\
+#define _outputPort_1_Daemon_assign_stmt_703_c_macro_ __declare_static_bit_vector(konst_701,33);\
+bit_vector_clear(&konst_701);\
+konst_701.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_702,1);\
+bit_vector_clear(&konst_701);\
+konst_701.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_2_e_word), &(konst_701), &(BITSEL_u33_u1_702));\
+bit_vector_cast_to_bit_vector(0, &(p2_valid), &(BITSEL_u33_u1_702));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_720_c_macro_ __declare_static_bit_vector(konst_718,33);\
-bit_vector_clear(&konst_718);\
-konst_718.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_719,1);\
-bit_vector_clear(&konst_718);\
-konst_718.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_3_e_word), &(konst_718), &(BITSEL_u33_u1_719));\
-bit_vector_cast_to_bit_vector(0, &(p3_valid), &(BITSEL_u33_u1_719));\
+#define _outputPort_1_Daemon_assign_stmt_708_c_macro_ __declare_static_bit_vector(konst_706,33);\
+bit_vector_clear(&konst_706);\
+konst_706.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_707,1);\
+bit_vector_clear(&konst_706);\
+konst_706.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_3_e_word), &(konst_706), &(BITSEL_u33_u1_707));\
+bit_vector_cast_to_bit_vector(0, &(p3_valid), &(BITSEL_u33_u1_707));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_725_c_macro_ __declare_static_bit_vector(konst_723,33);\
-bit_vector_clear(&konst_723);\
-konst_723.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_724,1);\
-bit_vector_clear(&konst_723);\
-konst_723.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_4_e_word), &(konst_723), &(BITSEL_u33_u1_724));\
-bit_vector_cast_to_bit_vector(0, &(p4_valid), &(BITSEL_u33_u1_724));\
+#define _outputPort_1_Daemon_assign_stmt_713_c_macro_ __declare_static_bit_vector(konst_711,33);\
+bit_vector_clear(&konst_711);\
+konst_711.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_712,1);\
+bit_vector_clear(&konst_711);\
+konst_711.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_4_e_word), &(konst_711), &(BITSEL_u33_u1_712));\
+bit_vector_cast_to_bit_vector(0, &(p4_valid), &(BITSEL_u33_u1_712));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_754_c_macro_ __declare_static_bit_vector(konst_728,3);\
-bit_vector_clear(&konst_728);\
-konst_728.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_729,1);\
-__declare_static_bit_vector(konst_731,1);\
-bit_vector_clear(&konst_731);\
-__declare_static_bit_vector(MUX_732,1);\
-__declare_static_bit_vector(konst_734,3);\
-bit_vector_clear(&konst_734);\
-konst_734.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_735,1);\
-__declare_static_bit_vector(konst_737,1);\
-bit_vector_clear(&konst_737);\
-__declare_static_bit_vector(MUX_738,1);\
-__declare_static_bit_vector(OR_u1_u1_739,1);\
-__declare_static_bit_vector(konst_741,3);\
-bit_vector_clear(&konst_741);\
-konst_741.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_742,1);\
-__declare_static_bit_vector(konst_744,1);\
-bit_vector_clear(&konst_744);\
-__declare_static_bit_vector(MUX_745,1);\
-__declare_static_bit_vector(konst_747,3);\
-bit_vector_clear(&konst_747);\
-konst_747.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_748,1);\
-__declare_static_bit_vector(konst_750,1);\
-bit_vector_clear(&konst_750);\
-__declare_static_bit_vector(MUX_751,1);\
-__declare_static_bit_vector(OR_u1_u1_752,1);\
-__declare_static_bit_vector(OR_u1_u1_753,1);\
-bit_vector_clear(&konst_728);\
-konst_728.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(active_packet), &(konst_728), &(EQ_u3_u1_729));\
-if (has_undefined_bit(&EQ_u3_u1_729)) {fprintf(stderr, "Error: variable EQ_u3_u1_729 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_729));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_729)){bit_vector_cast_to_bit_vector(0, &(MUX_732), &(p1_valid));\
-}else {bit_vector_clear(&konst_731);\
-bit_vector_cast_to_bit_vector(0, &(MUX_732), &(konst_731));\
-}bit_vector_clear(&konst_734);\
-konst_734.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(active_packet), &(konst_734), &(EQ_u3_u1_735));\
-if (has_undefined_bit(&EQ_u3_u1_735)) {fprintf(stderr, "Error: variable EQ_u3_u1_735 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_735));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_735)){bit_vector_cast_to_bit_vector(0, &(MUX_738), &(p2_valid));\
-}else {bit_vector_clear(&konst_737);\
-bit_vector_cast_to_bit_vector(0, &(MUX_738), &(konst_737));\
-}bit_vector_or(&(MUX_732), &(MUX_738), &(OR_u1_u1_739));\
-bit_vector_clear(&konst_741);\
-konst_741.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(active_packet), &(konst_741), &(EQ_u3_u1_742));\
-if (has_undefined_bit(&EQ_u3_u1_742)) {fprintf(stderr, "Error: variable EQ_u3_u1_742 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_742));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_742)){bit_vector_cast_to_bit_vector(0, &(MUX_745), &(p3_valid));\
-}else {bit_vector_clear(&konst_744);\
-bit_vector_cast_to_bit_vector(0, &(MUX_745), &(konst_744));\
-}bit_vector_clear(&konst_747);\
-konst_747.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(active_packet), &(konst_747), &(EQ_u3_u1_748));\
-if (has_undefined_bit(&EQ_u3_u1_748)) {fprintf(stderr, "Error: variable EQ_u3_u1_748 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_748));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_748)){bit_vector_cast_to_bit_vector(0, &(MUX_751), &(p4_valid));\
-}else {bit_vector_clear(&konst_750);\
-bit_vector_cast_to_bit_vector(0, &(MUX_751), &(konst_750));\
-}bit_vector_or(&(MUX_745), &(MUX_751), &(OR_u1_u1_752));\
-bit_vector_or(&(OR_u1_u1_739), &(OR_u1_u1_752), &(OR_u1_u1_753));\
-bit_vector_cast_to_bit_vector(0, &(valid_active_pkt_word_read), &(OR_u1_u1_753));\
+#define _outputPort_1_Daemon_assign_stmt_742_c_macro_ __declare_static_bit_vector(konst_716,3);\
+bit_vector_clear(&konst_716);\
+konst_716.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_717,1);\
+__declare_static_bit_vector(konst_719,1);\
+bit_vector_clear(&konst_719);\
+__declare_static_bit_vector(MUX_720,1);\
+__declare_static_bit_vector(konst_722,3);\
+bit_vector_clear(&konst_722);\
+konst_722.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_723,1);\
+__declare_static_bit_vector(konst_725,1);\
+bit_vector_clear(&konst_725);\
+__declare_static_bit_vector(MUX_726,1);\
+__declare_static_bit_vector(OR_u1_u1_727,1);\
+__declare_static_bit_vector(konst_729,3);\
+bit_vector_clear(&konst_729);\
+konst_729.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_730,1);\
+__declare_static_bit_vector(konst_732,1);\
+bit_vector_clear(&konst_732);\
+__declare_static_bit_vector(MUX_733,1);\
+__declare_static_bit_vector(konst_735,3);\
+bit_vector_clear(&konst_735);\
+konst_735.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_736,1);\
+__declare_static_bit_vector(konst_738,1);\
+bit_vector_clear(&konst_738);\
+__declare_static_bit_vector(MUX_739,1);\
+__declare_static_bit_vector(OR_u1_u1_740,1);\
+__declare_static_bit_vector(OR_u1_u1_741,1);\
+bit_vector_clear(&konst_716);\
+konst_716.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(active_packet), &(konst_716), &(EQ_u3_u1_717));\
+if (has_undefined_bit(&EQ_u3_u1_717)) {fprintf(stderr, "Error: variable EQ_u3_u1_717 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_717));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_717)){bit_vector_cast_to_bit_vector(0, &(MUX_720), &(p1_valid));\
+}else {bit_vector_clear(&konst_719);\
+bit_vector_cast_to_bit_vector(0, &(MUX_720), &(konst_719));\
+}bit_vector_clear(&konst_722);\
+konst_722.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(active_packet), &(konst_722), &(EQ_u3_u1_723));\
+if (has_undefined_bit(&EQ_u3_u1_723)) {fprintf(stderr, "Error: variable EQ_u3_u1_723 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_723));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_723)){bit_vector_cast_to_bit_vector(0, &(MUX_726), &(p2_valid));\
+}else {bit_vector_clear(&konst_725);\
+bit_vector_cast_to_bit_vector(0, &(MUX_726), &(konst_725));\
+}bit_vector_or(&(MUX_720), &(MUX_726), &(OR_u1_u1_727));\
+bit_vector_clear(&konst_729);\
+konst_729.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(active_packet), &(konst_729), &(EQ_u3_u1_730));\
+if (has_undefined_bit(&EQ_u3_u1_730)) {fprintf(stderr, "Error: variable EQ_u3_u1_730 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_730));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_730)){bit_vector_cast_to_bit_vector(0, &(MUX_733), &(p3_valid));\
+}else {bit_vector_clear(&konst_732);\
+bit_vector_cast_to_bit_vector(0, &(MUX_733), &(konst_732));\
+}bit_vector_clear(&konst_735);\
+konst_735.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(active_packet), &(konst_735), &(EQ_u3_u1_736));\
+if (has_undefined_bit(&EQ_u3_u1_736)) {fprintf(stderr, "Error: variable EQ_u3_u1_736 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_736));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_736)){bit_vector_cast_to_bit_vector(0, &(MUX_739), &(p4_valid));\
+}else {bit_vector_clear(&konst_738);\
+bit_vector_cast_to_bit_vector(0, &(MUX_739), &(konst_738));\
+}bit_vector_or(&(MUX_733), &(MUX_739), &(OR_u1_u1_740));\
+bit_vector_or(&(OR_u1_u1_727), &(OR_u1_u1_740), &(OR_u1_u1_741));\
+bit_vector_cast_to_bit_vector(0, &(valid_active_pkt_word_read), &(OR_u1_u1_741));\
 ;
 
-#define _outputPort_1_Daemon_call_stmt_764_c_macro_ _prioritySelect_( &(down_counter),  &(active_packet),  &(pkt_priority),  &(p1_valid),  &(p2_valid),  &(p3_valid),  &(p4_valid), &(next_active_packet), &(next_pkt_priority));\
+#define _outputPort_1_Daemon_call_stmt_752_c_macro_ _prioritySelect_( &(down_counter),  &(active_packet),  &(pkt_priority),  &(p1_valid),  &(p2_valid),  &(p3_valid),  &(p4_valid), &(next_active_packet), &(next_pkt_priority));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_777_c_macro_ __declare_static_bit_vector(OR_u1_u1_768,1);\
-__declare_static_bit_vector(OR_u1_u1_771,1);\
-__declare_static_bit_vector(OR_u1_u1_772,1);\
-__declare_static_bit_vector(konst_774,8);\
-bit_vector_clear(&konst_774);\
-__declare_static_bit_vector(EQ_u8_u1_775,1);\
-__declare_static_bit_vector(AND_u1_u1_776,1);\
-bit_vector_or(&(p1_valid), &(p2_valid), &(OR_u1_u1_768));\
-bit_vector_or(&(p3_valid), &(p4_valid), &(OR_u1_u1_771));\
-bit_vector_or(&(OR_u1_u1_768), &(OR_u1_u1_771), &(OR_u1_u1_772));\
-bit_vector_clear(&konst_774);\
-bit_vector_equal(0, &(down_counter), &(konst_774), &(EQ_u8_u1_775));\
-bit_vector_and(&(OR_u1_u1_772), &(EQ_u8_u1_775), &(AND_u1_u1_776));\
-bit_vector_cast_to_bit_vector(0, &(started_new_packet), &(AND_u1_u1_776));\
+#define _outputPort_1_Daemon_assign_stmt_765_c_macro_ __declare_static_bit_vector(OR_u1_u1_756,1);\
+__declare_static_bit_vector(OR_u1_u1_759,1);\
+__declare_static_bit_vector(OR_u1_u1_760,1);\
+__declare_static_bit_vector(konst_762,8);\
+bit_vector_clear(&konst_762);\
+__declare_static_bit_vector(EQ_u8_u1_763,1);\
+__declare_static_bit_vector(AND_u1_u1_764,1);\
+bit_vector_or(&(p1_valid), &(p2_valid), &(OR_u1_u1_756));\
+bit_vector_or(&(p3_valid), &(p4_valid), &(OR_u1_u1_759));\
+bit_vector_or(&(OR_u1_u1_756), &(OR_u1_u1_759), &(OR_u1_u1_760));\
+bit_vector_clear(&konst_762);\
+bit_vector_equal(0, &(down_counter), &(konst_762), &(EQ_u8_u1_763));\
+bit_vector_and(&(OR_u1_u1_760), &(EQ_u8_u1_763), &(AND_u1_u1_764));\
+bit_vector_cast_to_bit_vector(0, &(started_new_packet), &(AND_u1_u1_764));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_788_c_macro_ __declare_static_bit_vector(konst_780,8);\
-bit_vector_clear(&konst_780);\
-konst_780.val.byte_array[0] = 63;\
-__declare_static_bit_vector(konst_783,8);\
-bit_vector_clear(&konst_783);\
-konst_783.val.byte_array[0] = 1;\
-__declare_static_bit_vector(SUB_u8_u8_784,8);\
-__declare_static_bit_vector(MUX_786,8);\
-__declare_static_bit_vector(MUX_787,8);\
+#define _outputPort_1_Daemon_assign_stmt_776_c_macro_ __declare_static_bit_vector(konst_768,8);\
+bit_vector_clear(&konst_768);\
+konst_768.val.byte_array[0] = 63;\
+__declare_static_bit_vector(konst_771,8);\
+bit_vector_clear(&konst_771);\
+konst_771.val.byte_array[0] = 1;\
+__declare_static_bit_vector(SUB_u8_u8_772,8);\
+__declare_static_bit_vector(MUX_774,8);\
+__declare_static_bit_vector(MUX_775,8);\
 if (has_undefined_bit(&started_new_packet)) {fprintf(stderr, "Error: variable started_new_packet has undefined value (%s) at test point.\n", to_string(&started_new_packet));assert(0);} \
-if(bit_vector_to_uint64(0, &started_new_packet)){bit_vector_clear(&konst_780);\
-konst_780.val.byte_array[0] = 63;\
-bit_vector_cast_to_bit_vector(0, &(MUX_787), &(konst_780));\
+if(bit_vector_to_uint64(0, &started_new_packet)){bit_vector_clear(&konst_768);\
+konst_768.val.byte_array[0] = 63;\
+bit_vector_cast_to_bit_vector(0, &(MUX_775), &(konst_768));\
 }else {if (has_undefined_bit(&valid_active_pkt_word_read)) {fprintf(stderr, "Error: variable valid_active_pkt_word_read has undefined value (%s) at test point.\n", to_string(&valid_active_pkt_word_read));assert(0);} \
-if(bit_vector_to_uint64(0, &valid_active_pkt_word_read)){bit_vector_clear(&konst_783);\
-konst_783.val.byte_array[0] = 1;\
-bit_vector_minus( &(down_counter), &(konst_783), &(SUB_u8_u8_784));\
-bit_vector_cast_to_bit_vector(0, &(MUX_786), &(SUB_u8_u8_784));\
-}else {bit_vector_cast_to_bit_vector(0, &(MUX_786), &(down_counter));\
-}bit_vector_cast_to_bit_vector(0, &(MUX_787), &(MUX_786));\
-}bit_vector_cast_to_bit_vector(0, &(next_down_counter), &(MUX_787));\
+if(bit_vector_to_uint64(0, &valid_active_pkt_word_read)){bit_vector_clear(&konst_771);\
+konst_771.val.byte_array[0] = 1;\
+bit_vector_minus( &(down_counter), &(konst_771), &(SUB_u8_u8_772));\
+bit_vector_cast_to_bit_vector(0, &(MUX_774), &(SUB_u8_u8_772));\
+}else {bit_vector_cast_to_bit_vector(0, &(MUX_774), &(down_counter));\
+}bit_vector_cast_to_bit_vector(0, &(MUX_775), &(MUX_774));\
+}bit_vector_cast_to_bit_vector(0, &(next_down_counter), &(MUX_775));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_796_c_macro_ __declare_static_bit_vector(NOT_u1_u1_791,1);\
-__declare_static_bit_vector(konst_793,3);\
-bit_vector_clear(&konst_793);\
-konst_793.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_794,1);\
-__declare_static_bit_vector(OR_u1_u1_795,1);\
-bit_vector_not( &(p1_valid), &(NOT_u1_u1_791));\
-bit_vector_clear(&konst_793);\
-konst_793.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_793), &(EQ_u3_u1_794));\
-bit_vector_or(&(NOT_u1_u1_791), &(EQ_u3_u1_794), &(OR_u1_u1_795));\
-bit_vector_cast_to_bit_vector(0, &(read_from_1), &(OR_u1_u1_795));\
+#define _outputPort_1_Daemon_assign_stmt_784_c_macro_ __declare_static_bit_vector(NOT_u1_u1_779,1);\
+__declare_static_bit_vector(konst_781,3);\
+bit_vector_clear(&konst_781);\
+konst_781.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_782,1);\
+__declare_static_bit_vector(OR_u1_u1_783,1);\
+bit_vector_not( &(p1_valid), &(NOT_u1_u1_779));\
+bit_vector_clear(&konst_781);\
+konst_781.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_781), &(EQ_u3_u1_782));\
+bit_vector_or(&(NOT_u1_u1_779), &(EQ_u3_u1_782), &(OR_u1_u1_783));\
+bit_vector_cast_to_bit_vector(0, &(read_from_1), &(OR_u1_u1_783));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_804_c_macro_ __declare_static_bit_vector(NOT_u1_u1_799,1);\
-__declare_static_bit_vector(konst_801,3);\
-bit_vector_clear(&konst_801);\
-konst_801.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_802,1);\
-__declare_static_bit_vector(OR_u1_u1_803,1);\
-bit_vector_not( &(p2_valid), &(NOT_u1_u1_799));\
-bit_vector_clear(&konst_801);\
-konst_801.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_801), &(EQ_u3_u1_802));\
-bit_vector_or(&(NOT_u1_u1_799), &(EQ_u3_u1_802), &(OR_u1_u1_803));\
-bit_vector_cast_to_bit_vector(0, &(read_from_2), &(OR_u1_u1_803));\
+#define _outputPort_1_Daemon_assign_stmt_792_c_macro_ __declare_static_bit_vector(NOT_u1_u1_787,1);\
+__declare_static_bit_vector(konst_789,3);\
+bit_vector_clear(&konst_789);\
+konst_789.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_790,1);\
+__declare_static_bit_vector(OR_u1_u1_791,1);\
+bit_vector_not( &(p2_valid), &(NOT_u1_u1_787));\
+bit_vector_clear(&konst_789);\
+konst_789.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_789), &(EQ_u3_u1_790));\
+bit_vector_or(&(NOT_u1_u1_787), &(EQ_u3_u1_790), &(OR_u1_u1_791));\
+bit_vector_cast_to_bit_vector(0, &(read_from_2), &(OR_u1_u1_791));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_812_c_macro_ __declare_static_bit_vector(NOT_u1_u1_807,1);\
-__declare_static_bit_vector(konst_809,3);\
-bit_vector_clear(&konst_809);\
-konst_809.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_810,1);\
-__declare_static_bit_vector(OR_u1_u1_811,1);\
-bit_vector_not( &(p3_valid), &(NOT_u1_u1_807));\
-bit_vector_clear(&konst_809);\
-konst_809.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_809), &(EQ_u3_u1_810));\
-bit_vector_or(&(NOT_u1_u1_807), &(EQ_u3_u1_810), &(OR_u1_u1_811));\
-bit_vector_cast_to_bit_vector(0, &(read_from_3), &(OR_u1_u1_811));\
+#define _outputPort_1_Daemon_assign_stmt_800_c_macro_ __declare_static_bit_vector(NOT_u1_u1_795,1);\
+__declare_static_bit_vector(konst_797,3);\
+bit_vector_clear(&konst_797);\
+konst_797.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_798,1);\
+__declare_static_bit_vector(OR_u1_u1_799,1);\
+bit_vector_not( &(p3_valid), &(NOT_u1_u1_795));\
+bit_vector_clear(&konst_797);\
+konst_797.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_797), &(EQ_u3_u1_798));\
+bit_vector_or(&(NOT_u1_u1_795), &(EQ_u3_u1_798), &(OR_u1_u1_799));\
+bit_vector_cast_to_bit_vector(0, &(read_from_3), &(OR_u1_u1_799));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_820_c_macro_ __declare_static_bit_vector(NOT_u1_u1_815,1);\
-__declare_static_bit_vector(konst_817,3);\
-bit_vector_clear(&konst_817);\
-konst_817.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_818,1);\
-__declare_static_bit_vector(OR_u1_u1_819,1);\
-bit_vector_not( &(p4_valid), &(NOT_u1_u1_815));\
-bit_vector_clear(&konst_817);\
-konst_817.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_817), &(EQ_u3_u1_818));\
-bit_vector_or(&(NOT_u1_u1_815), &(EQ_u3_u1_818), &(OR_u1_u1_819));\
-bit_vector_cast_to_bit_vector(0, &(read_from_4), &(OR_u1_u1_819));\
+#define _outputPort_1_Daemon_assign_stmt_808_c_macro_ __declare_static_bit_vector(NOT_u1_u1_803,1);\
+__declare_static_bit_vector(konst_805,3);\
+bit_vector_clear(&konst_805);\
+konst_805.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_806,1);\
+__declare_static_bit_vector(OR_u1_u1_807,1);\
+bit_vector_not( &(p4_valid), &(NOT_u1_u1_803));\
+bit_vector_clear(&konst_805);\
+konst_805.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_805), &(EQ_u3_u1_806));\
+bit_vector_or(&(NOT_u1_u1_803), &(EQ_u3_u1_806), &(OR_u1_u1_807));\
+bit_vector_cast_to_bit_vector(0, &(read_from_4), &(OR_u1_u1_807));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_853_c_macro_ __declare_static_bit_vector(konst_823,3);\
-bit_vector_clear(&konst_823);\
-konst_823.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_824,1);\
-__declare_static_bit_vector(slice_826,32);\
-__declare_static_bit_vector(konst_827,32);\
-bit_vector_clear(&konst_827);\
-__declare_static_bit_vector(MUX_828,32);\
-__declare_static_bit_vector(konst_830,3);\
+#define _outputPort_1_Daemon_assign_stmt_841_c_macro_ __declare_static_bit_vector(konst_811,3);\
+bit_vector_clear(&konst_811);\
+konst_811.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_812,1);\
+__declare_static_bit_vector(slice_814,32);\
+__declare_static_bit_vector(konst_815,32);\
+bit_vector_clear(&konst_815);\
+__declare_static_bit_vector(MUX_816,32);\
+__declare_static_bit_vector(konst_818,3);\
+bit_vector_clear(&konst_818);\
+konst_818.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_819,1);\
+__declare_static_bit_vector(slice_821,32);\
+__declare_static_bit_vector(konst_822,32);\
+bit_vector_clear(&konst_822);\
+__declare_static_bit_vector(MUX_823,32);\
+__declare_static_bit_vector(OR_u32_u32_824,32);\
+__declare_static_bit_vector(konst_826,3);\
+bit_vector_clear(&konst_826);\
+konst_826.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_827,1);\
+__declare_static_bit_vector(slice_829,32);\
+__declare_static_bit_vector(konst_830,32);\
 bit_vector_clear(&konst_830);\
-konst_830.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_831,1);\
-__declare_static_bit_vector(slice_833,32);\
-__declare_static_bit_vector(konst_834,32);\
-bit_vector_clear(&konst_834);\
-__declare_static_bit_vector(MUX_835,32);\
-__declare_static_bit_vector(OR_u32_u32_836,32);\
-__declare_static_bit_vector(konst_838,3);\
-bit_vector_clear(&konst_838);\
-konst_838.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_839,1);\
-__declare_static_bit_vector(slice_841,32);\
-__declare_static_bit_vector(konst_842,32);\
-bit_vector_clear(&konst_842);\
-__declare_static_bit_vector(MUX_843,32);\
-__declare_static_bit_vector(konst_845,3);\
-bit_vector_clear(&konst_845);\
-konst_845.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_846,1);\
-__declare_static_bit_vector(slice_848,32);\
-__declare_static_bit_vector(konst_849,32);\
-bit_vector_clear(&konst_849);\
-__declare_static_bit_vector(MUX_850,32);\
-__declare_static_bit_vector(OR_u32_u32_851,32);\
-__declare_static_bit_vector(OR_u32_u32_852,32);\
-bit_vector_clear(&konst_823);\
-konst_823.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_823), &(EQ_u3_u1_824));\
-if (has_undefined_bit(&EQ_u3_u1_824)) {fprintf(stderr, "Error: variable EQ_u3_u1_824 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_824));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_824)){bit_vector_slice(&(pkt_1_e_word), &(slice_826), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_828), &(slice_826));\
-}else {bit_vector_clear(&konst_827);\
-bit_vector_cast_to_bit_vector(0, &(MUX_828), &(konst_827));\
-}bit_vector_clear(&konst_830);\
-konst_830.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_830), &(EQ_u3_u1_831));\
-if (has_undefined_bit(&EQ_u3_u1_831)) {fprintf(stderr, "Error: variable EQ_u3_u1_831 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_831));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_831)){bit_vector_slice(&(pkt_2_e_word), &(slice_833), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_835), &(slice_833));\
-}else {bit_vector_clear(&konst_834);\
-bit_vector_cast_to_bit_vector(0, &(MUX_835), &(konst_834));\
-}bit_vector_or(&(MUX_828), &(MUX_835), &(OR_u32_u32_836));\
-bit_vector_clear(&konst_838);\
-konst_838.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_838), &(EQ_u3_u1_839));\
-if (has_undefined_bit(&EQ_u3_u1_839)) {fprintf(stderr, "Error: variable EQ_u3_u1_839 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_839));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_839)){bit_vector_slice(&(pkt_3_e_word), &(slice_841), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_843), &(slice_841));\
-}else {bit_vector_clear(&konst_842);\
-bit_vector_cast_to_bit_vector(0, &(MUX_843), &(konst_842));\
-}bit_vector_clear(&konst_845);\
-konst_845.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_845), &(EQ_u3_u1_846));\
-if (has_undefined_bit(&EQ_u3_u1_846)) {fprintf(stderr, "Error: variable EQ_u3_u1_846 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_846));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_846)){bit_vector_slice(&(pkt_4_e_word), &(slice_848), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_850), &(slice_848));\
-}else {bit_vector_clear(&konst_849);\
-bit_vector_cast_to_bit_vector(0, &(MUX_850), &(konst_849));\
-}bit_vector_or(&(MUX_843), &(MUX_850), &(OR_u32_u32_851));\
-bit_vector_or(&(OR_u32_u32_836), &(OR_u32_u32_851), &(OR_u32_u32_852));\
-bit_vector_cast_to_bit_vector(0, &(data_to_out), &(OR_u32_u32_852));\
+__declare_static_bit_vector(MUX_831,32);\
+__declare_static_bit_vector(konst_833,3);\
+bit_vector_clear(&konst_833);\
+konst_833.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_834,1);\
+__declare_static_bit_vector(slice_836,32);\
+__declare_static_bit_vector(konst_837,32);\
+bit_vector_clear(&konst_837);\
+__declare_static_bit_vector(MUX_838,32);\
+__declare_static_bit_vector(OR_u32_u32_839,32);\
+__declare_static_bit_vector(OR_u32_u32_840,32);\
+bit_vector_clear(&konst_811);\
+konst_811.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_811), &(EQ_u3_u1_812));\
+if (has_undefined_bit(&EQ_u3_u1_812)) {fprintf(stderr, "Error: variable EQ_u3_u1_812 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_812));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_812)){bit_vector_slice(&(pkt_1_e_word), &(slice_814), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_816), &(slice_814));\
+}else {bit_vector_clear(&konst_815);\
+bit_vector_cast_to_bit_vector(0, &(MUX_816), &(konst_815));\
+}bit_vector_clear(&konst_818);\
+konst_818.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_818), &(EQ_u3_u1_819));\
+if (has_undefined_bit(&EQ_u3_u1_819)) {fprintf(stderr, "Error: variable EQ_u3_u1_819 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_819));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_819)){bit_vector_slice(&(pkt_2_e_word), &(slice_821), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_823), &(slice_821));\
+}else {bit_vector_clear(&konst_822);\
+bit_vector_cast_to_bit_vector(0, &(MUX_823), &(konst_822));\
+}bit_vector_or(&(MUX_816), &(MUX_823), &(OR_u32_u32_824));\
+bit_vector_clear(&konst_826);\
+konst_826.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_826), &(EQ_u3_u1_827));\
+if (has_undefined_bit(&EQ_u3_u1_827)) {fprintf(stderr, "Error: variable EQ_u3_u1_827 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_827));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_827)){bit_vector_slice(&(pkt_3_e_word), &(slice_829), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_831), &(slice_829));\
+}else {bit_vector_clear(&konst_830);\
+bit_vector_cast_to_bit_vector(0, &(MUX_831), &(konst_830));\
+}bit_vector_clear(&konst_833);\
+konst_833.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_833), &(EQ_u3_u1_834));\
+if (has_undefined_bit(&EQ_u3_u1_834)) {fprintf(stderr, "Error: variable EQ_u3_u1_834 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_834));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_834)){bit_vector_slice(&(pkt_4_e_word), &(slice_836), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_838), &(slice_836));\
+}else {bit_vector_clear(&konst_837);\
+bit_vector_cast_to_bit_vector(0, &(MUX_838), &(konst_837));\
+}bit_vector_or(&(MUX_831), &(MUX_838), &(OR_u32_u32_839));\
+bit_vector_or(&(OR_u32_u32_824), &(OR_u32_u32_839), &(OR_u32_u32_840));\
+bit_vector_cast_to_bit_vector(0, &(data_to_out), &(OR_u32_u32_840));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_882_c_macro_ __declare_static_bit_vector(konst_856,3);\
-bit_vector_clear(&konst_856);\
-konst_856.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_857,1);\
-__declare_static_bit_vector(konst_859,1);\
-bit_vector_clear(&konst_859);\
-__declare_static_bit_vector(MUX_860,1);\
-__declare_static_bit_vector(konst_862,3);\
-bit_vector_clear(&konst_862);\
-konst_862.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_863,1);\
-__declare_static_bit_vector(konst_865,1);\
-bit_vector_clear(&konst_865);\
-__declare_static_bit_vector(MUX_866,1);\
-__declare_static_bit_vector(OR_u1_u1_867,1);\
-__declare_static_bit_vector(konst_869,3);\
-bit_vector_clear(&konst_869);\
-konst_869.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_870,1);\
-__declare_static_bit_vector(konst_872,1);\
-bit_vector_clear(&konst_872);\
-__declare_static_bit_vector(MUX_873,1);\
-__declare_static_bit_vector(konst_875,3);\
-bit_vector_clear(&konst_875);\
-konst_875.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_876,1);\
-__declare_static_bit_vector(konst_878,1);\
-bit_vector_clear(&konst_878);\
-__declare_static_bit_vector(MUX_879,1);\
-__declare_static_bit_vector(OR_u1_u1_880,1);\
-__declare_static_bit_vector(OR_u1_u1_881,1);\
-bit_vector_clear(&konst_856);\
-konst_856.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_856), &(EQ_u3_u1_857));\
-if (has_undefined_bit(&EQ_u3_u1_857)) {fprintf(stderr, "Error: variable EQ_u3_u1_857 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_857));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_857)){bit_vector_cast_to_bit_vector(0, &(MUX_860), &(p1_valid));\
-}else {bit_vector_clear(&konst_859);\
-bit_vector_cast_to_bit_vector(0, &(MUX_860), &(konst_859));\
-}bit_vector_clear(&konst_862);\
-konst_862.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_862), &(EQ_u3_u1_863));\
-if (has_undefined_bit(&EQ_u3_u1_863)) {fprintf(stderr, "Error: variable EQ_u3_u1_863 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_863));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_863)){bit_vector_cast_to_bit_vector(0, &(MUX_866), &(p2_valid));\
-}else {bit_vector_clear(&konst_865);\
-bit_vector_cast_to_bit_vector(0, &(MUX_866), &(konst_865));\
-}bit_vector_or(&(MUX_860), &(MUX_866), &(OR_u1_u1_867));\
-bit_vector_clear(&konst_869);\
-konst_869.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_869), &(EQ_u3_u1_870));\
-if (has_undefined_bit(&EQ_u3_u1_870)) {fprintf(stderr, "Error: variable EQ_u3_u1_870 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_870));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_870)){bit_vector_cast_to_bit_vector(0, &(MUX_873), &(p3_valid));\
-}else {bit_vector_clear(&konst_872);\
-bit_vector_cast_to_bit_vector(0, &(MUX_873), &(konst_872));\
-}bit_vector_clear(&konst_875);\
-konst_875.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_875), &(EQ_u3_u1_876));\
-if (has_undefined_bit(&EQ_u3_u1_876)) {fprintf(stderr, "Error: variable EQ_u3_u1_876 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_876));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_876)){bit_vector_cast_to_bit_vector(0, &(MUX_879), &(p4_valid));\
-}else {bit_vector_clear(&konst_878);\
-bit_vector_cast_to_bit_vector(0, &(MUX_879), &(konst_878));\
-}bit_vector_or(&(MUX_873), &(MUX_879), &(OR_u1_u1_880));\
-bit_vector_or(&(OR_u1_u1_867), &(OR_u1_u1_880), &(OR_u1_u1_881));\
-bit_vector_cast_to_bit_vector(0, &(send_flag), &(OR_u1_u1_881));\
+#define _outputPort_1_Daemon_assign_stmt_870_c_macro_ __declare_static_bit_vector(konst_844,3);\
+bit_vector_clear(&konst_844);\
+konst_844.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_845,1);\
+__declare_static_bit_vector(konst_847,1);\
+bit_vector_clear(&konst_847);\
+__declare_static_bit_vector(MUX_848,1);\
+__declare_static_bit_vector(konst_850,3);\
+bit_vector_clear(&konst_850);\
+konst_850.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_851,1);\
+__declare_static_bit_vector(konst_853,1);\
+bit_vector_clear(&konst_853);\
+__declare_static_bit_vector(MUX_854,1);\
+__declare_static_bit_vector(OR_u1_u1_855,1);\
+__declare_static_bit_vector(konst_857,3);\
+bit_vector_clear(&konst_857);\
+konst_857.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_858,1);\
+__declare_static_bit_vector(konst_860,1);\
+bit_vector_clear(&konst_860);\
+__declare_static_bit_vector(MUX_861,1);\
+__declare_static_bit_vector(konst_863,3);\
+bit_vector_clear(&konst_863);\
+konst_863.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_864,1);\
+__declare_static_bit_vector(konst_866,1);\
+bit_vector_clear(&konst_866);\
+__declare_static_bit_vector(MUX_867,1);\
+__declare_static_bit_vector(OR_u1_u1_868,1);\
+__declare_static_bit_vector(OR_u1_u1_869,1);\
+bit_vector_clear(&konst_844);\
+konst_844.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_844), &(EQ_u3_u1_845));\
+if (has_undefined_bit(&EQ_u3_u1_845)) {fprintf(stderr, "Error: variable EQ_u3_u1_845 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_845));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_845)){bit_vector_cast_to_bit_vector(0, &(MUX_848), &(p1_valid));\
+}else {bit_vector_clear(&konst_847);\
+bit_vector_cast_to_bit_vector(0, &(MUX_848), &(konst_847));\
+}bit_vector_clear(&konst_850);\
+konst_850.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_850), &(EQ_u3_u1_851));\
+if (has_undefined_bit(&EQ_u3_u1_851)) {fprintf(stderr, "Error: variable EQ_u3_u1_851 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_851));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_851)){bit_vector_cast_to_bit_vector(0, &(MUX_854), &(p2_valid));\
+}else {bit_vector_clear(&konst_853);\
+bit_vector_cast_to_bit_vector(0, &(MUX_854), &(konst_853));\
+}bit_vector_or(&(MUX_848), &(MUX_854), &(OR_u1_u1_855));\
+bit_vector_clear(&konst_857);\
+konst_857.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_857), &(EQ_u3_u1_858));\
+if (has_undefined_bit(&EQ_u3_u1_858)) {fprintf(stderr, "Error: variable EQ_u3_u1_858 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_858));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_858)){bit_vector_cast_to_bit_vector(0, &(MUX_861), &(p3_valid));\
+}else {bit_vector_clear(&konst_860);\
+bit_vector_cast_to_bit_vector(0, &(MUX_861), &(konst_860));\
+}bit_vector_clear(&konst_863);\
+konst_863.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_863), &(EQ_u3_u1_864));\
+if (has_undefined_bit(&EQ_u3_u1_864)) {fprintf(stderr, "Error: variable EQ_u3_u1_864 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_864));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_864)){bit_vector_cast_to_bit_vector(0, &(MUX_867), &(p4_valid));\
+}else {bit_vector_clear(&konst_866);\
+bit_vector_cast_to_bit_vector(0, &(MUX_867), &(konst_866));\
+}bit_vector_or(&(MUX_861), &(MUX_867), &(OR_u1_u1_868));\
+bit_vector_or(&(OR_u1_u1_855), &(OR_u1_u1_868), &(OR_u1_u1_869));\
+bit_vector_cast_to_bit_vector(0, &(send_flag), &(OR_u1_u1_869));\
 ;
 
-#define _outputPort_1_Daemon_assign_stmt_886_c_macro_ if (has_undefined_bit(&send_flag)) {fprintf(stderr, "Error: variable send_flag has undefined value (%s) at test point.\n", to_string(&send_flag));assert(0);} \
+#define _outputPort_1_Daemon_assign_stmt_874_c_macro_ if (has_undefined_bit(&send_flag)) {fprintf(stderr, "Error: variable send_flag has undefined value (%s) at test point.\n", to_string(&send_flag));assert(0);} \
 if (bit_vector_to_uint64(0, &send_flag)) {\
 write_bit_vector_to_pipe("out_data_1",&(data_to_out));\
 }
 ;
 ;
 
-#define _outputPort_1_Daemon_branch_block_stmt_670_c_export_apply_macro_ ;
+#define _outputPort_1_Daemon_branch_block_stmt_658_c_export_apply_macro_ ;
 
 #define _outputPort_1_Daemon_inner_outarg_prep_macro__ ;
 
@@ -1263,7 +1263,7 @@ write_bit_vector_to_pipe("out_data_1",&(data_to_out));\
 #define _outputPort_1_Daemon_outer_op_xfer_macro__ ;
 
 #define _outputPort_2_Daemon_inner_inarg_prep_macro__ 
-#define _outputPort_2_Daemon_branch_block_stmt_892_c_export_decl_macro_ __declare_static_bit_vector(down_counter,8);\
+#define _outputPort_2_Daemon_branch_block_stmt_880_c_export_decl_macro_ __declare_static_bit_vector(down_counter,8);\
 __declare_static_bit_vector(pkt_1_e_word,33);\
 __declare_static_bit_vector(pkt_2_e_word,33);\
 __declare_static_bit_vector(pkt_3_e_word,33);\
@@ -1287,12 +1287,12 @@ __declare_static_bit_vector(data_to_out,32);\
 __declare_static_bit_vector(send_flag,1);\
 
 
-#define _outputPort_2_Daemon_merge_stmt_894_c_preamble_macro_ uint8_t merge_stmt_894_entry_flag;\
-merge_stmt_894_entry_flag = do_while_entry_flag;\
-goto merge_stmt_894_run;\
-merge_stmt_894_run: ;\
+#define _outputPort_2_Daemon_merge_stmt_882_c_preamble_macro_ uint8_t merge_stmt_882_entry_flag;\
+merge_stmt_882_entry_flag = do_while_entry_flag;\
+goto merge_stmt_882_run;\
+merge_stmt_882_run: ;\
 
-#define _outputPort_2_Daemon_phi_stmt_895_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_2_Daemon_phi_stmt_883_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(down_counter), &(next_down_counter));\
 }\
 else {\
@@ -1300,11 +1300,11 @@ bit_vector_cast_to_bit_vector(0, &(down_counter), &(ZERO_8));\
 }\
 ;
 
-#define _outputPort_2_Daemon_phi_stmt_899_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_1_2_903,33);\
+#define _outputPort_2_Daemon_phi_stmt_887_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_1_2_891,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_1)) {\
-read_bit_vector_from_pipe("noblock_obuf_1_2",&(RPIPE_noblock_obuf_1_2_903));\
-bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(RPIPE_noblock_obuf_1_2_903));\
+read_bit_vector_from_pipe("noblock_obuf_1_2",&(RPIPE_noblock_obuf_1_2_891));\
+bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(RPIPE_noblock_obuf_1_2_891));\
 }\
 }\
 else {\
@@ -1312,11 +1312,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_2_Daemon_phi_stmt_904_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_2_2_908,33);\
+#define _outputPort_2_Daemon_phi_stmt_892_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_2_2_896,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_2)) {\
-read_bit_vector_from_pipe("noblock_obuf_2_2",&(RPIPE_noblock_obuf_2_2_908));\
-bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(RPIPE_noblock_obuf_2_2_908));\
+read_bit_vector_from_pipe("noblock_obuf_2_2",&(RPIPE_noblock_obuf_2_2_896));\
+bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(RPIPE_noblock_obuf_2_2_896));\
 }\
 }\
 else {\
@@ -1324,11 +1324,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_2_Daemon_phi_stmt_909_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_3_2_913,33);\
+#define _outputPort_2_Daemon_phi_stmt_897_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_3_2_901,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_3)) {\
-read_bit_vector_from_pipe("noblock_obuf_3_2",&(RPIPE_noblock_obuf_3_2_913));\
-bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(RPIPE_noblock_obuf_3_2_913));\
+read_bit_vector_from_pipe("noblock_obuf_3_2",&(RPIPE_noblock_obuf_3_2_901));\
+bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(RPIPE_noblock_obuf_3_2_901));\
 }\
 }\
 else {\
@@ -1336,11 +1336,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_2_Daemon_phi_stmt_914_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_4_2_918,33);\
+#define _outputPort_2_Daemon_phi_stmt_902_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_4_2_906,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_4)) {\
-read_bit_vector_from_pipe("noblock_obuf_4_2",&(RPIPE_noblock_obuf_4_2_918));\
-bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(RPIPE_noblock_obuf_4_2_918));\
+read_bit_vector_from_pipe("noblock_obuf_4_2",&(RPIPE_noblock_obuf_4_2_906));\
+bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(RPIPE_noblock_obuf_4_2_906));\
 }\
 }\
 else {\
@@ -1348,7 +1348,7 @@ bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_2_Daemon_phi_stmt_919_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_2_Daemon_phi_stmt_907_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(active_packet), &(next_active_packet));\
 }\
 else {\
@@ -1356,366 +1356,366 @@ bit_vector_cast_to_bit_vector(0, &(active_packet), &(ZERO_3));\
 }\
 ;
 
-#define _outputPort_2_Daemon_phi_stmt_923_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_2_Daemon_phi_stmt_911_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(next_pkt_priority));\
 }\
 else {\
-bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(ZERO_3));\
+bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(ONE_3));\
 }\
 ;
 ;
 
-#define _outputPort_2_Daemon_merge_stmt_894_c_postamble_macro_ merge_stmt_894_entry_flag = 0;
+#define _outputPort_2_Daemon_merge_stmt_882_c_postamble_macro_ merge_stmt_882_entry_flag = 0;
 
-#define _outputPort_2_Daemon_assign_stmt_932_c_macro_ __declare_static_bit_vector(konst_930,33);\
-bit_vector_clear(&konst_930);\
-konst_930.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_931,1);\
-bit_vector_clear(&konst_930);\
-konst_930.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_1_e_word), &(konst_930), &(BITSEL_u33_u1_931));\
-bit_vector_cast_to_bit_vector(0, &(p1_valid), &(BITSEL_u33_u1_931));\
+#define _outputPort_2_Daemon_assign_stmt_920_c_macro_ __declare_static_bit_vector(konst_918,33);\
+bit_vector_clear(&konst_918);\
+konst_918.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_919,1);\
+bit_vector_clear(&konst_918);\
+konst_918.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_1_e_word), &(konst_918), &(BITSEL_u33_u1_919));\
+bit_vector_cast_to_bit_vector(0, &(p1_valid), &(BITSEL_u33_u1_919));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_937_c_macro_ __declare_static_bit_vector(konst_935,33);\
-bit_vector_clear(&konst_935);\
-konst_935.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_936,1);\
-bit_vector_clear(&konst_935);\
-konst_935.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_2_e_word), &(konst_935), &(BITSEL_u33_u1_936));\
-bit_vector_cast_to_bit_vector(0, &(p2_valid), &(BITSEL_u33_u1_936));\
+#define _outputPort_2_Daemon_assign_stmt_925_c_macro_ __declare_static_bit_vector(konst_923,33);\
+bit_vector_clear(&konst_923);\
+konst_923.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_924,1);\
+bit_vector_clear(&konst_923);\
+konst_923.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_2_e_word), &(konst_923), &(BITSEL_u33_u1_924));\
+bit_vector_cast_to_bit_vector(0, &(p2_valid), &(BITSEL_u33_u1_924));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_942_c_macro_ __declare_static_bit_vector(konst_940,33);\
-bit_vector_clear(&konst_940);\
-konst_940.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_941,1);\
-bit_vector_clear(&konst_940);\
-konst_940.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_3_e_word), &(konst_940), &(BITSEL_u33_u1_941));\
-bit_vector_cast_to_bit_vector(0, &(p3_valid), &(BITSEL_u33_u1_941));\
+#define _outputPort_2_Daemon_assign_stmt_930_c_macro_ __declare_static_bit_vector(konst_928,33);\
+bit_vector_clear(&konst_928);\
+konst_928.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_929,1);\
+bit_vector_clear(&konst_928);\
+konst_928.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_3_e_word), &(konst_928), &(BITSEL_u33_u1_929));\
+bit_vector_cast_to_bit_vector(0, &(p3_valid), &(BITSEL_u33_u1_929));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_947_c_macro_ __declare_static_bit_vector(konst_945,33);\
-bit_vector_clear(&konst_945);\
-konst_945.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_946,1);\
-bit_vector_clear(&konst_945);\
-konst_945.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_4_e_word), &(konst_945), &(BITSEL_u33_u1_946));\
-bit_vector_cast_to_bit_vector(0, &(p4_valid), &(BITSEL_u33_u1_946));\
+#define _outputPort_2_Daemon_assign_stmt_935_c_macro_ __declare_static_bit_vector(konst_933,33);\
+bit_vector_clear(&konst_933);\
+konst_933.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_934,1);\
+bit_vector_clear(&konst_933);\
+konst_933.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_4_e_word), &(konst_933), &(BITSEL_u33_u1_934));\
+bit_vector_cast_to_bit_vector(0, &(p4_valid), &(BITSEL_u33_u1_934));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_976_c_macro_ __declare_static_bit_vector(konst_950,3);\
-bit_vector_clear(&konst_950);\
-konst_950.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_951,1);\
-__declare_static_bit_vector(konst_953,1);\
-bit_vector_clear(&konst_953);\
-__declare_static_bit_vector(MUX_954,1);\
-__declare_static_bit_vector(konst_956,3);\
-bit_vector_clear(&konst_956);\
-konst_956.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_957,1);\
-__declare_static_bit_vector(konst_959,1);\
-bit_vector_clear(&konst_959);\
-__declare_static_bit_vector(MUX_960,1);\
-__declare_static_bit_vector(OR_u1_u1_961,1);\
-__declare_static_bit_vector(konst_963,3);\
-bit_vector_clear(&konst_963);\
-konst_963.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_964,1);\
-__declare_static_bit_vector(konst_966,1);\
-bit_vector_clear(&konst_966);\
-__declare_static_bit_vector(MUX_967,1);\
-__declare_static_bit_vector(konst_969,3);\
-bit_vector_clear(&konst_969);\
-konst_969.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_970,1);\
-__declare_static_bit_vector(konst_972,1);\
-bit_vector_clear(&konst_972);\
-__declare_static_bit_vector(MUX_973,1);\
-__declare_static_bit_vector(OR_u1_u1_974,1);\
-__declare_static_bit_vector(OR_u1_u1_975,1);\
-bit_vector_clear(&konst_950);\
-konst_950.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(active_packet), &(konst_950), &(EQ_u3_u1_951));\
-if (has_undefined_bit(&EQ_u3_u1_951)) {fprintf(stderr, "Error: variable EQ_u3_u1_951 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_951));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_951)){bit_vector_cast_to_bit_vector(0, &(MUX_954), &(p1_valid));\
-}else {bit_vector_clear(&konst_953);\
-bit_vector_cast_to_bit_vector(0, &(MUX_954), &(konst_953));\
-}bit_vector_clear(&konst_956);\
-konst_956.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(active_packet), &(konst_956), &(EQ_u3_u1_957));\
-if (has_undefined_bit(&EQ_u3_u1_957)) {fprintf(stderr, "Error: variable EQ_u3_u1_957 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_957));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_957)){bit_vector_cast_to_bit_vector(0, &(MUX_960), &(p2_valid));\
-}else {bit_vector_clear(&konst_959);\
-bit_vector_cast_to_bit_vector(0, &(MUX_960), &(konst_959));\
-}bit_vector_or(&(MUX_954), &(MUX_960), &(OR_u1_u1_961));\
-bit_vector_clear(&konst_963);\
-konst_963.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(active_packet), &(konst_963), &(EQ_u3_u1_964));\
-if (has_undefined_bit(&EQ_u3_u1_964)) {fprintf(stderr, "Error: variable EQ_u3_u1_964 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_964));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_964)){bit_vector_cast_to_bit_vector(0, &(MUX_967), &(p3_valid));\
-}else {bit_vector_clear(&konst_966);\
-bit_vector_cast_to_bit_vector(0, &(MUX_967), &(konst_966));\
-}bit_vector_clear(&konst_969);\
-konst_969.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(active_packet), &(konst_969), &(EQ_u3_u1_970));\
-if (has_undefined_bit(&EQ_u3_u1_970)) {fprintf(stderr, "Error: variable EQ_u3_u1_970 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_970));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_970)){bit_vector_cast_to_bit_vector(0, &(MUX_973), &(p4_valid));\
-}else {bit_vector_clear(&konst_972);\
-bit_vector_cast_to_bit_vector(0, &(MUX_973), &(konst_972));\
-}bit_vector_or(&(MUX_967), &(MUX_973), &(OR_u1_u1_974));\
-bit_vector_or(&(OR_u1_u1_961), &(OR_u1_u1_974), &(OR_u1_u1_975));\
-bit_vector_cast_to_bit_vector(0, &(valid_active_pkt_word_read), &(OR_u1_u1_975));\
+#define _outputPort_2_Daemon_assign_stmt_964_c_macro_ __declare_static_bit_vector(konst_938,3);\
+bit_vector_clear(&konst_938);\
+konst_938.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_939,1);\
+__declare_static_bit_vector(konst_941,1);\
+bit_vector_clear(&konst_941);\
+__declare_static_bit_vector(MUX_942,1);\
+__declare_static_bit_vector(konst_944,3);\
+bit_vector_clear(&konst_944);\
+konst_944.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_945,1);\
+__declare_static_bit_vector(konst_947,1);\
+bit_vector_clear(&konst_947);\
+__declare_static_bit_vector(MUX_948,1);\
+__declare_static_bit_vector(OR_u1_u1_949,1);\
+__declare_static_bit_vector(konst_951,3);\
+bit_vector_clear(&konst_951);\
+konst_951.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_952,1);\
+__declare_static_bit_vector(konst_954,1);\
+bit_vector_clear(&konst_954);\
+__declare_static_bit_vector(MUX_955,1);\
+__declare_static_bit_vector(konst_957,3);\
+bit_vector_clear(&konst_957);\
+konst_957.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_958,1);\
+__declare_static_bit_vector(konst_960,1);\
+bit_vector_clear(&konst_960);\
+__declare_static_bit_vector(MUX_961,1);\
+__declare_static_bit_vector(OR_u1_u1_962,1);\
+__declare_static_bit_vector(OR_u1_u1_963,1);\
+bit_vector_clear(&konst_938);\
+konst_938.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(active_packet), &(konst_938), &(EQ_u3_u1_939));\
+if (has_undefined_bit(&EQ_u3_u1_939)) {fprintf(stderr, "Error: variable EQ_u3_u1_939 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_939));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_939)){bit_vector_cast_to_bit_vector(0, &(MUX_942), &(p1_valid));\
+}else {bit_vector_clear(&konst_941);\
+bit_vector_cast_to_bit_vector(0, &(MUX_942), &(konst_941));\
+}bit_vector_clear(&konst_944);\
+konst_944.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(active_packet), &(konst_944), &(EQ_u3_u1_945));\
+if (has_undefined_bit(&EQ_u3_u1_945)) {fprintf(stderr, "Error: variable EQ_u3_u1_945 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_945));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_945)){bit_vector_cast_to_bit_vector(0, &(MUX_948), &(p2_valid));\
+}else {bit_vector_clear(&konst_947);\
+bit_vector_cast_to_bit_vector(0, &(MUX_948), &(konst_947));\
+}bit_vector_or(&(MUX_942), &(MUX_948), &(OR_u1_u1_949));\
+bit_vector_clear(&konst_951);\
+konst_951.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(active_packet), &(konst_951), &(EQ_u3_u1_952));\
+if (has_undefined_bit(&EQ_u3_u1_952)) {fprintf(stderr, "Error: variable EQ_u3_u1_952 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_952));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_952)){bit_vector_cast_to_bit_vector(0, &(MUX_955), &(p3_valid));\
+}else {bit_vector_clear(&konst_954);\
+bit_vector_cast_to_bit_vector(0, &(MUX_955), &(konst_954));\
+}bit_vector_clear(&konst_957);\
+konst_957.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(active_packet), &(konst_957), &(EQ_u3_u1_958));\
+if (has_undefined_bit(&EQ_u3_u1_958)) {fprintf(stderr, "Error: variable EQ_u3_u1_958 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_958));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_958)){bit_vector_cast_to_bit_vector(0, &(MUX_961), &(p4_valid));\
+}else {bit_vector_clear(&konst_960);\
+bit_vector_cast_to_bit_vector(0, &(MUX_961), &(konst_960));\
+}bit_vector_or(&(MUX_955), &(MUX_961), &(OR_u1_u1_962));\
+bit_vector_or(&(OR_u1_u1_949), &(OR_u1_u1_962), &(OR_u1_u1_963));\
+bit_vector_cast_to_bit_vector(0, &(valid_active_pkt_word_read), &(OR_u1_u1_963));\
 ;
 
-#define _outputPort_2_Daemon_call_stmt_986_c_macro_ _prioritySelect_( &(down_counter),  &(active_packet),  &(pkt_priority),  &(p1_valid),  &(p2_valid),  &(p3_valid),  &(p4_valid), &(next_active_packet), &(next_pkt_priority));\
+#define _outputPort_2_Daemon_call_stmt_974_c_macro_ _prioritySelect_( &(down_counter),  &(active_packet),  &(pkt_priority),  &(p1_valid),  &(p2_valid),  &(p3_valid),  &(p4_valid), &(next_active_packet), &(next_pkt_priority));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_999_c_macro_ __declare_static_bit_vector(OR_u1_u1_990,1);\
-__declare_static_bit_vector(OR_u1_u1_993,1);\
-__declare_static_bit_vector(OR_u1_u1_994,1);\
-__declare_static_bit_vector(konst_996,8);\
-bit_vector_clear(&konst_996);\
-__declare_static_bit_vector(EQ_u8_u1_997,1);\
-__declare_static_bit_vector(AND_u1_u1_998,1);\
-bit_vector_or(&(p1_valid), &(p2_valid), &(OR_u1_u1_990));\
-bit_vector_or(&(p3_valid), &(p4_valid), &(OR_u1_u1_993));\
-bit_vector_or(&(OR_u1_u1_990), &(OR_u1_u1_993), &(OR_u1_u1_994));\
-bit_vector_clear(&konst_996);\
-bit_vector_equal(0, &(down_counter), &(konst_996), &(EQ_u8_u1_997));\
-bit_vector_and(&(OR_u1_u1_994), &(EQ_u8_u1_997), &(AND_u1_u1_998));\
-bit_vector_cast_to_bit_vector(0, &(started_new_packet), &(AND_u1_u1_998));\
+#define _outputPort_2_Daemon_assign_stmt_987_c_macro_ __declare_static_bit_vector(OR_u1_u1_978,1);\
+__declare_static_bit_vector(OR_u1_u1_981,1);\
+__declare_static_bit_vector(OR_u1_u1_982,1);\
+__declare_static_bit_vector(konst_984,8);\
+bit_vector_clear(&konst_984);\
+__declare_static_bit_vector(EQ_u8_u1_985,1);\
+__declare_static_bit_vector(AND_u1_u1_986,1);\
+bit_vector_or(&(p1_valid), &(p2_valid), &(OR_u1_u1_978));\
+bit_vector_or(&(p3_valid), &(p4_valid), &(OR_u1_u1_981));\
+bit_vector_or(&(OR_u1_u1_978), &(OR_u1_u1_981), &(OR_u1_u1_982));\
+bit_vector_clear(&konst_984);\
+bit_vector_equal(0, &(down_counter), &(konst_984), &(EQ_u8_u1_985));\
+bit_vector_and(&(OR_u1_u1_982), &(EQ_u8_u1_985), &(AND_u1_u1_986));\
+bit_vector_cast_to_bit_vector(0, &(started_new_packet), &(AND_u1_u1_986));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_1010_c_macro_ __declare_static_bit_vector(konst_1002,8);\
-bit_vector_clear(&konst_1002);\
-konst_1002.val.byte_array[0] = 63;\
-__declare_static_bit_vector(konst_1005,8);\
-bit_vector_clear(&konst_1005);\
-konst_1005.val.byte_array[0] = 1;\
-__declare_static_bit_vector(SUB_u8_u8_1006,8);\
-__declare_static_bit_vector(MUX_1008,8);\
-__declare_static_bit_vector(MUX_1009,8);\
+#define _outputPort_2_Daemon_assign_stmt_998_c_macro_ __declare_static_bit_vector(konst_990,8);\
+bit_vector_clear(&konst_990);\
+konst_990.val.byte_array[0] = 63;\
+__declare_static_bit_vector(konst_993,8);\
+bit_vector_clear(&konst_993);\
+konst_993.val.byte_array[0] = 1;\
+__declare_static_bit_vector(SUB_u8_u8_994,8);\
+__declare_static_bit_vector(MUX_996,8);\
+__declare_static_bit_vector(MUX_997,8);\
 if (has_undefined_bit(&started_new_packet)) {fprintf(stderr, "Error: variable started_new_packet has undefined value (%s) at test point.\n", to_string(&started_new_packet));assert(0);} \
-if(bit_vector_to_uint64(0, &started_new_packet)){bit_vector_clear(&konst_1002);\
-konst_1002.val.byte_array[0] = 63;\
-bit_vector_cast_to_bit_vector(0, &(MUX_1009), &(konst_1002));\
+if(bit_vector_to_uint64(0, &started_new_packet)){bit_vector_clear(&konst_990);\
+konst_990.val.byte_array[0] = 63;\
+bit_vector_cast_to_bit_vector(0, &(MUX_997), &(konst_990));\
 }else {if (has_undefined_bit(&valid_active_pkt_word_read)) {fprintf(stderr, "Error: variable valid_active_pkt_word_read has undefined value (%s) at test point.\n", to_string(&valid_active_pkt_word_read));assert(0);} \
-if(bit_vector_to_uint64(0, &valid_active_pkt_word_read)){bit_vector_clear(&konst_1005);\
-konst_1005.val.byte_array[0] = 1;\
-bit_vector_minus( &(down_counter), &(konst_1005), &(SUB_u8_u8_1006));\
-bit_vector_cast_to_bit_vector(0, &(MUX_1008), &(SUB_u8_u8_1006));\
-}else {bit_vector_cast_to_bit_vector(0, &(MUX_1008), &(down_counter));\
-}bit_vector_cast_to_bit_vector(0, &(MUX_1009), &(MUX_1008));\
-}bit_vector_cast_to_bit_vector(0, &(next_down_counter), &(MUX_1009));\
+if(bit_vector_to_uint64(0, &valid_active_pkt_word_read)){bit_vector_clear(&konst_993);\
+konst_993.val.byte_array[0] = 1;\
+bit_vector_minus( &(down_counter), &(konst_993), &(SUB_u8_u8_994));\
+bit_vector_cast_to_bit_vector(0, &(MUX_996), &(SUB_u8_u8_994));\
+}else {bit_vector_cast_to_bit_vector(0, &(MUX_996), &(down_counter));\
+}bit_vector_cast_to_bit_vector(0, &(MUX_997), &(MUX_996));\
+}bit_vector_cast_to_bit_vector(0, &(next_down_counter), &(MUX_997));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_1018_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1013,1);\
-__declare_static_bit_vector(konst_1015,3);\
-bit_vector_clear(&konst_1015);\
-konst_1015.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1016,1);\
-__declare_static_bit_vector(OR_u1_u1_1017,1);\
-bit_vector_not( &(p1_valid), &(NOT_u1_u1_1013));\
-bit_vector_clear(&konst_1015);\
-konst_1015.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1015), &(EQ_u3_u1_1016));\
-bit_vector_or(&(NOT_u1_u1_1013), &(EQ_u3_u1_1016), &(OR_u1_u1_1017));\
-bit_vector_cast_to_bit_vector(0, &(read_from_1), &(OR_u1_u1_1017));\
+#define _outputPort_2_Daemon_assign_stmt_1006_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1001,1);\
+__declare_static_bit_vector(konst_1003,3);\
+bit_vector_clear(&konst_1003);\
+konst_1003.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1004,1);\
+__declare_static_bit_vector(OR_u1_u1_1005,1);\
+bit_vector_not( &(p1_valid), &(NOT_u1_u1_1001));\
+bit_vector_clear(&konst_1003);\
+konst_1003.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1003), &(EQ_u3_u1_1004));\
+bit_vector_or(&(NOT_u1_u1_1001), &(EQ_u3_u1_1004), &(OR_u1_u1_1005));\
+bit_vector_cast_to_bit_vector(0, &(read_from_1), &(OR_u1_u1_1005));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_1026_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1021,1);\
-__declare_static_bit_vector(konst_1023,3);\
-bit_vector_clear(&konst_1023);\
-konst_1023.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1024,1);\
-__declare_static_bit_vector(OR_u1_u1_1025,1);\
-bit_vector_not( &(p2_valid), &(NOT_u1_u1_1021));\
-bit_vector_clear(&konst_1023);\
-konst_1023.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1023), &(EQ_u3_u1_1024));\
-bit_vector_or(&(NOT_u1_u1_1021), &(EQ_u3_u1_1024), &(OR_u1_u1_1025));\
-bit_vector_cast_to_bit_vector(0, &(read_from_2), &(OR_u1_u1_1025));\
+#define _outputPort_2_Daemon_assign_stmt_1014_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1009,1);\
+__declare_static_bit_vector(konst_1011,3);\
+bit_vector_clear(&konst_1011);\
+konst_1011.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1012,1);\
+__declare_static_bit_vector(OR_u1_u1_1013,1);\
+bit_vector_not( &(p2_valid), &(NOT_u1_u1_1009));\
+bit_vector_clear(&konst_1011);\
+konst_1011.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1011), &(EQ_u3_u1_1012));\
+bit_vector_or(&(NOT_u1_u1_1009), &(EQ_u3_u1_1012), &(OR_u1_u1_1013));\
+bit_vector_cast_to_bit_vector(0, &(read_from_2), &(OR_u1_u1_1013));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_1034_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1029,1);\
-__declare_static_bit_vector(konst_1031,3);\
-bit_vector_clear(&konst_1031);\
-konst_1031.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1032,1);\
-__declare_static_bit_vector(OR_u1_u1_1033,1);\
-bit_vector_not( &(p3_valid), &(NOT_u1_u1_1029));\
-bit_vector_clear(&konst_1031);\
-konst_1031.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1031), &(EQ_u3_u1_1032));\
-bit_vector_or(&(NOT_u1_u1_1029), &(EQ_u3_u1_1032), &(OR_u1_u1_1033));\
-bit_vector_cast_to_bit_vector(0, &(read_from_3), &(OR_u1_u1_1033));\
+#define _outputPort_2_Daemon_assign_stmt_1022_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1017,1);\
+__declare_static_bit_vector(konst_1019,3);\
+bit_vector_clear(&konst_1019);\
+konst_1019.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1020,1);\
+__declare_static_bit_vector(OR_u1_u1_1021,1);\
+bit_vector_not( &(p3_valid), &(NOT_u1_u1_1017));\
+bit_vector_clear(&konst_1019);\
+konst_1019.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1019), &(EQ_u3_u1_1020));\
+bit_vector_or(&(NOT_u1_u1_1017), &(EQ_u3_u1_1020), &(OR_u1_u1_1021));\
+bit_vector_cast_to_bit_vector(0, &(read_from_3), &(OR_u1_u1_1021));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_1042_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1037,1);\
-__declare_static_bit_vector(konst_1039,3);\
-bit_vector_clear(&konst_1039);\
-konst_1039.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1040,1);\
-__declare_static_bit_vector(OR_u1_u1_1041,1);\
-bit_vector_not( &(p4_valid), &(NOT_u1_u1_1037));\
-bit_vector_clear(&konst_1039);\
-konst_1039.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1039), &(EQ_u3_u1_1040));\
-bit_vector_or(&(NOT_u1_u1_1037), &(EQ_u3_u1_1040), &(OR_u1_u1_1041));\
-bit_vector_cast_to_bit_vector(0, &(read_from_4), &(OR_u1_u1_1041));\
+#define _outputPort_2_Daemon_assign_stmt_1030_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1025,1);\
+__declare_static_bit_vector(konst_1027,3);\
+bit_vector_clear(&konst_1027);\
+konst_1027.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1028,1);\
+__declare_static_bit_vector(OR_u1_u1_1029,1);\
+bit_vector_not( &(p4_valid), &(NOT_u1_u1_1025));\
+bit_vector_clear(&konst_1027);\
+konst_1027.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1027), &(EQ_u3_u1_1028));\
+bit_vector_or(&(NOT_u1_u1_1025), &(EQ_u3_u1_1028), &(OR_u1_u1_1029));\
+bit_vector_cast_to_bit_vector(0, &(read_from_4), &(OR_u1_u1_1029));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_1075_c_macro_ __declare_static_bit_vector(konst_1045,3);\
-bit_vector_clear(&konst_1045);\
-konst_1045.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1046,1);\
-__declare_static_bit_vector(slice_1048,32);\
-__declare_static_bit_vector(konst_1049,32);\
-bit_vector_clear(&konst_1049);\
-__declare_static_bit_vector(MUX_1050,32);\
-__declare_static_bit_vector(konst_1052,3);\
+#define _outputPort_2_Daemon_assign_stmt_1063_c_macro_ __declare_static_bit_vector(konst_1033,3);\
+bit_vector_clear(&konst_1033);\
+konst_1033.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1034,1);\
+__declare_static_bit_vector(slice_1036,32);\
+__declare_static_bit_vector(konst_1037,32);\
+bit_vector_clear(&konst_1037);\
+__declare_static_bit_vector(MUX_1038,32);\
+__declare_static_bit_vector(konst_1040,3);\
+bit_vector_clear(&konst_1040);\
+konst_1040.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1041,1);\
+__declare_static_bit_vector(slice_1043,32);\
+__declare_static_bit_vector(konst_1044,32);\
+bit_vector_clear(&konst_1044);\
+__declare_static_bit_vector(MUX_1045,32);\
+__declare_static_bit_vector(OR_u32_u32_1046,32);\
+__declare_static_bit_vector(konst_1048,3);\
+bit_vector_clear(&konst_1048);\
+konst_1048.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1049,1);\
+__declare_static_bit_vector(slice_1051,32);\
+__declare_static_bit_vector(konst_1052,32);\
 bit_vector_clear(&konst_1052);\
-konst_1052.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1053,1);\
-__declare_static_bit_vector(slice_1055,32);\
-__declare_static_bit_vector(konst_1056,32);\
-bit_vector_clear(&konst_1056);\
-__declare_static_bit_vector(MUX_1057,32);\
-__declare_static_bit_vector(OR_u32_u32_1058,32);\
-__declare_static_bit_vector(konst_1060,3);\
-bit_vector_clear(&konst_1060);\
-konst_1060.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1061,1);\
-__declare_static_bit_vector(slice_1063,32);\
-__declare_static_bit_vector(konst_1064,32);\
-bit_vector_clear(&konst_1064);\
-__declare_static_bit_vector(MUX_1065,32);\
-__declare_static_bit_vector(konst_1067,3);\
-bit_vector_clear(&konst_1067);\
-konst_1067.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1068,1);\
-__declare_static_bit_vector(slice_1070,32);\
-__declare_static_bit_vector(konst_1071,32);\
-bit_vector_clear(&konst_1071);\
-__declare_static_bit_vector(MUX_1072,32);\
-__declare_static_bit_vector(OR_u32_u32_1073,32);\
-__declare_static_bit_vector(OR_u32_u32_1074,32);\
-bit_vector_clear(&konst_1045);\
-konst_1045.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1045), &(EQ_u3_u1_1046));\
-if (has_undefined_bit(&EQ_u3_u1_1046)) {fprintf(stderr, "Error: variable EQ_u3_u1_1046 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1046));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1046)){bit_vector_slice(&(pkt_1_e_word), &(slice_1048), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1050), &(slice_1048));\
-}else {bit_vector_clear(&konst_1049);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1050), &(konst_1049));\
-}bit_vector_clear(&konst_1052);\
-konst_1052.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1052), &(EQ_u3_u1_1053));\
-if (has_undefined_bit(&EQ_u3_u1_1053)) {fprintf(stderr, "Error: variable EQ_u3_u1_1053 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1053));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1053)){bit_vector_slice(&(pkt_2_e_word), &(slice_1055), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1057), &(slice_1055));\
-}else {bit_vector_clear(&konst_1056);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1057), &(konst_1056));\
-}bit_vector_or(&(MUX_1050), &(MUX_1057), &(OR_u32_u32_1058));\
-bit_vector_clear(&konst_1060);\
-konst_1060.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1060), &(EQ_u3_u1_1061));\
-if (has_undefined_bit(&EQ_u3_u1_1061)) {fprintf(stderr, "Error: variable EQ_u3_u1_1061 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1061));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1061)){bit_vector_slice(&(pkt_3_e_word), &(slice_1063), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1065), &(slice_1063));\
-}else {bit_vector_clear(&konst_1064);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1065), &(konst_1064));\
-}bit_vector_clear(&konst_1067);\
-konst_1067.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1067), &(EQ_u3_u1_1068));\
-if (has_undefined_bit(&EQ_u3_u1_1068)) {fprintf(stderr, "Error: variable EQ_u3_u1_1068 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1068));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1068)){bit_vector_slice(&(pkt_4_e_word), &(slice_1070), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1072), &(slice_1070));\
-}else {bit_vector_clear(&konst_1071);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1072), &(konst_1071));\
-}bit_vector_or(&(MUX_1065), &(MUX_1072), &(OR_u32_u32_1073));\
-bit_vector_or(&(OR_u32_u32_1058), &(OR_u32_u32_1073), &(OR_u32_u32_1074));\
-bit_vector_cast_to_bit_vector(0, &(data_to_out), &(OR_u32_u32_1074));\
+__declare_static_bit_vector(MUX_1053,32);\
+__declare_static_bit_vector(konst_1055,3);\
+bit_vector_clear(&konst_1055);\
+konst_1055.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1056,1);\
+__declare_static_bit_vector(slice_1058,32);\
+__declare_static_bit_vector(konst_1059,32);\
+bit_vector_clear(&konst_1059);\
+__declare_static_bit_vector(MUX_1060,32);\
+__declare_static_bit_vector(OR_u32_u32_1061,32);\
+__declare_static_bit_vector(OR_u32_u32_1062,32);\
+bit_vector_clear(&konst_1033);\
+konst_1033.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1033), &(EQ_u3_u1_1034));\
+if (has_undefined_bit(&EQ_u3_u1_1034)) {fprintf(stderr, "Error: variable EQ_u3_u1_1034 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1034));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1034)){bit_vector_slice(&(pkt_1_e_word), &(slice_1036), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1038), &(slice_1036));\
+}else {bit_vector_clear(&konst_1037);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1038), &(konst_1037));\
+}bit_vector_clear(&konst_1040);\
+konst_1040.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1040), &(EQ_u3_u1_1041));\
+if (has_undefined_bit(&EQ_u3_u1_1041)) {fprintf(stderr, "Error: variable EQ_u3_u1_1041 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1041));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1041)){bit_vector_slice(&(pkt_2_e_word), &(slice_1043), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1045), &(slice_1043));\
+}else {bit_vector_clear(&konst_1044);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1045), &(konst_1044));\
+}bit_vector_or(&(MUX_1038), &(MUX_1045), &(OR_u32_u32_1046));\
+bit_vector_clear(&konst_1048);\
+konst_1048.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1048), &(EQ_u3_u1_1049));\
+if (has_undefined_bit(&EQ_u3_u1_1049)) {fprintf(stderr, "Error: variable EQ_u3_u1_1049 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1049));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1049)){bit_vector_slice(&(pkt_3_e_word), &(slice_1051), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1053), &(slice_1051));\
+}else {bit_vector_clear(&konst_1052);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1053), &(konst_1052));\
+}bit_vector_clear(&konst_1055);\
+konst_1055.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1055), &(EQ_u3_u1_1056));\
+if (has_undefined_bit(&EQ_u3_u1_1056)) {fprintf(stderr, "Error: variable EQ_u3_u1_1056 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1056));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1056)){bit_vector_slice(&(pkt_4_e_word), &(slice_1058), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1060), &(slice_1058));\
+}else {bit_vector_clear(&konst_1059);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1060), &(konst_1059));\
+}bit_vector_or(&(MUX_1053), &(MUX_1060), &(OR_u32_u32_1061));\
+bit_vector_or(&(OR_u32_u32_1046), &(OR_u32_u32_1061), &(OR_u32_u32_1062));\
+bit_vector_cast_to_bit_vector(0, &(data_to_out), &(OR_u32_u32_1062));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_1104_c_macro_ __declare_static_bit_vector(konst_1078,3);\
-bit_vector_clear(&konst_1078);\
-konst_1078.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1079,1);\
-__declare_static_bit_vector(konst_1081,1);\
-bit_vector_clear(&konst_1081);\
-__declare_static_bit_vector(MUX_1082,1);\
-__declare_static_bit_vector(konst_1084,3);\
-bit_vector_clear(&konst_1084);\
-konst_1084.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1085,1);\
-__declare_static_bit_vector(konst_1087,1);\
-bit_vector_clear(&konst_1087);\
-__declare_static_bit_vector(MUX_1088,1);\
-__declare_static_bit_vector(OR_u1_u1_1089,1);\
-__declare_static_bit_vector(konst_1091,3);\
-bit_vector_clear(&konst_1091);\
-konst_1091.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1092,1);\
-__declare_static_bit_vector(konst_1094,1);\
-bit_vector_clear(&konst_1094);\
-__declare_static_bit_vector(MUX_1095,1);\
-__declare_static_bit_vector(konst_1097,3);\
-bit_vector_clear(&konst_1097);\
-konst_1097.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1098,1);\
-__declare_static_bit_vector(konst_1100,1);\
-bit_vector_clear(&konst_1100);\
-__declare_static_bit_vector(MUX_1101,1);\
-__declare_static_bit_vector(OR_u1_u1_1102,1);\
-__declare_static_bit_vector(OR_u1_u1_1103,1);\
-bit_vector_clear(&konst_1078);\
-konst_1078.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1078), &(EQ_u3_u1_1079));\
-if (has_undefined_bit(&EQ_u3_u1_1079)) {fprintf(stderr, "Error: variable EQ_u3_u1_1079 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1079));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1079)){bit_vector_cast_to_bit_vector(0, &(MUX_1082), &(p1_valid));\
-}else {bit_vector_clear(&konst_1081);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1082), &(konst_1081));\
-}bit_vector_clear(&konst_1084);\
-konst_1084.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1084), &(EQ_u3_u1_1085));\
-if (has_undefined_bit(&EQ_u3_u1_1085)) {fprintf(stderr, "Error: variable EQ_u3_u1_1085 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1085));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1085)){bit_vector_cast_to_bit_vector(0, &(MUX_1088), &(p2_valid));\
-}else {bit_vector_clear(&konst_1087);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1088), &(konst_1087));\
-}bit_vector_or(&(MUX_1082), &(MUX_1088), &(OR_u1_u1_1089));\
-bit_vector_clear(&konst_1091);\
-konst_1091.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1091), &(EQ_u3_u1_1092));\
-if (has_undefined_bit(&EQ_u3_u1_1092)) {fprintf(stderr, "Error: variable EQ_u3_u1_1092 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1092));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1092)){bit_vector_cast_to_bit_vector(0, &(MUX_1095), &(p3_valid));\
-}else {bit_vector_clear(&konst_1094);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1095), &(konst_1094));\
-}bit_vector_clear(&konst_1097);\
-konst_1097.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1097), &(EQ_u3_u1_1098));\
-if (has_undefined_bit(&EQ_u3_u1_1098)) {fprintf(stderr, "Error: variable EQ_u3_u1_1098 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1098));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1098)){bit_vector_cast_to_bit_vector(0, &(MUX_1101), &(p4_valid));\
-}else {bit_vector_clear(&konst_1100);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1101), &(konst_1100));\
-}bit_vector_or(&(MUX_1095), &(MUX_1101), &(OR_u1_u1_1102));\
-bit_vector_or(&(OR_u1_u1_1089), &(OR_u1_u1_1102), &(OR_u1_u1_1103));\
-bit_vector_cast_to_bit_vector(0, &(send_flag), &(OR_u1_u1_1103));\
+#define _outputPort_2_Daemon_assign_stmt_1092_c_macro_ __declare_static_bit_vector(konst_1066,3);\
+bit_vector_clear(&konst_1066);\
+konst_1066.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1067,1);\
+__declare_static_bit_vector(konst_1069,1);\
+bit_vector_clear(&konst_1069);\
+__declare_static_bit_vector(MUX_1070,1);\
+__declare_static_bit_vector(konst_1072,3);\
+bit_vector_clear(&konst_1072);\
+konst_1072.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1073,1);\
+__declare_static_bit_vector(konst_1075,1);\
+bit_vector_clear(&konst_1075);\
+__declare_static_bit_vector(MUX_1076,1);\
+__declare_static_bit_vector(OR_u1_u1_1077,1);\
+__declare_static_bit_vector(konst_1079,3);\
+bit_vector_clear(&konst_1079);\
+konst_1079.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1080,1);\
+__declare_static_bit_vector(konst_1082,1);\
+bit_vector_clear(&konst_1082);\
+__declare_static_bit_vector(MUX_1083,1);\
+__declare_static_bit_vector(konst_1085,3);\
+bit_vector_clear(&konst_1085);\
+konst_1085.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1086,1);\
+__declare_static_bit_vector(konst_1088,1);\
+bit_vector_clear(&konst_1088);\
+__declare_static_bit_vector(MUX_1089,1);\
+__declare_static_bit_vector(OR_u1_u1_1090,1);\
+__declare_static_bit_vector(OR_u1_u1_1091,1);\
+bit_vector_clear(&konst_1066);\
+konst_1066.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1066), &(EQ_u3_u1_1067));\
+if (has_undefined_bit(&EQ_u3_u1_1067)) {fprintf(stderr, "Error: variable EQ_u3_u1_1067 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1067));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1067)){bit_vector_cast_to_bit_vector(0, &(MUX_1070), &(p1_valid));\
+}else {bit_vector_clear(&konst_1069);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1070), &(konst_1069));\
+}bit_vector_clear(&konst_1072);\
+konst_1072.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1072), &(EQ_u3_u1_1073));\
+if (has_undefined_bit(&EQ_u3_u1_1073)) {fprintf(stderr, "Error: variable EQ_u3_u1_1073 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1073));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1073)){bit_vector_cast_to_bit_vector(0, &(MUX_1076), &(p2_valid));\
+}else {bit_vector_clear(&konst_1075);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1076), &(konst_1075));\
+}bit_vector_or(&(MUX_1070), &(MUX_1076), &(OR_u1_u1_1077));\
+bit_vector_clear(&konst_1079);\
+konst_1079.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1079), &(EQ_u3_u1_1080));\
+if (has_undefined_bit(&EQ_u3_u1_1080)) {fprintf(stderr, "Error: variable EQ_u3_u1_1080 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1080));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1080)){bit_vector_cast_to_bit_vector(0, &(MUX_1083), &(p3_valid));\
+}else {bit_vector_clear(&konst_1082);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1083), &(konst_1082));\
+}bit_vector_clear(&konst_1085);\
+konst_1085.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1085), &(EQ_u3_u1_1086));\
+if (has_undefined_bit(&EQ_u3_u1_1086)) {fprintf(stderr, "Error: variable EQ_u3_u1_1086 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1086));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1086)){bit_vector_cast_to_bit_vector(0, &(MUX_1089), &(p4_valid));\
+}else {bit_vector_clear(&konst_1088);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1089), &(konst_1088));\
+}bit_vector_or(&(MUX_1083), &(MUX_1089), &(OR_u1_u1_1090));\
+bit_vector_or(&(OR_u1_u1_1077), &(OR_u1_u1_1090), &(OR_u1_u1_1091));\
+bit_vector_cast_to_bit_vector(0, &(send_flag), &(OR_u1_u1_1091));\
 ;
 
-#define _outputPort_2_Daemon_assign_stmt_1108_c_macro_ if (has_undefined_bit(&send_flag)) {fprintf(stderr, "Error: variable send_flag has undefined value (%s) at test point.\n", to_string(&send_flag));assert(0);} \
+#define _outputPort_2_Daemon_assign_stmt_1096_c_macro_ if (has_undefined_bit(&send_flag)) {fprintf(stderr, "Error: variable send_flag has undefined value (%s) at test point.\n", to_string(&send_flag));assert(0);} \
 if (bit_vector_to_uint64(0, &send_flag)) {\
 write_bit_vector_to_pipe("out_data_2",&(data_to_out));\
 }
 ;
 ;
 
-#define _outputPort_2_Daemon_branch_block_stmt_892_c_export_apply_macro_ ;
+#define _outputPort_2_Daemon_branch_block_stmt_880_c_export_apply_macro_ ;
 
 #define _outputPort_2_Daemon_inner_outarg_prep_macro__ ;
 
@@ -1724,7 +1724,7 @@ write_bit_vector_to_pipe("out_data_2",&(data_to_out));\
 #define _outputPort_2_Daemon_outer_op_xfer_macro__ ;
 
 #define _outputPort_3_Daemon_inner_inarg_prep_macro__ 
-#define _outputPort_3_Daemon_branch_block_stmt_1114_c_export_decl_macro_ __declare_static_bit_vector(down_counter,8);\
+#define _outputPort_3_Daemon_branch_block_stmt_1102_c_export_decl_macro_ __declare_static_bit_vector(down_counter,8);\
 __declare_static_bit_vector(pkt_1_e_word,33);\
 __declare_static_bit_vector(pkt_2_e_word,33);\
 __declare_static_bit_vector(pkt_3_e_word,33);\
@@ -1748,12 +1748,12 @@ __declare_static_bit_vector(data_to_out,32);\
 __declare_static_bit_vector(send_flag,1);\
 
 
-#define _outputPort_3_Daemon_merge_stmt_1116_c_preamble_macro_ uint8_t merge_stmt_1116_entry_flag;\
-merge_stmt_1116_entry_flag = do_while_entry_flag;\
-goto merge_stmt_1116_run;\
-merge_stmt_1116_run: ;\
+#define _outputPort_3_Daemon_merge_stmt_1104_c_preamble_macro_ uint8_t merge_stmt_1104_entry_flag;\
+merge_stmt_1104_entry_flag = do_while_entry_flag;\
+goto merge_stmt_1104_run;\
+merge_stmt_1104_run: ;\
 
-#define _outputPort_3_Daemon_phi_stmt_1117_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_3_Daemon_phi_stmt_1105_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(down_counter), &(next_down_counter));\
 }\
 else {\
@@ -1761,11 +1761,11 @@ bit_vector_cast_to_bit_vector(0, &(down_counter), &(ZERO_8));\
 }\
 ;
 
-#define _outputPort_3_Daemon_phi_stmt_1121_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_1_3_1125,33);\
+#define _outputPort_3_Daemon_phi_stmt_1109_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_1_3_1113,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_1)) {\
-read_bit_vector_from_pipe("noblock_obuf_1_3",&(RPIPE_noblock_obuf_1_3_1125));\
-bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(RPIPE_noblock_obuf_1_3_1125));\
+read_bit_vector_from_pipe("noblock_obuf_1_3",&(RPIPE_noblock_obuf_1_3_1113));\
+bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(RPIPE_noblock_obuf_1_3_1113));\
 }\
 }\
 else {\
@@ -1773,11 +1773,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_3_Daemon_phi_stmt_1126_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_2_3_1130,33);\
+#define _outputPort_3_Daemon_phi_stmt_1114_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_2_3_1118,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_2)) {\
-read_bit_vector_from_pipe("noblock_obuf_2_3",&(RPIPE_noblock_obuf_2_3_1130));\
-bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(RPIPE_noblock_obuf_2_3_1130));\
+read_bit_vector_from_pipe("noblock_obuf_2_3",&(RPIPE_noblock_obuf_2_3_1118));\
+bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(RPIPE_noblock_obuf_2_3_1118));\
 }\
 }\
 else {\
@@ -1785,11 +1785,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_3_Daemon_phi_stmt_1131_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_3_3_1135,33);\
+#define _outputPort_3_Daemon_phi_stmt_1119_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_3_3_1123,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_3)) {\
-read_bit_vector_from_pipe("noblock_obuf_3_3",&(RPIPE_noblock_obuf_3_3_1135));\
-bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(RPIPE_noblock_obuf_3_3_1135));\
+read_bit_vector_from_pipe("noblock_obuf_3_3",&(RPIPE_noblock_obuf_3_3_1123));\
+bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(RPIPE_noblock_obuf_3_3_1123));\
 }\
 }\
 else {\
@@ -1797,11 +1797,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_3_Daemon_phi_stmt_1136_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_4_3_1140,33);\
+#define _outputPort_3_Daemon_phi_stmt_1124_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_4_3_1128,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_4)) {\
-read_bit_vector_from_pipe("noblock_obuf_4_3",&(RPIPE_noblock_obuf_4_3_1140));\
-bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(RPIPE_noblock_obuf_4_3_1140));\
+read_bit_vector_from_pipe("noblock_obuf_4_3",&(RPIPE_noblock_obuf_4_3_1128));\
+bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(RPIPE_noblock_obuf_4_3_1128));\
 }\
 }\
 else {\
@@ -1809,7 +1809,7 @@ bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_3_Daemon_phi_stmt_1141_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_3_Daemon_phi_stmt_1129_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(active_packet), &(next_active_packet));\
 }\
 else {\
@@ -1817,366 +1817,366 @@ bit_vector_cast_to_bit_vector(0, &(active_packet), &(ZERO_3));\
 }\
 ;
 
-#define _outputPort_3_Daemon_phi_stmt_1145_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_3_Daemon_phi_stmt_1133_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(next_pkt_priority));\
 }\
 else {\
-bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(ZERO_3));\
+bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(ONE_3));\
 }\
 ;
 ;
 
-#define _outputPort_3_Daemon_merge_stmt_1116_c_postamble_macro_ merge_stmt_1116_entry_flag = 0;
+#define _outputPort_3_Daemon_merge_stmt_1104_c_postamble_macro_ merge_stmt_1104_entry_flag = 0;
 
-#define _outputPort_3_Daemon_assign_stmt_1154_c_macro_ __declare_static_bit_vector(konst_1152,33);\
-bit_vector_clear(&konst_1152);\
-konst_1152.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_1153,1);\
-bit_vector_clear(&konst_1152);\
-konst_1152.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_1_e_word), &(konst_1152), &(BITSEL_u33_u1_1153));\
-bit_vector_cast_to_bit_vector(0, &(p1_valid), &(BITSEL_u33_u1_1153));\
+#define _outputPort_3_Daemon_assign_stmt_1142_c_macro_ __declare_static_bit_vector(konst_1140,33);\
+bit_vector_clear(&konst_1140);\
+konst_1140.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_1141,1);\
+bit_vector_clear(&konst_1140);\
+konst_1140.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_1_e_word), &(konst_1140), &(BITSEL_u33_u1_1141));\
+bit_vector_cast_to_bit_vector(0, &(p1_valid), &(BITSEL_u33_u1_1141));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1159_c_macro_ __declare_static_bit_vector(konst_1157,33);\
-bit_vector_clear(&konst_1157);\
-konst_1157.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_1158,1);\
-bit_vector_clear(&konst_1157);\
-konst_1157.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_2_e_word), &(konst_1157), &(BITSEL_u33_u1_1158));\
-bit_vector_cast_to_bit_vector(0, &(p2_valid), &(BITSEL_u33_u1_1158));\
+#define _outputPort_3_Daemon_assign_stmt_1147_c_macro_ __declare_static_bit_vector(konst_1145,33);\
+bit_vector_clear(&konst_1145);\
+konst_1145.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_1146,1);\
+bit_vector_clear(&konst_1145);\
+konst_1145.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_2_e_word), &(konst_1145), &(BITSEL_u33_u1_1146));\
+bit_vector_cast_to_bit_vector(0, &(p2_valid), &(BITSEL_u33_u1_1146));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1164_c_macro_ __declare_static_bit_vector(konst_1162,33);\
-bit_vector_clear(&konst_1162);\
-konst_1162.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_1163,1);\
-bit_vector_clear(&konst_1162);\
-konst_1162.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_3_e_word), &(konst_1162), &(BITSEL_u33_u1_1163));\
-bit_vector_cast_to_bit_vector(0, &(p3_valid), &(BITSEL_u33_u1_1163));\
+#define _outputPort_3_Daemon_assign_stmt_1152_c_macro_ __declare_static_bit_vector(konst_1150,33);\
+bit_vector_clear(&konst_1150);\
+konst_1150.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_1151,1);\
+bit_vector_clear(&konst_1150);\
+konst_1150.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_3_e_word), &(konst_1150), &(BITSEL_u33_u1_1151));\
+bit_vector_cast_to_bit_vector(0, &(p3_valid), &(BITSEL_u33_u1_1151));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1169_c_macro_ __declare_static_bit_vector(konst_1167,33);\
-bit_vector_clear(&konst_1167);\
-konst_1167.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_1168,1);\
-bit_vector_clear(&konst_1167);\
-konst_1167.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_4_e_word), &(konst_1167), &(BITSEL_u33_u1_1168));\
-bit_vector_cast_to_bit_vector(0, &(p4_valid), &(BITSEL_u33_u1_1168));\
+#define _outputPort_3_Daemon_assign_stmt_1157_c_macro_ __declare_static_bit_vector(konst_1155,33);\
+bit_vector_clear(&konst_1155);\
+konst_1155.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_1156,1);\
+bit_vector_clear(&konst_1155);\
+konst_1155.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_4_e_word), &(konst_1155), &(BITSEL_u33_u1_1156));\
+bit_vector_cast_to_bit_vector(0, &(p4_valid), &(BITSEL_u33_u1_1156));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1198_c_macro_ __declare_static_bit_vector(konst_1172,3);\
-bit_vector_clear(&konst_1172);\
-konst_1172.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1173,1);\
-__declare_static_bit_vector(konst_1175,1);\
-bit_vector_clear(&konst_1175);\
-__declare_static_bit_vector(MUX_1176,1);\
-__declare_static_bit_vector(konst_1178,3);\
-bit_vector_clear(&konst_1178);\
-konst_1178.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1179,1);\
-__declare_static_bit_vector(konst_1181,1);\
-bit_vector_clear(&konst_1181);\
-__declare_static_bit_vector(MUX_1182,1);\
-__declare_static_bit_vector(OR_u1_u1_1183,1);\
-__declare_static_bit_vector(konst_1185,3);\
-bit_vector_clear(&konst_1185);\
-konst_1185.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1186,1);\
-__declare_static_bit_vector(konst_1188,1);\
-bit_vector_clear(&konst_1188);\
-__declare_static_bit_vector(MUX_1189,1);\
-__declare_static_bit_vector(konst_1191,3);\
-bit_vector_clear(&konst_1191);\
-konst_1191.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1192,1);\
-__declare_static_bit_vector(konst_1194,1);\
-bit_vector_clear(&konst_1194);\
-__declare_static_bit_vector(MUX_1195,1);\
-__declare_static_bit_vector(OR_u1_u1_1196,1);\
-__declare_static_bit_vector(OR_u1_u1_1197,1);\
-bit_vector_clear(&konst_1172);\
-konst_1172.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(active_packet), &(konst_1172), &(EQ_u3_u1_1173));\
-if (has_undefined_bit(&EQ_u3_u1_1173)) {fprintf(stderr, "Error: variable EQ_u3_u1_1173 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1173));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1173)){bit_vector_cast_to_bit_vector(0, &(MUX_1176), &(p1_valid));\
-}else {bit_vector_clear(&konst_1175);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1176), &(konst_1175));\
-}bit_vector_clear(&konst_1178);\
-konst_1178.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(active_packet), &(konst_1178), &(EQ_u3_u1_1179));\
-if (has_undefined_bit(&EQ_u3_u1_1179)) {fprintf(stderr, "Error: variable EQ_u3_u1_1179 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1179));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1179)){bit_vector_cast_to_bit_vector(0, &(MUX_1182), &(p2_valid));\
-}else {bit_vector_clear(&konst_1181);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1182), &(konst_1181));\
-}bit_vector_or(&(MUX_1176), &(MUX_1182), &(OR_u1_u1_1183));\
-bit_vector_clear(&konst_1185);\
-konst_1185.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(active_packet), &(konst_1185), &(EQ_u3_u1_1186));\
-if (has_undefined_bit(&EQ_u3_u1_1186)) {fprintf(stderr, "Error: variable EQ_u3_u1_1186 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1186));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1186)){bit_vector_cast_to_bit_vector(0, &(MUX_1189), &(p3_valid));\
-}else {bit_vector_clear(&konst_1188);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1189), &(konst_1188));\
-}bit_vector_clear(&konst_1191);\
-konst_1191.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(active_packet), &(konst_1191), &(EQ_u3_u1_1192));\
-if (has_undefined_bit(&EQ_u3_u1_1192)) {fprintf(stderr, "Error: variable EQ_u3_u1_1192 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1192));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1192)){bit_vector_cast_to_bit_vector(0, &(MUX_1195), &(p4_valid));\
-}else {bit_vector_clear(&konst_1194);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1195), &(konst_1194));\
-}bit_vector_or(&(MUX_1189), &(MUX_1195), &(OR_u1_u1_1196));\
-bit_vector_or(&(OR_u1_u1_1183), &(OR_u1_u1_1196), &(OR_u1_u1_1197));\
-bit_vector_cast_to_bit_vector(0, &(valid_active_pkt_word_read), &(OR_u1_u1_1197));\
+#define _outputPort_3_Daemon_assign_stmt_1186_c_macro_ __declare_static_bit_vector(konst_1160,3);\
+bit_vector_clear(&konst_1160);\
+konst_1160.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1161,1);\
+__declare_static_bit_vector(konst_1163,1);\
+bit_vector_clear(&konst_1163);\
+__declare_static_bit_vector(MUX_1164,1);\
+__declare_static_bit_vector(konst_1166,3);\
+bit_vector_clear(&konst_1166);\
+konst_1166.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1167,1);\
+__declare_static_bit_vector(konst_1169,1);\
+bit_vector_clear(&konst_1169);\
+__declare_static_bit_vector(MUX_1170,1);\
+__declare_static_bit_vector(OR_u1_u1_1171,1);\
+__declare_static_bit_vector(konst_1173,3);\
+bit_vector_clear(&konst_1173);\
+konst_1173.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1174,1);\
+__declare_static_bit_vector(konst_1176,1);\
+bit_vector_clear(&konst_1176);\
+__declare_static_bit_vector(MUX_1177,1);\
+__declare_static_bit_vector(konst_1179,3);\
+bit_vector_clear(&konst_1179);\
+konst_1179.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1180,1);\
+__declare_static_bit_vector(konst_1182,1);\
+bit_vector_clear(&konst_1182);\
+__declare_static_bit_vector(MUX_1183,1);\
+__declare_static_bit_vector(OR_u1_u1_1184,1);\
+__declare_static_bit_vector(OR_u1_u1_1185,1);\
+bit_vector_clear(&konst_1160);\
+konst_1160.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(active_packet), &(konst_1160), &(EQ_u3_u1_1161));\
+if (has_undefined_bit(&EQ_u3_u1_1161)) {fprintf(stderr, "Error: variable EQ_u3_u1_1161 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1161));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1161)){bit_vector_cast_to_bit_vector(0, &(MUX_1164), &(p1_valid));\
+}else {bit_vector_clear(&konst_1163);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1164), &(konst_1163));\
+}bit_vector_clear(&konst_1166);\
+konst_1166.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(active_packet), &(konst_1166), &(EQ_u3_u1_1167));\
+if (has_undefined_bit(&EQ_u3_u1_1167)) {fprintf(stderr, "Error: variable EQ_u3_u1_1167 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1167));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1167)){bit_vector_cast_to_bit_vector(0, &(MUX_1170), &(p2_valid));\
+}else {bit_vector_clear(&konst_1169);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1170), &(konst_1169));\
+}bit_vector_or(&(MUX_1164), &(MUX_1170), &(OR_u1_u1_1171));\
+bit_vector_clear(&konst_1173);\
+konst_1173.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(active_packet), &(konst_1173), &(EQ_u3_u1_1174));\
+if (has_undefined_bit(&EQ_u3_u1_1174)) {fprintf(stderr, "Error: variable EQ_u3_u1_1174 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1174));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1174)){bit_vector_cast_to_bit_vector(0, &(MUX_1177), &(p3_valid));\
+}else {bit_vector_clear(&konst_1176);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1177), &(konst_1176));\
+}bit_vector_clear(&konst_1179);\
+konst_1179.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(active_packet), &(konst_1179), &(EQ_u3_u1_1180));\
+if (has_undefined_bit(&EQ_u3_u1_1180)) {fprintf(stderr, "Error: variable EQ_u3_u1_1180 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1180));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1180)){bit_vector_cast_to_bit_vector(0, &(MUX_1183), &(p4_valid));\
+}else {bit_vector_clear(&konst_1182);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1183), &(konst_1182));\
+}bit_vector_or(&(MUX_1177), &(MUX_1183), &(OR_u1_u1_1184));\
+bit_vector_or(&(OR_u1_u1_1171), &(OR_u1_u1_1184), &(OR_u1_u1_1185));\
+bit_vector_cast_to_bit_vector(0, &(valid_active_pkt_word_read), &(OR_u1_u1_1185));\
 ;
 
-#define _outputPort_3_Daemon_call_stmt_1208_c_macro_ _prioritySelect_( &(down_counter),  &(active_packet),  &(pkt_priority),  &(p1_valid),  &(p2_valid),  &(p3_valid),  &(p4_valid), &(next_active_packet), &(next_pkt_priority));\
+#define _outputPort_3_Daemon_call_stmt_1196_c_macro_ _prioritySelect_( &(down_counter),  &(active_packet),  &(pkt_priority),  &(p1_valid),  &(p2_valid),  &(p3_valid),  &(p4_valid), &(next_active_packet), &(next_pkt_priority));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1221_c_macro_ __declare_static_bit_vector(OR_u1_u1_1212,1);\
-__declare_static_bit_vector(OR_u1_u1_1215,1);\
-__declare_static_bit_vector(OR_u1_u1_1216,1);\
-__declare_static_bit_vector(konst_1218,8);\
-bit_vector_clear(&konst_1218);\
-__declare_static_bit_vector(EQ_u8_u1_1219,1);\
-__declare_static_bit_vector(AND_u1_u1_1220,1);\
-bit_vector_or(&(p1_valid), &(p2_valid), &(OR_u1_u1_1212));\
-bit_vector_or(&(p3_valid), &(p4_valid), &(OR_u1_u1_1215));\
-bit_vector_or(&(OR_u1_u1_1212), &(OR_u1_u1_1215), &(OR_u1_u1_1216));\
-bit_vector_clear(&konst_1218);\
-bit_vector_equal(0, &(down_counter), &(konst_1218), &(EQ_u8_u1_1219));\
-bit_vector_and(&(OR_u1_u1_1216), &(EQ_u8_u1_1219), &(AND_u1_u1_1220));\
-bit_vector_cast_to_bit_vector(0, &(started_new_packet), &(AND_u1_u1_1220));\
+#define _outputPort_3_Daemon_assign_stmt_1209_c_macro_ __declare_static_bit_vector(OR_u1_u1_1200,1);\
+__declare_static_bit_vector(OR_u1_u1_1203,1);\
+__declare_static_bit_vector(OR_u1_u1_1204,1);\
+__declare_static_bit_vector(konst_1206,8);\
+bit_vector_clear(&konst_1206);\
+__declare_static_bit_vector(EQ_u8_u1_1207,1);\
+__declare_static_bit_vector(AND_u1_u1_1208,1);\
+bit_vector_or(&(p1_valid), &(p2_valid), &(OR_u1_u1_1200));\
+bit_vector_or(&(p3_valid), &(p4_valid), &(OR_u1_u1_1203));\
+bit_vector_or(&(OR_u1_u1_1200), &(OR_u1_u1_1203), &(OR_u1_u1_1204));\
+bit_vector_clear(&konst_1206);\
+bit_vector_equal(0, &(down_counter), &(konst_1206), &(EQ_u8_u1_1207));\
+bit_vector_and(&(OR_u1_u1_1204), &(EQ_u8_u1_1207), &(AND_u1_u1_1208));\
+bit_vector_cast_to_bit_vector(0, &(started_new_packet), &(AND_u1_u1_1208));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1232_c_macro_ __declare_static_bit_vector(konst_1224,8);\
-bit_vector_clear(&konst_1224);\
-konst_1224.val.byte_array[0] = 63;\
-__declare_static_bit_vector(konst_1227,8);\
-bit_vector_clear(&konst_1227);\
-konst_1227.val.byte_array[0] = 1;\
-__declare_static_bit_vector(SUB_u8_u8_1228,8);\
-__declare_static_bit_vector(MUX_1230,8);\
-__declare_static_bit_vector(MUX_1231,8);\
+#define _outputPort_3_Daemon_assign_stmt_1220_c_macro_ __declare_static_bit_vector(konst_1212,8);\
+bit_vector_clear(&konst_1212);\
+konst_1212.val.byte_array[0] = 63;\
+__declare_static_bit_vector(konst_1215,8);\
+bit_vector_clear(&konst_1215);\
+konst_1215.val.byte_array[0] = 1;\
+__declare_static_bit_vector(SUB_u8_u8_1216,8);\
+__declare_static_bit_vector(MUX_1218,8);\
+__declare_static_bit_vector(MUX_1219,8);\
 if (has_undefined_bit(&started_new_packet)) {fprintf(stderr, "Error: variable started_new_packet has undefined value (%s) at test point.\n", to_string(&started_new_packet));assert(0);} \
-if(bit_vector_to_uint64(0, &started_new_packet)){bit_vector_clear(&konst_1224);\
-konst_1224.val.byte_array[0] = 63;\
-bit_vector_cast_to_bit_vector(0, &(MUX_1231), &(konst_1224));\
+if(bit_vector_to_uint64(0, &started_new_packet)){bit_vector_clear(&konst_1212);\
+konst_1212.val.byte_array[0] = 63;\
+bit_vector_cast_to_bit_vector(0, &(MUX_1219), &(konst_1212));\
 }else {if (has_undefined_bit(&valid_active_pkt_word_read)) {fprintf(stderr, "Error: variable valid_active_pkt_word_read has undefined value (%s) at test point.\n", to_string(&valid_active_pkt_word_read));assert(0);} \
-if(bit_vector_to_uint64(0, &valid_active_pkt_word_read)){bit_vector_clear(&konst_1227);\
-konst_1227.val.byte_array[0] = 1;\
-bit_vector_minus( &(down_counter), &(konst_1227), &(SUB_u8_u8_1228));\
-bit_vector_cast_to_bit_vector(0, &(MUX_1230), &(SUB_u8_u8_1228));\
-}else {bit_vector_cast_to_bit_vector(0, &(MUX_1230), &(down_counter));\
-}bit_vector_cast_to_bit_vector(0, &(MUX_1231), &(MUX_1230));\
-}bit_vector_cast_to_bit_vector(0, &(next_down_counter), &(MUX_1231));\
+if(bit_vector_to_uint64(0, &valid_active_pkt_word_read)){bit_vector_clear(&konst_1215);\
+konst_1215.val.byte_array[0] = 1;\
+bit_vector_minus( &(down_counter), &(konst_1215), &(SUB_u8_u8_1216));\
+bit_vector_cast_to_bit_vector(0, &(MUX_1218), &(SUB_u8_u8_1216));\
+}else {bit_vector_cast_to_bit_vector(0, &(MUX_1218), &(down_counter));\
+}bit_vector_cast_to_bit_vector(0, &(MUX_1219), &(MUX_1218));\
+}bit_vector_cast_to_bit_vector(0, &(next_down_counter), &(MUX_1219));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1240_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1235,1);\
-__declare_static_bit_vector(konst_1237,3);\
-bit_vector_clear(&konst_1237);\
-konst_1237.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1238,1);\
-__declare_static_bit_vector(OR_u1_u1_1239,1);\
-bit_vector_not( &(p1_valid), &(NOT_u1_u1_1235));\
-bit_vector_clear(&konst_1237);\
-konst_1237.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1237), &(EQ_u3_u1_1238));\
-bit_vector_or(&(NOT_u1_u1_1235), &(EQ_u3_u1_1238), &(OR_u1_u1_1239));\
-bit_vector_cast_to_bit_vector(0, &(read_from_1), &(OR_u1_u1_1239));\
+#define _outputPort_3_Daemon_assign_stmt_1228_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1223,1);\
+__declare_static_bit_vector(konst_1225,3);\
+bit_vector_clear(&konst_1225);\
+konst_1225.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1226,1);\
+__declare_static_bit_vector(OR_u1_u1_1227,1);\
+bit_vector_not( &(p1_valid), &(NOT_u1_u1_1223));\
+bit_vector_clear(&konst_1225);\
+konst_1225.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1225), &(EQ_u3_u1_1226));\
+bit_vector_or(&(NOT_u1_u1_1223), &(EQ_u3_u1_1226), &(OR_u1_u1_1227));\
+bit_vector_cast_to_bit_vector(0, &(read_from_1), &(OR_u1_u1_1227));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1248_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1243,1);\
-__declare_static_bit_vector(konst_1245,3);\
-bit_vector_clear(&konst_1245);\
-konst_1245.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1246,1);\
-__declare_static_bit_vector(OR_u1_u1_1247,1);\
-bit_vector_not( &(p2_valid), &(NOT_u1_u1_1243));\
-bit_vector_clear(&konst_1245);\
-konst_1245.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1245), &(EQ_u3_u1_1246));\
-bit_vector_or(&(NOT_u1_u1_1243), &(EQ_u3_u1_1246), &(OR_u1_u1_1247));\
-bit_vector_cast_to_bit_vector(0, &(read_from_2), &(OR_u1_u1_1247));\
+#define _outputPort_3_Daemon_assign_stmt_1236_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1231,1);\
+__declare_static_bit_vector(konst_1233,3);\
+bit_vector_clear(&konst_1233);\
+konst_1233.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1234,1);\
+__declare_static_bit_vector(OR_u1_u1_1235,1);\
+bit_vector_not( &(p2_valid), &(NOT_u1_u1_1231));\
+bit_vector_clear(&konst_1233);\
+konst_1233.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1233), &(EQ_u3_u1_1234));\
+bit_vector_or(&(NOT_u1_u1_1231), &(EQ_u3_u1_1234), &(OR_u1_u1_1235));\
+bit_vector_cast_to_bit_vector(0, &(read_from_2), &(OR_u1_u1_1235));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1256_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1251,1);\
-__declare_static_bit_vector(konst_1253,3);\
-bit_vector_clear(&konst_1253);\
-konst_1253.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1254,1);\
-__declare_static_bit_vector(OR_u1_u1_1255,1);\
-bit_vector_not( &(p3_valid), &(NOT_u1_u1_1251));\
-bit_vector_clear(&konst_1253);\
-konst_1253.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1253), &(EQ_u3_u1_1254));\
-bit_vector_or(&(NOT_u1_u1_1251), &(EQ_u3_u1_1254), &(OR_u1_u1_1255));\
-bit_vector_cast_to_bit_vector(0, &(read_from_3), &(OR_u1_u1_1255));\
+#define _outputPort_3_Daemon_assign_stmt_1244_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1239,1);\
+__declare_static_bit_vector(konst_1241,3);\
+bit_vector_clear(&konst_1241);\
+konst_1241.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1242,1);\
+__declare_static_bit_vector(OR_u1_u1_1243,1);\
+bit_vector_not( &(p3_valid), &(NOT_u1_u1_1239));\
+bit_vector_clear(&konst_1241);\
+konst_1241.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1241), &(EQ_u3_u1_1242));\
+bit_vector_or(&(NOT_u1_u1_1239), &(EQ_u3_u1_1242), &(OR_u1_u1_1243));\
+bit_vector_cast_to_bit_vector(0, &(read_from_3), &(OR_u1_u1_1243));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1264_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1259,1);\
-__declare_static_bit_vector(konst_1261,3);\
-bit_vector_clear(&konst_1261);\
-konst_1261.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1262,1);\
-__declare_static_bit_vector(OR_u1_u1_1263,1);\
-bit_vector_not( &(p4_valid), &(NOT_u1_u1_1259));\
-bit_vector_clear(&konst_1261);\
-konst_1261.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1261), &(EQ_u3_u1_1262));\
-bit_vector_or(&(NOT_u1_u1_1259), &(EQ_u3_u1_1262), &(OR_u1_u1_1263));\
-bit_vector_cast_to_bit_vector(0, &(read_from_4), &(OR_u1_u1_1263));\
+#define _outputPort_3_Daemon_assign_stmt_1252_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1247,1);\
+__declare_static_bit_vector(konst_1249,3);\
+bit_vector_clear(&konst_1249);\
+konst_1249.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1250,1);\
+__declare_static_bit_vector(OR_u1_u1_1251,1);\
+bit_vector_not( &(p4_valid), &(NOT_u1_u1_1247));\
+bit_vector_clear(&konst_1249);\
+konst_1249.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1249), &(EQ_u3_u1_1250));\
+bit_vector_or(&(NOT_u1_u1_1247), &(EQ_u3_u1_1250), &(OR_u1_u1_1251));\
+bit_vector_cast_to_bit_vector(0, &(read_from_4), &(OR_u1_u1_1251));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1297_c_macro_ __declare_static_bit_vector(konst_1267,3);\
-bit_vector_clear(&konst_1267);\
-konst_1267.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1268,1);\
-__declare_static_bit_vector(slice_1270,32);\
-__declare_static_bit_vector(konst_1271,32);\
-bit_vector_clear(&konst_1271);\
-__declare_static_bit_vector(MUX_1272,32);\
-__declare_static_bit_vector(konst_1274,3);\
+#define _outputPort_3_Daemon_assign_stmt_1285_c_macro_ __declare_static_bit_vector(konst_1255,3);\
+bit_vector_clear(&konst_1255);\
+konst_1255.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1256,1);\
+__declare_static_bit_vector(slice_1258,32);\
+__declare_static_bit_vector(konst_1259,32);\
+bit_vector_clear(&konst_1259);\
+__declare_static_bit_vector(MUX_1260,32);\
+__declare_static_bit_vector(konst_1262,3);\
+bit_vector_clear(&konst_1262);\
+konst_1262.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1263,1);\
+__declare_static_bit_vector(slice_1265,32);\
+__declare_static_bit_vector(konst_1266,32);\
+bit_vector_clear(&konst_1266);\
+__declare_static_bit_vector(MUX_1267,32);\
+__declare_static_bit_vector(OR_u32_u32_1268,32);\
+__declare_static_bit_vector(konst_1270,3);\
+bit_vector_clear(&konst_1270);\
+konst_1270.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1271,1);\
+__declare_static_bit_vector(slice_1273,32);\
+__declare_static_bit_vector(konst_1274,32);\
 bit_vector_clear(&konst_1274);\
-konst_1274.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1275,1);\
-__declare_static_bit_vector(slice_1277,32);\
-__declare_static_bit_vector(konst_1278,32);\
-bit_vector_clear(&konst_1278);\
-__declare_static_bit_vector(MUX_1279,32);\
-__declare_static_bit_vector(OR_u32_u32_1280,32);\
-__declare_static_bit_vector(konst_1282,3);\
-bit_vector_clear(&konst_1282);\
-konst_1282.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1283,1);\
-__declare_static_bit_vector(slice_1285,32);\
-__declare_static_bit_vector(konst_1286,32);\
-bit_vector_clear(&konst_1286);\
-__declare_static_bit_vector(MUX_1287,32);\
-__declare_static_bit_vector(konst_1289,3);\
-bit_vector_clear(&konst_1289);\
-konst_1289.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1290,1);\
-__declare_static_bit_vector(slice_1292,32);\
-__declare_static_bit_vector(konst_1293,32);\
-bit_vector_clear(&konst_1293);\
-__declare_static_bit_vector(MUX_1294,32);\
-__declare_static_bit_vector(OR_u32_u32_1295,32);\
-__declare_static_bit_vector(OR_u32_u32_1296,32);\
-bit_vector_clear(&konst_1267);\
-konst_1267.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1267), &(EQ_u3_u1_1268));\
-if (has_undefined_bit(&EQ_u3_u1_1268)) {fprintf(stderr, "Error: variable EQ_u3_u1_1268 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1268));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1268)){bit_vector_slice(&(pkt_1_e_word), &(slice_1270), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1272), &(slice_1270));\
-}else {bit_vector_clear(&konst_1271);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1272), &(konst_1271));\
-}bit_vector_clear(&konst_1274);\
-konst_1274.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1274), &(EQ_u3_u1_1275));\
-if (has_undefined_bit(&EQ_u3_u1_1275)) {fprintf(stderr, "Error: variable EQ_u3_u1_1275 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1275));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1275)){bit_vector_slice(&(pkt_2_e_word), &(slice_1277), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1279), &(slice_1277));\
-}else {bit_vector_clear(&konst_1278);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1279), &(konst_1278));\
-}bit_vector_or(&(MUX_1272), &(MUX_1279), &(OR_u32_u32_1280));\
-bit_vector_clear(&konst_1282);\
-konst_1282.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1282), &(EQ_u3_u1_1283));\
-if (has_undefined_bit(&EQ_u3_u1_1283)) {fprintf(stderr, "Error: variable EQ_u3_u1_1283 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1283));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1283)){bit_vector_slice(&(pkt_3_e_word), &(slice_1285), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1287), &(slice_1285));\
-}else {bit_vector_clear(&konst_1286);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1287), &(konst_1286));\
-}bit_vector_clear(&konst_1289);\
-konst_1289.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1289), &(EQ_u3_u1_1290));\
-if (has_undefined_bit(&EQ_u3_u1_1290)) {fprintf(stderr, "Error: variable EQ_u3_u1_1290 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1290));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1290)){bit_vector_slice(&(pkt_4_e_word), &(slice_1292), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1294), &(slice_1292));\
-}else {bit_vector_clear(&konst_1293);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1294), &(konst_1293));\
-}bit_vector_or(&(MUX_1287), &(MUX_1294), &(OR_u32_u32_1295));\
-bit_vector_or(&(OR_u32_u32_1280), &(OR_u32_u32_1295), &(OR_u32_u32_1296));\
-bit_vector_cast_to_bit_vector(0, &(data_to_out), &(OR_u32_u32_1296));\
+__declare_static_bit_vector(MUX_1275,32);\
+__declare_static_bit_vector(konst_1277,3);\
+bit_vector_clear(&konst_1277);\
+konst_1277.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1278,1);\
+__declare_static_bit_vector(slice_1280,32);\
+__declare_static_bit_vector(konst_1281,32);\
+bit_vector_clear(&konst_1281);\
+__declare_static_bit_vector(MUX_1282,32);\
+__declare_static_bit_vector(OR_u32_u32_1283,32);\
+__declare_static_bit_vector(OR_u32_u32_1284,32);\
+bit_vector_clear(&konst_1255);\
+konst_1255.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1255), &(EQ_u3_u1_1256));\
+if (has_undefined_bit(&EQ_u3_u1_1256)) {fprintf(stderr, "Error: variable EQ_u3_u1_1256 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1256));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1256)){bit_vector_slice(&(pkt_1_e_word), &(slice_1258), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1260), &(slice_1258));\
+}else {bit_vector_clear(&konst_1259);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1260), &(konst_1259));\
+}bit_vector_clear(&konst_1262);\
+konst_1262.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1262), &(EQ_u3_u1_1263));\
+if (has_undefined_bit(&EQ_u3_u1_1263)) {fprintf(stderr, "Error: variable EQ_u3_u1_1263 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1263));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1263)){bit_vector_slice(&(pkt_2_e_word), &(slice_1265), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1267), &(slice_1265));\
+}else {bit_vector_clear(&konst_1266);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1267), &(konst_1266));\
+}bit_vector_or(&(MUX_1260), &(MUX_1267), &(OR_u32_u32_1268));\
+bit_vector_clear(&konst_1270);\
+konst_1270.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1270), &(EQ_u3_u1_1271));\
+if (has_undefined_bit(&EQ_u3_u1_1271)) {fprintf(stderr, "Error: variable EQ_u3_u1_1271 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1271));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1271)){bit_vector_slice(&(pkt_3_e_word), &(slice_1273), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1275), &(slice_1273));\
+}else {bit_vector_clear(&konst_1274);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1275), &(konst_1274));\
+}bit_vector_clear(&konst_1277);\
+konst_1277.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1277), &(EQ_u3_u1_1278));\
+if (has_undefined_bit(&EQ_u3_u1_1278)) {fprintf(stderr, "Error: variable EQ_u3_u1_1278 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1278));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1278)){bit_vector_slice(&(pkt_4_e_word), &(slice_1280), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1282), &(slice_1280));\
+}else {bit_vector_clear(&konst_1281);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1282), &(konst_1281));\
+}bit_vector_or(&(MUX_1275), &(MUX_1282), &(OR_u32_u32_1283));\
+bit_vector_or(&(OR_u32_u32_1268), &(OR_u32_u32_1283), &(OR_u32_u32_1284));\
+bit_vector_cast_to_bit_vector(0, &(data_to_out), &(OR_u32_u32_1284));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1326_c_macro_ __declare_static_bit_vector(konst_1300,3);\
-bit_vector_clear(&konst_1300);\
-konst_1300.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1301,1);\
-__declare_static_bit_vector(konst_1303,1);\
-bit_vector_clear(&konst_1303);\
-__declare_static_bit_vector(MUX_1304,1);\
-__declare_static_bit_vector(konst_1306,3);\
-bit_vector_clear(&konst_1306);\
-konst_1306.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1307,1);\
-__declare_static_bit_vector(konst_1309,1);\
-bit_vector_clear(&konst_1309);\
-__declare_static_bit_vector(MUX_1310,1);\
-__declare_static_bit_vector(OR_u1_u1_1311,1);\
-__declare_static_bit_vector(konst_1313,3);\
-bit_vector_clear(&konst_1313);\
-konst_1313.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1314,1);\
-__declare_static_bit_vector(konst_1316,1);\
-bit_vector_clear(&konst_1316);\
-__declare_static_bit_vector(MUX_1317,1);\
-__declare_static_bit_vector(konst_1319,3);\
-bit_vector_clear(&konst_1319);\
-konst_1319.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1320,1);\
-__declare_static_bit_vector(konst_1322,1);\
-bit_vector_clear(&konst_1322);\
-__declare_static_bit_vector(MUX_1323,1);\
-__declare_static_bit_vector(OR_u1_u1_1324,1);\
-__declare_static_bit_vector(OR_u1_u1_1325,1);\
-bit_vector_clear(&konst_1300);\
-konst_1300.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1300), &(EQ_u3_u1_1301));\
-if (has_undefined_bit(&EQ_u3_u1_1301)) {fprintf(stderr, "Error: variable EQ_u3_u1_1301 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1301));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1301)){bit_vector_cast_to_bit_vector(0, &(MUX_1304), &(p1_valid));\
-}else {bit_vector_clear(&konst_1303);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1304), &(konst_1303));\
-}bit_vector_clear(&konst_1306);\
-konst_1306.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1306), &(EQ_u3_u1_1307));\
-if (has_undefined_bit(&EQ_u3_u1_1307)) {fprintf(stderr, "Error: variable EQ_u3_u1_1307 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1307));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1307)){bit_vector_cast_to_bit_vector(0, &(MUX_1310), &(p2_valid));\
-}else {bit_vector_clear(&konst_1309);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1310), &(konst_1309));\
-}bit_vector_or(&(MUX_1304), &(MUX_1310), &(OR_u1_u1_1311));\
-bit_vector_clear(&konst_1313);\
-konst_1313.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1313), &(EQ_u3_u1_1314));\
-if (has_undefined_bit(&EQ_u3_u1_1314)) {fprintf(stderr, "Error: variable EQ_u3_u1_1314 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1314));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1314)){bit_vector_cast_to_bit_vector(0, &(MUX_1317), &(p3_valid));\
-}else {bit_vector_clear(&konst_1316);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1317), &(konst_1316));\
-}bit_vector_clear(&konst_1319);\
-konst_1319.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1319), &(EQ_u3_u1_1320));\
-if (has_undefined_bit(&EQ_u3_u1_1320)) {fprintf(stderr, "Error: variable EQ_u3_u1_1320 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1320));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1320)){bit_vector_cast_to_bit_vector(0, &(MUX_1323), &(p4_valid));\
-}else {bit_vector_clear(&konst_1322);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1323), &(konst_1322));\
-}bit_vector_or(&(MUX_1317), &(MUX_1323), &(OR_u1_u1_1324));\
-bit_vector_or(&(OR_u1_u1_1311), &(OR_u1_u1_1324), &(OR_u1_u1_1325));\
-bit_vector_cast_to_bit_vector(0, &(send_flag), &(OR_u1_u1_1325));\
+#define _outputPort_3_Daemon_assign_stmt_1314_c_macro_ __declare_static_bit_vector(konst_1288,3);\
+bit_vector_clear(&konst_1288);\
+konst_1288.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1289,1);\
+__declare_static_bit_vector(konst_1291,1);\
+bit_vector_clear(&konst_1291);\
+__declare_static_bit_vector(MUX_1292,1);\
+__declare_static_bit_vector(konst_1294,3);\
+bit_vector_clear(&konst_1294);\
+konst_1294.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1295,1);\
+__declare_static_bit_vector(konst_1297,1);\
+bit_vector_clear(&konst_1297);\
+__declare_static_bit_vector(MUX_1298,1);\
+__declare_static_bit_vector(OR_u1_u1_1299,1);\
+__declare_static_bit_vector(konst_1301,3);\
+bit_vector_clear(&konst_1301);\
+konst_1301.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1302,1);\
+__declare_static_bit_vector(konst_1304,1);\
+bit_vector_clear(&konst_1304);\
+__declare_static_bit_vector(MUX_1305,1);\
+__declare_static_bit_vector(konst_1307,3);\
+bit_vector_clear(&konst_1307);\
+konst_1307.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1308,1);\
+__declare_static_bit_vector(konst_1310,1);\
+bit_vector_clear(&konst_1310);\
+__declare_static_bit_vector(MUX_1311,1);\
+__declare_static_bit_vector(OR_u1_u1_1312,1);\
+__declare_static_bit_vector(OR_u1_u1_1313,1);\
+bit_vector_clear(&konst_1288);\
+konst_1288.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1288), &(EQ_u3_u1_1289));\
+if (has_undefined_bit(&EQ_u3_u1_1289)) {fprintf(stderr, "Error: variable EQ_u3_u1_1289 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1289));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1289)){bit_vector_cast_to_bit_vector(0, &(MUX_1292), &(p1_valid));\
+}else {bit_vector_clear(&konst_1291);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1292), &(konst_1291));\
+}bit_vector_clear(&konst_1294);\
+konst_1294.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1294), &(EQ_u3_u1_1295));\
+if (has_undefined_bit(&EQ_u3_u1_1295)) {fprintf(stderr, "Error: variable EQ_u3_u1_1295 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1295));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1295)){bit_vector_cast_to_bit_vector(0, &(MUX_1298), &(p2_valid));\
+}else {bit_vector_clear(&konst_1297);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1298), &(konst_1297));\
+}bit_vector_or(&(MUX_1292), &(MUX_1298), &(OR_u1_u1_1299));\
+bit_vector_clear(&konst_1301);\
+konst_1301.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1301), &(EQ_u3_u1_1302));\
+if (has_undefined_bit(&EQ_u3_u1_1302)) {fprintf(stderr, "Error: variable EQ_u3_u1_1302 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1302));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1302)){bit_vector_cast_to_bit_vector(0, &(MUX_1305), &(p3_valid));\
+}else {bit_vector_clear(&konst_1304);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1305), &(konst_1304));\
+}bit_vector_clear(&konst_1307);\
+konst_1307.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1307), &(EQ_u3_u1_1308));\
+if (has_undefined_bit(&EQ_u3_u1_1308)) {fprintf(stderr, "Error: variable EQ_u3_u1_1308 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1308));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1308)){bit_vector_cast_to_bit_vector(0, &(MUX_1311), &(p4_valid));\
+}else {bit_vector_clear(&konst_1310);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1311), &(konst_1310));\
+}bit_vector_or(&(MUX_1305), &(MUX_1311), &(OR_u1_u1_1312));\
+bit_vector_or(&(OR_u1_u1_1299), &(OR_u1_u1_1312), &(OR_u1_u1_1313));\
+bit_vector_cast_to_bit_vector(0, &(send_flag), &(OR_u1_u1_1313));\
 ;
 
-#define _outputPort_3_Daemon_assign_stmt_1330_c_macro_ if (has_undefined_bit(&send_flag)) {fprintf(stderr, "Error: variable send_flag has undefined value (%s) at test point.\n", to_string(&send_flag));assert(0);} \
+#define _outputPort_3_Daemon_assign_stmt_1318_c_macro_ if (has_undefined_bit(&send_flag)) {fprintf(stderr, "Error: variable send_flag has undefined value (%s) at test point.\n", to_string(&send_flag));assert(0);} \
 if (bit_vector_to_uint64(0, &send_flag)) {\
 write_bit_vector_to_pipe("out_data_3",&(data_to_out));\
 }
 ;
 ;
 
-#define _outputPort_3_Daemon_branch_block_stmt_1114_c_export_apply_macro_ ;
+#define _outputPort_3_Daemon_branch_block_stmt_1102_c_export_apply_macro_ ;
 
 #define _outputPort_3_Daemon_inner_outarg_prep_macro__ ;
 
@@ -2185,7 +2185,7 @@ write_bit_vector_to_pipe("out_data_3",&(data_to_out));\
 #define _outputPort_3_Daemon_outer_op_xfer_macro__ ;
 
 #define _outputPort_4_Daemon_inner_inarg_prep_macro__ 
-#define _outputPort_4_Daemon_branch_block_stmt_1336_c_export_decl_macro_ __declare_static_bit_vector(down_counter,8);\
+#define _outputPort_4_Daemon_branch_block_stmt_1324_c_export_decl_macro_ __declare_static_bit_vector(down_counter,8);\
 __declare_static_bit_vector(pkt_1_e_word,33);\
 __declare_static_bit_vector(pkt_2_e_word,33);\
 __declare_static_bit_vector(pkt_3_e_word,33);\
@@ -2209,12 +2209,12 @@ __declare_static_bit_vector(data_to_out,32);\
 __declare_static_bit_vector(send_flag,1);\
 
 
-#define _outputPort_4_Daemon_merge_stmt_1338_c_preamble_macro_ uint8_t merge_stmt_1338_entry_flag;\
-merge_stmt_1338_entry_flag = do_while_entry_flag;\
-goto merge_stmt_1338_run;\
-merge_stmt_1338_run: ;\
+#define _outputPort_4_Daemon_merge_stmt_1326_c_preamble_macro_ uint8_t merge_stmt_1326_entry_flag;\
+merge_stmt_1326_entry_flag = do_while_entry_flag;\
+goto merge_stmt_1326_run;\
+merge_stmt_1326_run: ;\
 
-#define _outputPort_4_Daemon_phi_stmt_1339_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_4_Daemon_phi_stmt_1327_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(down_counter), &(next_down_counter));\
 }\
 else {\
@@ -2222,11 +2222,11 @@ bit_vector_cast_to_bit_vector(0, &(down_counter), &(ZERO_8));\
 }\
 ;
 
-#define _outputPort_4_Daemon_phi_stmt_1343_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_1_4_1347,33);\
+#define _outputPort_4_Daemon_phi_stmt_1331_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_1_4_1335,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_1)) {\
-read_bit_vector_from_pipe("noblock_obuf_1_4",&(RPIPE_noblock_obuf_1_4_1347));\
-bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(RPIPE_noblock_obuf_1_4_1347));\
+read_bit_vector_from_pipe("noblock_obuf_1_4",&(RPIPE_noblock_obuf_1_4_1335));\
+bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(RPIPE_noblock_obuf_1_4_1335));\
 }\
 }\
 else {\
@@ -2234,11 +2234,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_1_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_4_Daemon_phi_stmt_1348_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_2_4_1352,33);\
+#define _outputPort_4_Daemon_phi_stmt_1336_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_2_4_1340,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_2)) {\
-read_bit_vector_from_pipe("noblock_obuf_2_4",&(RPIPE_noblock_obuf_2_4_1352));\
-bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(RPIPE_noblock_obuf_2_4_1352));\
+read_bit_vector_from_pipe("noblock_obuf_2_4",&(RPIPE_noblock_obuf_2_4_1340));\
+bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(RPIPE_noblock_obuf_2_4_1340));\
 }\
 }\
 else {\
@@ -2246,11 +2246,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_2_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_4_Daemon_phi_stmt_1353_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_3_4_1357,33);\
+#define _outputPort_4_Daemon_phi_stmt_1341_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_3_4_1345,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_3)) {\
-read_bit_vector_from_pipe("noblock_obuf_3_4",&(RPIPE_noblock_obuf_3_4_1357));\
-bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(RPIPE_noblock_obuf_3_4_1357));\
+read_bit_vector_from_pipe("noblock_obuf_3_4",&(RPIPE_noblock_obuf_3_4_1345));\
+bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(RPIPE_noblock_obuf_3_4_1345));\
 }\
 }\
 else {\
@@ -2258,11 +2258,11 @@ bit_vector_cast_to_bit_vector(0, &(pkt_3_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_4_Daemon_phi_stmt_1358_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_4_4_1362,33);\
+#define _outputPort_4_Daemon_phi_stmt_1346_c_macro_ __declare_static_bit_vector(RPIPE_noblock_obuf_4_4_1350,33);\
 if(do_while_loopback_flag) {\
 if(bit_vector_to_uint64(0, &read_from_4)) {\
-read_bit_vector_from_pipe("noblock_obuf_4_4",&(RPIPE_noblock_obuf_4_4_1362));\
-bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(RPIPE_noblock_obuf_4_4_1362));\
+read_bit_vector_from_pipe("noblock_obuf_4_4",&(RPIPE_noblock_obuf_4_4_1350));\
+bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(RPIPE_noblock_obuf_4_4_1350));\
 }\
 }\
 else {\
@@ -2270,7 +2270,7 @@ bit_vector_cast_to_bit_vector(0, &(pkt_4_e_word), &(ZERO_33));\
 }\
 ;
 
-#define _outputPort_4_Daemon_phi_stmt_1363_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_4_Daemon_phi_stmt_1351_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(active_packet), &(next_active_packet));\
 }\
 else {\
@@ -2278,366 +2278,366 @@ bit_vector_cast_to_bit_vector(0, &(active_packet), &(ZERO_3));\
 }\
 ;
 
-#define _outputPort_4_Daemon_phi_stmt_1367_c_macro_ if(do_while_loopback_flag) {\
+#define _outputPort_4_Daemon_phi_stmt_1355_c_macro_ if(do_while_loopback_flag) {\
 bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(next_pkt_priority));\
 }\
 else {\
-bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(ZERO_3));\
+bit_vector_cast_to_bit_vector(0, &(pkt_priority), &(ONE_3));\
 }\
 ;
 ;
 
-#define _outputPort_4_Daemon_merge_stmt_1338_c_postamble_macro_ merge_stmt_1338_entry_flag = 0;
+#define _outputPort_4_Daemon_merge_stmt_1326_c_postamble_macro_ merge_stmt_1326_entry_flag = 0;
 
-#define _outputPort_4_Daemon_assign_stmt_1376_c_macro_ __declare_static_bit_vector(konst_1374,33);\
-bit_vector_clear(&konst_1374);\
-konst_1374.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_1375,1);\
-bit_vector_clear(&konst_1374);\
-konst_1374.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_1_e_word), &(konst_1374), &(BITSEL_u33_u1_1375));\
-bit_vector_cast_to_bit_vector(0, &(p1_valid), &(BITSEL_u33_u1_1375));\
+#define _outputPort_4_Daemon_assign_stmt_1364_c_macro_ __declare_static_bit_vector(konst_1362,33);\
+bit_vector_clear(&konst_1362);\
+konst_1362.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_1363,1);\
+bit_vector_clear(&konst_1362);\
+konst_1362.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_1_e_word), &(konst_1362), &(BITSEL_u33_u1_1363));\
+bit_vector_cast_to_bit_vector(0, &(p1_valid), &(BITSEL_u33_u1_1363));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1381_c_macro_ __declare_static_bit_vector(konst_1379,33);\
-bit_vector_clear(&konst_1379);\
-konst_1379.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_1380,1);\
-bit_vector_clear(&konst_1379);\
-konst_1379.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_2_e_word), &(konst_1379), &(BITSEL_u33_u1_1380));\
-bit_vector_cast_to_bit_vector(0, &(p2_valid), &(BITSEL_u33_u1_1380));\
+#define _outputPort_4_Daemon_assign_stmt_1369_c_macro_ __declare_static_bit_vector(konst_1367,33);\
+bit_vector_clear(&konst_1367);\
+konst_1367.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_1368,1);\
+bit_vector_clear(&konst_1367);\
+konst_1367.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_2_e_word), &(konst_1367), &(BITSEL_u33_u1_1368));\
+bit_vector_cast_to_bit_vector(0, &(p2_valid), &(BITSEL_u33_u1_1368));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1386_c_macro_ __declare_static_bit_vector(konst_1384,33);\
-bit_vector_clear(&konst_1384);\
-konst_1384.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_1385,1);\
-bit_vector_clear(&konst_1384);\
-konst_1384.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_3_e_word), &(konst_1384), &(BITSEL_u33_u1_1385));\
-bit_vector_cast_to_bit_vector(0, &(p3_valid), &(BITSEL_u33_u1_1385));\
+#define _outputPort_4_Daemon_assign_stmt_1374_c_macro_ __declare_static_bit_vector(konst_1372,33);\
+bit_vector_clear(&konst_1372);\
+konst_1372.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_1373,1);\
+bit_vector_clear(&konst_1372);\
+konst_1372.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_3_e_word), &(konst_1372), &(BITSEL_u33_u1_1373));\
+bit_vector_cast_to_bit_vector(0, &(p3_valid), &(BITSEL_u33_u1_1373));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1391_c_macro_ __declare_static_bit_vector(konst_1389,33);\
-bit_vector_clear(&konst_1389);\
-konst_1389.val.byte_array[0] = 32;\
-__declare_static_bit_vector(BITSEL_u33_u1_1390,1);\
-bit_vector_clear(&konst_1389);\
-konst_1389.val.byte_array[0] = 32;\
-bit_vector_bitsel( &(pkt_4_e_word), &(konst_1389), &(BITSEL_u33_u1_1390));\
-bit_vector_cast_to_bit_vector(0, &(p4_valid), &(BITSEL_u33_u1_1390));\
+#define _outputPort_4_Daemon_assign_stmt_1379_c_macro_ __declare_static_bit_vector(konst_1377,33);\
+bit_vector_clear(&konst_1377);\
+konst_1377.val.byte_array[0] = 32;\
+__declare_static_bit_vector(BITSEL_u33_u1_1378,1);\
+bit_vector_clear(&konst_1377);\
+konst_1377.val.byte_array[0] = 32;\
+bit_vector_bitsel( &(pkt_4_e_word), &(konst_1377), &(BITSEL_u33_u1_1378));\
+bit_vector_cast_to_bit_vector(0, &(p4_valid), &(BITSEL_u33_u1_1378));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1420_c_macro_ __declare_static_bit_vector(konst_1394,3);\
-bit_vector_clear(&konst_1394);\
-konst_1394.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1395,1);\
-__declare_static_bit_vector(konst_1397,1);\
-bit_vector_clear(&konst_1397);\
-__declare_static_bit_vector(MUX_1398,1);\
-__declare_static_bit_vector(konst_1400,3);\
-bit_vector_clear(&konst_1400);\
-konst_1400.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1401,1);\
-__declare_static_bit_vector(konst_1403,1);\
-bit_vector_clear(&konst_1403);\
-__declare_static_bit_vector(MUX_1404,1);\
-__declare_static_bit_vector(OR_u1_u1_1405,1);\
-__declare_static_bit_vector(konst_1407,3);\
-bit_vector_clear(&konst_1407);\
-konst_1407.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1408,1);\
-__declare_static_bit_vector(konst_1410,1);\
-bit_vector_clear(&konst_1410);\
-__declare_static_bit_vector(MUX_1411,1);\
-__declare_static_bit_vector(konst_1413,3);\
-bit_vector_clear(&konst_1413);\
-konst_1413.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1414,1);\
-__declare_static_bit_vector(konst_1416,1);\
-bit_vector_clear(&konst_1416);\
-__declare_static_bit_vector(MUX_1417,1);\
-__declare_static_bit_vector(OR_u1_u1_1418,1);\
-__declare_static_bit_vector(OR_u1_u1_1419,1);\
-bit_vector_clear(&konst_1394);\
-konst_1394.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(active_packet), &(konst_1394), &(EQ_u3_u1_1395));\
-if (has_undefined_bit(&EQ_u3_u1_1395)) {fprintf(stderr, "Error: variable EQ_u3_u1_1395 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1395));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1395)){bit_vector_cast_to_bit_vector(0, &(MUX_1398), &(p1_valid));\
-}else {bit_vector_clear(&konst_1397);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1398), &(konst_1397));\
-}bit_vector_clear(&konst_1400);\
-konst_1400.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(active_packet), &(konst_1400), &(EQ_u3_u1_1401));\
-if (has_undefined_bit(&EQ_u3_u1_1401)) {fprintf(stderr, "Error: variable EQ_u3_u1_1401 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1401));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1401)){bit_vector_cast_to_bit_vector(0, &(MUX_1404), &(p2_valid));\
-}else {bit_vector_clear(&konst_1403);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1404), &(konst_1403));\
-}bit_vector_or(&(MUX_1398), &(MUX_1404), &(OR_u1_u1_1405));\
-bit_vector_clear(&konst_1407);\
-konst_1407.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(active_packet), &(konst_1407), &(EQ_u3_u1_1408));\
-if (has_undefined_bit(&EQ_u3_u1_1408)) {fprintf(stderr, "Error: variable EQ_u3_u1_1408 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1408));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1408)){bit_vector_cast_to_bit_vector(0, &(MUX_1411), &(p3_valid));\
-}else {bit_vector_clear(&konst_1410);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1411), &(konst_1410));\
-}bit_vector_clear(&konst_1413);\
-konst_1413.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(active_packet), &(konst_1413), &(EQ_u3_u1_1414));\
-if (has_undefined_bit(&EQ_u3_u1_1414)) {fprintf(stderr, "Error: variable EQ_u3_u1_1414 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1414));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1414)){bit_vector_cast_to_bit_vector(0, &(MUX_1417), &(p4_valid));\
-}else {bit_vector_clear(&konst_1416);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1417), &(konst_1416));\
-}bit_vector_or(&(MUX_1411), &(MUX_1417), &(OR_u1_u1_1418));\
-bit_vector_or(&(OR_u1_u1_1405), &(OR_u1_u1_1418), &(OR_u1_u1_1419));\
-bit_vector_cast_to_bit_vector(0, &(valid_active_pkt_word_read), &(OR_u1_u1_1419));\
+#define _outputPort_4_Daemon_assign_stmt_1408_c_macro_ __declare_static_bit_vector(konst_1382,3);\
+bit_vector_clear(&konst_1382);\
+konst_1382.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1383,1);\
+__declare_static_bit_vector(konst_1385,1);\
+bit_vector_clear(&konst_1385);\
+__declare_static_bit_vector(MUX_1386,1);\
+__declare_static_bit_vector(konst_1388,3);\
+bit_vector_clear(&konst_1388);\
+konst_1388.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1389,1);\
+__declare_static_bit_vector(konst_1391,1);\
+bit_vector_clear(&konst_1391);\
+__declare_static_bit_vector(MUX_1392,1);\
+__declare_static_bit_vector(OR_u1_u1_1393,1);\
+__declare_static_bit_vector(konst_1395,3);\
+bit_vector_clear(&konst_1395);\
+konst_1395.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1396,1);\
+__declare_static_bit_vector(konst_1398,1);\
+bit_vector_clear(&konst_1398);\
+__declare_static_bit_vector(MUX_1399,1);\
+__declare_static_bit_vector(konst_1401,3);\
+bit_vector_clear(&konst_1401);\
+konst_1401.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1402,1);\
+__declare_static_bit_vector(konst_1404,1);\
+bit_vector_clear(&konst_1404);\
+__declare_static_bit_vector(MUX_1405,1);\
+__declare_static_bit_vector(OR_u1_u1_1406,1);\
+__declare_static_bit_vector(OR_u1_u1_1407,1);\
+bit_vector_clear(&konst_1382);\
+konst_1382.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(active_packet), &(konst_1382), &(EQ_u3_u1_1383));\
+if (has_undefined_bit(&EQ_u3_u1_1383)) {fprintf(stderr, "Error: variable EQ_u3_u1_1383 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1383));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1383)){bit_vector_cast_to_bit_vector(0, &(MUX_1386), &(p1_valid));\
+}else {bit_vector_clear(&konst_1385);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1386), &(konst_1385));\
+}bit_vector_clear(&konst_1388);\
+konst_1388.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(active_packet), &(konst_1388), &(EQ_u3_u1_1389));\
+if (has_undefined_bit(&EQ_u3_u1_1389)) {fprintf(stderr, "Error: variable EQ_u3_u1_1389 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1389));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1389)){bit_vector_cast_to_bit_vector(0, &(MUX_1392), &(p2_valid));\
+}else {bit_vector_clear(&konst_1391);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1392), &(konst_1391));\
+}bit_vector_or(&(MUX_1386), &(MUX_1392), &(OR_u1_u1_1393));\
+bit_vector_clear(&konst_1395);\
+konst_1395.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(active_packet), &(konst_1395), &(EQ_u3_u1_1396));\
+if (has_undefined_bit(&EQ_u3_u1_1396)) {fprintf(stderr, "Error: variable EQ_u3_u1_1396 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1396));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1396)){bit_vector_cast_to_bit_vector(0, &(MUX_1399), &(p3_valid));\
+}else {bit_vector_clear(&konst_1398);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1399), &(konst_1398));\
+}bit_vector_clear(&konst_1401);\
+konst_1401.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(active_packet), &(konst_1401), &(EQ_u3_u1_1402));\
+if (has_undefined_bit(&EQ_u3_u1_1402)) {fprintf(stderr, "Error: variable EQ_u3_u1_1402 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1402));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1402)){bit_vector_cast_to_bit_vector(0, &(MUX_1405), &(p4_valid));\
+}else {bit_vector_clear(&konst_1404);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1405), &(konst_1404));\
+}bit_vector_or(&(MUX_1399), &(MUX_1405), &(OR_u1_u1_1406));\
+bit_vector_or(&(OR_u1_u1_1393), &(OR_u1_u1_1406), &(OR_u1_u1_1407));\
+bit_vector_cast_to_bit_vector(0, &(valid_active_pkt_word_read), &(OR_u1_u1_1407));\
 ;
 
-#define _outputPort_4_Daemon_call_stmt_1430_c_macro_ _prioritySelect_( &(down_counter),  &(active_packet),  &(pkt_priority),  &(p1_valid),  &(p2_valid),  &(p3_valid),  &(p4_valid), &(next_active_packet), &(next_pkt_priority));\
+#define _outputPort_4_Daemon_call_stmt_1418_c_macro_ _prioritySelect_( &(down_counter),  &(active_packet),  &(pkt_priority),  &(p1_valid),  &(p2_valid),  &(p3_valid),  &(p4_valid), &(next_active_packet), &(next_pkt_priority));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1443_c_macro_ __declare_static_bit_vector(OR_u1_u1_1434,1);\
-__declare_static_bit_vector(OR_u1_u1_1437,1);\
-__declare_static_bit_vector(OR_u1_u1_1438,1);\
-__declare_static_bit_vector(konst_1440,8);\
-bit_vector_clear(&konst_1440);\
-__declare_static_bit_vector(EQ_u8_u1_1441,1);\
-__declare_static_bit_vector(AND_u1_u1_1442,1);\
-bit_vector_or(&(p1_valid), &(p2_valid), &(OR_u1_u1_1434));\
-bit_vector_or(&(p3_valid), &(p4_valid), &(OR_u1_u1_1437));\
-bit_vector_or(&(OR_u1_u1_1434), &(OR_u1_u1_1437), &(OR_u1_u1_1438));\
-bit_vector_clear(&konst_1440);\
-bit_vector_equal(0, &(down_counter), &(konst_1440), &(EQ_u8_u1_1441));\
-bit_vector_and(&(OR_u1_u1_1438), &(EQ_u8_u1_1441), &(AND_u1_u1_1442));\
-bit_vector_cast_to_bit_vector(0, &(started_new_packet), &(AND_u1_u1_1442));\
+#define _outputPort_4_Daemon_assign_stmt_1431_c_macro_ __declare_static_bit_vector(OR_u1_u1_1422,1);\
+__declare_static_bit_vector(OR_u1_u1_1425,1);\
+__declare_static_bit_vector(OR_u1_u1_1426,1);\
+__declare_static_bit_vector(konst_1428,8);\
+bit_vector_clear(&konst_1428);\
+__declare_static_bit_vector(EQ_u8_u1_1429,1);\
+__declare_static_bit_vector(AND_u1_u1_1430,1);\
+bit_vector_or(&(p1_valid), &(p2_valid), &(OR_u1_u1_1422));\
+bit_vector_or(&(p3_valid), &(p4_valid), &(OR_u1_u1_1425));\
+bit_vector_or(&(OR_u1_u1_1422), &(OR_u1_u1_1425), &(OR_u1_u1_1426));\
+bit_vector_clear(&konst_1428);\
+bit_vector_equal(0, &(down_counter), &(konst_1428), &(EQ_u8_u1_1429));\
+bit_vector_and(&(OR_u1_u1_1426), &(EQ_u8_u1_1429), &(AND_u1_u1_1430));\
+bit_vector_cast_to_bit_vector(0, &(started_new_packet), &(AND_u1_u1_1430));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1454_c_macro_ __declare_static_bit_vector(konst_1446,8);\
-bit_vector_clear(&konst_1446);\
-konst_1446.val.byte_array[0] = 63;\
-__declare_static_bit_vector(konst_1449,8);\
-bit_vector_clear(&konst_1449);\
-konst_1449.val.byte_array[0] = 1;\
-__declare_static_bit_vector(SUB_u8_u8_1450,8);\
-__declare_static_bit_vector(MUX_1452,8);\
-__declare_static_bit_vector(MUX_1453,8);\
+#define _outputPort_4_Daemon_assign_stmt_1442_c_macro_ __declare_static_bit_vector(konst_1434,8);\
+bit_vector_clear(&konst_1434);\
+konst_1434.val.byte_array[0] = 63;\
+__declare_static_bit_vector(konst_1437,8);\
+bit_vector_clear(&konst_1437);\
+konst_1437.val.byte_array[0] = 1;\
+__declare_static_bit_vector(SUB_u8_u8_1438,8);\
+__declare_static_bit_vector(MUX_1440,8);\
+__declare_static_bit_vector(MUX_1441,8);\
 if (has_undefined_bit(&started_new_packet)) {fprintf(stderr, "Error: variable started_new_packet has undefined value (%s) at test point.\n", to_string(&started_new_packet));assert(0);} \
-if(bit_vector_to_uint64(0, &started_new_packet)){bit_vector_clear(&konst_1446);\
-konst_1446.val.byte_array[0] = 63;\
-bit_vector_cast_to_bit_vector(0, &(MUX_1453), &(konst_1446));\
+if(bit_vector_to_uint64(0, &started_new_packet)){bit_vector_clear(&konst_1434);\
+konst_1434.val.byte_array[0] = 63;\
+bit_vector_cast_to_bit_vector(0, &(MUX_1441), &(konst_1434));\
 }else {if (has_undefined_bit(&valid_active_pkt_word_read)) {fprintf(stderr, "Error: variable valid_active_pkt_word_read has undefined value (%s) at test point.\n", to_string(&valid_active_pkt_word_read));assert(0);} \
-if(bit_vector_to_uint64(0, &valid_active_pkt_word_read)){bit_vector_clear(&konst_1449);\
-konst_1449.val.byte_array[0] = 1;\
-bit_vector_minus( &(down_counter), &(konst_1449), &(SUB_u8_u8_1450));\
-bit_vector_cast_to_bit_vector(0, &(MUX_1452), &(SUB_u8_u8_1450));\
-}else {bit_vector_cast_to_bit_vector(0, &(MUX_1452), &(down_counter));\
-}bit_vector_cast_to_bit_vector(0, &(MUX_1453), &(MUX_1452));\
-}bit_vector_cast_to_bit_vector(0, &(next_down_counter), &(MUX_1453));\
+if(bit_vector_to_uint64(0, &valid_active_pkt_word_read)){bit_vector_clear(&konst_1437);\
+konst_1437.val.byte_array[0] = 1;\
+bit_vector_minus( &(down_counter), &(konst_1437), &(SUB_u8_u8_1438));\
+bit_vector_cast_to_bit_vector(0, &(MUX_1440), &(SUB_u8_u8_1438));\
+}else {bit_vector_cast_to_bit_vector(0, &(MUX_1440), &(down_counter));\
+}bit_vector_cast_to_bit_vector(0, &(MUX_1441), &(MUX_1440));\
+}bit_vector_cast_to_bit_vector(0, &(next_down_counter), &(MUX_1441));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1462_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1457,1);\
-__declare_static_bit_vector(konst_1459,3);\
-bit_vector_clear(&konst_1459);\
-konst_1459.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1460,1);\
-__declare_static_bit_vector(OR_u1_u1_1461,1);\
-bit_vector_not( &(p1_valid), &(NOT_u1_u1_1457));\
-bit_vector_clear(&konst_1459);\
-konst_1459.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1459), &(EQ_u3_u1_1460));\
-bit_vector_or(&(NOT_u1_u1_1457), &(EQ_u3_u1_1460), &(OR_u1_u1_1461));\
-bit_vector_cast_to_bit_vector(0, &(read_from_1), &(OR_u1_u1_1461));\
+#define _outputPort_4_Daemon_assign_stmt_1450_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1445,1);\
+__declare_static_bit_vector(konst_1447,3);\
+bit_vector_clear(&konst_1447);\
+konst_1447.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1448,1);\
+__declare_static_bit_vector(OR_u1_u1_1449,1);\
+bit_vector_not( &(p1_valid), &(NOT_u1_u1_1445));\
+bit_vector_clear(&konst_1447);\
+konst_1447.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1447), &(EQ_u3_u1_1448));\
+bit_vector_or(&(NOT_u1_u1_1445), &(EQ_u3_u1_1448), &(OR_u1_u1_1449));\
+bit_vector_cast_to_bit_vector(0, &(read_from_1), &(OR_u1_u1_1449));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1470_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1465,1);\
-__declare_static_bit_vector(konst_1467,3);\
-bit_vector_clear(&konst_1467);\
-konst_1467.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1468,1);\
-__declare_static_bit_vector(OR_u1_u1_1469,1);\
-bit_vector_not( &(p2_valid), &(NOT_u1_u1_1465));\
-bit_vector_clear(&konst_1467);\
-konst_1467.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1467), &(EQ_u3_u1_1468));\
-bit_vector_or(&(NOT_u1_u1_1465), &(EQ_u3_u1_1468), &(OR_u1_u1_1469));\
-bit_vector_cast_to_bit_vector(0, &(read_from_2), &(OR_u1_u1_1469));\
+#define _outputPort_4_Daemon_assign_stmt_1458_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1453,1);\
+__declare_static_bit_vector(konst_1455,3);\
+bit_vector_clear(&konst_1455);\
+konst_1455.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1456,1);\
+__declare_static_bit_vector(OR_u1_u1_1457,1);\
+bit_vector_not( &(p2_valid), &(NOT_u1_u1_1453));\
+bit_vector_clear(&konst_1455);\
+konst_1455.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1455), &(EQ_u3_u1_1456));\
+bit_vector_or(&(NOT_u1_u1_1453), &(EQ_u3_u1_1456), &(OR_u1_u1_1457));\
+bit_vector_cast_to_bit_vector(0, &(read_from_2), &(OR_u1_u1_1457));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1478_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1473,1);\
-__declare_static_bit_vector(konst_1475,3);\
-bit_vector_clear(&konst_1475);\
-konst_1475.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1476,1);\
-__declare_static_bit_vector(OR_u1_u1_1477,1);\
-bit_vector_not( &(p3_valid), &(NOT_u1_u1_1473));\
-bit_vector_clear(&konst_1475);\
-konst_1475.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1475), &(EQ_u3_u1_1476));\
-bit_vector_or(&(NOT_u1_u1_1473), &(EQ_u3_u1_1476), &(OR_u1_u1_1477));\
-bit_vector_cast_to_bit_vector(0, &(read_from_3), &(OR_u1_u1_1477));\
+#define _outputPort_4_Daemon_assign_stmt_1466_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1461,1);\
+__declare_static_bit_vector(konst_1463,3);\
+bit_vector_clear(&konst_1463);\
+konst_1463.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1464,1);\
+__declare_static_bit_vector(OR_u1_u1_1465,1);\
+bit_vector_not( &(p3_valid), &(NOT_u1_u1_1461));\
+bit_vector_clear(&konst_1463);\
+konst_1463.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1463), &(EQ_u3_u1_1464));\
+bit_vector_or(&(NOT_u1_u1_1461), &(EQ_u3_u1_1464), &(OR_u1_u1_1465));\
+bit_vector_cast_to_bit_vector(0, &(read_from_3), &(OR_u1_u1_1465));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1486_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1481,1);\
-__declare_static_bit_vector(konst_1483,3);\
-bit_vector_clear(&konst_1483);\
-konst_1483.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1484,1);\
-__declare_static_bit_vector(OR_u1_u1_1485,1);\
-bit_vector_not( &(p4_valid), &(NOT_u1_u1_1481));\
-bit_vector_clear(&konst_1483);\
-konst_1483.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1483), &(EQ_u3_u1_1484));\
-bit_vector_or(&(NOT_u1_u1_1481), &(EQ_u3_u1_1484), &(OR_u1_u1_1485));\
-bit_vector_cast_to_bit_vector(0, &(read_from_4), &(OR_u1_u1_1485));\
+#define _outputPort_4_Daemon_assign_stmt_1474_c_macro_ __declare_static_bit_vector(NOT_u1_u1_1469,1);\
+__declare_static_bit_vector(konst_1471,3);\
+bit_vector_clear(&konst_1471);\
+konst_1471.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1472,1);\
+__declare_static_bit_vector(OR_u1_u1_1473,1);\
+bit_vector_not( &(p4_valid), &(NOT_u1_u1_1469));\
+bit_vector_clear(&konst_1471);\
+konst_1471.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1471), &(EQ_u3_u1_1472));\
+bit_vector_or(&(NOT_u1_u1_1469), &(EQ_u3_u1_1472), &(OR_u1_u1_1473));\
+bit_vector_cast_to_bit_vector(0, &(read_from_4), &(OR_u1_u1_1473));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1519_c_macro_ __declare_static_bit_vector(konst_1489,3);\
-bit_vector_clear(&konst_1489);\
-konst_1489.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1490,1);\
-__declare_static_bit_vector(slice_1492,32);\
-__declare_static_bit_vector(konst_1493,32);\
-bit_vector_clear(&konst_1493);\
-__declare_static_bit_vector(MUX_1494,32);\
-__declare_static_bit_vector(konst_1496,3);\
+#define _outputPort_4_Daemon_assign_stmt_1507_c_macro_ __declare_static_bit_vector(konst_1477,3);\
+bit_vector_clear(&konst_1477);\
+konst_1477.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1478,1);\
+__declare_static_bit_vector(slice_1480,32);\
+__declare_static_bit_vector(konst_1481,32);\
+bit_vector_clear(&konst_1481);\
+__declare_static_bit_vector(MUX_1482,32);\
+__declare_static_bit_vector(konst_1484,3);\
+bit_vector_clear(&konst_1484);\
+konst_1484.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1485,1);\
+__declare_static_bit_vector(slice_1487,32);\
+__declare_static_bit_vector(konst_1488,32);\
+bit_vector_clear(&konst_1488);\
+__declare_static_bit_vector(MUX_1489,32);\
+__declare_static_bit_vector(OR_u32_u32_1490,32);\
+__declare_static_bit_vector(konst_1492,3);\
+bit_vector_clear(&konst_1492);\
+konst_1492.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1493,1);\
+__declare_static_bit_vector(slice_1495,32);\
+__declare_static_bit_vector(konst_1496,32);\
 bit_vector_clear(&konst_1496);\
-konst_1496.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1497,1);\
-__declare_static_bit_vector(slice_1499,32);\
-__declare_static_bit_vector(konst_1500,32);\
-bit_vector_clear(&konst_1500);\
-__declare_static_bit_vector(MUX_1501,32);\
-__declare_static_bit_vector(OR_u32_u32_1502,32);\
-__declare_static_bit_vector(konst_1504,3);\
-bit_vector_clear(&konst_1504);\
-konst_1504.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1505,1);\
-__declare_static_bit_vector(slice_1507,32);\
-__declare_static_bit_vector(konst_1508,32);\
-bit_vector_clear(&konst_1508);\
-__declare_static_bit_vector(MUX_1509,32);\
-__declare_static_bit_vector(konst_1511,3);\
-bit_vector_clear(&konst_1511);\
-konst_1511.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1512,1);\
-__declare_static_bit_vector(slice_1514,32);\
-__declare_static_bit_vector(konst_1515,32);\
-bit_vector_clear(&konst_1515);\
-__declare_static_bit_vector(MUX_1516,32);\
-__declare_static_bit_vector(OR_u32_u32_1517,32);\
-__declare_static_bit_vector(OR_u32_u32_1518,32);\
-bit_vector_clear(&konst_1489);\
-konst_1489.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1489), &(EQ_u3_u1_1490));\
-if (has_undefined_bit(&EQ_u3_u1_1490)) {fprintf(stderr, "Error: variable EQ_u3_u1_1490 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1490));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1490)){bit_vector_slice(&(pkt_1_e_word), &(slice_1492), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1494), &(slice_1492));\
-}else {bit_vector_clear(&konst_1493);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1494), &(konst_1493));\
-}bit_vector_clear(&konst_1496);\
-konst_1496.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1496), &(EQ_u3_u1_1497));\
-if (has_undefined_bit(&EQ_u3_u1_1497)) {fprintf(stderr, "Error: variable EQ_u3_u1_1497 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1497));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1497)){bit_vector_slice(&(pkt_2_e_word), &(slice_1499), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1501), &(slice_1499));\
-}else {bit_vector_clear(&konst_1500);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1501), &(konst_1500));\
-}bit_vector_or(&(MUX_1494), &(MUX_1501), &(OR_u32_u32_1502));\
-bit_vector_clear(&konst_1504);\
-konst_1504.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1504), &(EQ_u3_u1_1505));\
-if (has_undefined_bit(&EQ_u3_u1_1505)) {fprintf(stderr, "Error: variable EQ_u3_u1_1505 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1505));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1505)){bit_vector_slice(&(pkt_3_e_word), &(slice_1507), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1509), &(slice_1507));\
-}else {bit_vector_clear(&konst_1508);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1509), &(konst_1508));\
-}bit_vector_clear(&konst_1511);\
-konst_1511.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1511), &(EQ_u3_u1_1512));\
-if (has_undefined_bit(&EQ_u3_u1_1512)) {fprintf(stderr, "Error: variable EQ_u3_u1_1512 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1512));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1512)){bit_vector_slice(&(pkt_4_e_word), &(slice_1514), 0);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1516), &(slice_1514));\
-}else {bit_vector_clear(&konst_1515);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1516), &(konst_1515));\
-}bit_vector_or(&(MUX_1509), &(MUX_1516), &(OR_u32_u32_1517));\
-bit_vector_or(&(OR_u32_u32_1502), &(OR_u32_u32_1517), &(OR_u32_u32_1518));\
-bit_vector_cast_to_bit_vector(0, &(data_to_out), &(OR_u32_u32_1518));\
+__declare_static_bit_vector(MUX_1497,32);\
+__declare_static_bit_vector(konst_1499,3);\
+bit_vector_clear(&konst_1499);\
+konst_1499.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1500,1);\
+__declare_static_bit_vector(slice_1502,32);\
+__declare_static_bit_vector(konst_1503,32);\
+bit_vector_clear(&konst_1503);\
+__declare_static_bit_vector(MUX_1504,32);\
+__declare_static_bit_vector(OR_u32_u32_1505,32);\
+__declare_static_bit_vector(OR_u32_u32_1506,32);\
+bit_vector_clear(&konst_1477);\
+konst_1477.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1477), &(EQ_u3_u1_1478));\
+if (has_undefined_bit(&EQ_u3_u1_1478)) {fprintf(stderr, "Error: variable EQ_u3_u1_1478 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1478));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1478)){bit_vector_slice(&(pkt_1_e_word), &(slice_1480), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1482), &(slice_1480));\
+}else {bit_vector_clear(&konst_1481);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1482), &(konst_1481));\
+}bit_vector_clear(&konst_1484);\
+konst_1484.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1484), &(EQ_u3_u1_1485));\
+if (has_undefined_bit(&EQ_u3_u1_1485)) {fprintf(stderr, "Error: variable EQ_u3_u1_1485 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1485));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1485)){bit_vector_slice(&(pkt_2_e_word), &(slice_1487), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1489), &(slice_1487));\
+}else {bit_vector_clear(&konst_1488);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1489), &(konst_1488));\
+}bit_vector_or(&(MUX_1482), &(MUX_1489), &(OR_u32_u32_1490));\
+bit_vector_clear(&konst_1492);\
+konst_1492.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1492), &(EQ_u3_u1_1493));\
+if (has_undefined_bit(&EQ_u3_u1_1493)) {fprintf(stderr, "Error: variable EQ_u3_u1_1493 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1493));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1493)){bit_vector_slice(&(pkt_3_e_word), &(slice_1495), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1497), &(slice_1495));\
+}else {bit_vector_clear(&konst_1496);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1497), &(konst_1496));\
+}bit_vector_clear(&konst_1499);\
+konst_1499.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1499), &(EQ_u3_u1_1500));\
+if (has_undefined_bit(&EQ_u3_u1_1500)) {fprintf(stderr, "Error: variable EQ_u3_u1_1500 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1500));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1500)){bit_vector_slice(&(pkt_4_e_word), &(slice_1502), 0);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1504), &(slice_1502));\
+}else {bit_vector_clear(&konst_1503);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1504), &(konst_1503));\
+}bit_vector_or(&(MUX_1497), &(MUX_1504), &(OR_u32_u32_1505));\
+bit_vector_or(&(OR_u32_u32_1490), &(OR_u32_u32_1505), &(OR_u32_u32_1506));\
+bit_vector_cast_to_bit_vector(0, &(data_to_out), &(OR_u32_u32_1506));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1548_c_macro_ __declare_static_bit_vector(konst_1522,3);\
-bit_vector_clear(&konst_1522);\
-konst_1522.val.byte_array[0] = 1;\
-__declare_static_bit_vector(EQ_u3_u1_1523,1);\
-__declare_static_bit_vector(konst_1525,1);\
-bit_vector_clear(&konst_1525);\
-__declare_static_bit_vector(MUX_1526,1);\
-__declare_static_bit_vector(konst_1528,3);\
-bit_vector_clear(&konst_1528);\
-konst_1528.val.byte_array[0] = 2;\
-__declare_static_bit_vector(EQ_u3_u1_1529,1);\
-__declare_static_bit_vector(konst_1531,1);\
-bit_vector_clear(&konst_1531);\
-__declare_static_bit_vector(MUX_1532,1);\
-__declare_static_bit_vector(OR_u1_u1_1533,1);\
-__declare_static_bit_vector(konst_1535,3);\
-bit_vector_clear(&konst_1535);\
-konst_1535.val.byte_array[0] = 3;\
-__declare_static_bit_vector(EQ_u3_u1_1536,1);\
-__declare_static_bit_vector(konst_1538,1);\
-bit_vector_clear(&konst_1538);\
-__declare_static_bit_vector(MUX_1539,1);\
-__declare_static_bit_vector(konst_1541,3);\
-bit_vector_clear(&konst_1541);\
-konst_1541.val.byte_array[0] = 4;\
-__declare_static_bit_vector(EQ_u3_u1_1542,1);\
-__declare_static_bit_vector(konst_1544,1);\
-bit_vector_clear(&konst_1544);\
-__declare_static_bit_vector(MUX_1545,1);\
-__declare_static_bit_vector(OR_u1_u1_1546,1);\
-__declare_static_bit_vector(OR_u1_u1_1547,1);\
-bit_vector_clear(&konst_1522);\
-konst_1522.val.byte_array[0] = 1;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1522), &(EQ_u3_u1_1523));\
-if (has_undefined_bit(&EQ_u3_u1_1523)) {fprintf(stderr, "Error: variable EQ_u3_u1_1523 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1523));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1523)){bit_vector_cast_to_bit_vector(0, &(MUX_1526), &(p1_valid));\
-}else {bit_vector_clear(&konst_1525);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1526), &(konst_1525));\
-}bit_vector_clear(&konst_1528);\
-konst_1528.val.byte_array[0] = 2;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1528), &(EQ_u3_u1_1529));\
-if (has_undefined_bit(&EQ_u3_u1_1529)) {fprintf(stderr, "Error: variable EQ_u3_u1_1529 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1529));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1529)){bit_vector_cast_to_bit_vector(0, &(MUX_1532), &(p2_valid));\
-}else {bit_vector_clear(&konst_1531);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1532), &(konst_1531));\
-}bit_vector_or(&(MUX_1526), &(MUX_1532), &(OR_u1_u1_1533));\
-bit_vector_clear(&konst_1535);\
-konst_1535.val.byte_array[0] = 3;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1535), &(EQ_u3_u1_1536));\
-if (has_undefined_bit(&EQ_u3_u1_1536)) {fprintf(stderr, "Error: variable EQ_u3_u1_1536 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1536));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1536)){bit_vector_cast_to_bit_vector(0, &(MUX_1539), &(p3_valid));\
-}else {bit_vector_clear(&konst_1538);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1539), &(konst_1538));\
-}bit_vector_clear(&konst_1541);\
-konst_1541.val.byte_array[0] = 4;\
-bit_vector_equal(0, &(next_active_packet), &(konst_1541), &(EQ_u3_u1_1542));\
-if (has_undefined_bit(&EQ_u3_u1_1542)) {fprintf(stderr, "Error: variable EQ_u3_u1_1542 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1542));assert(0);} \
-if(bit_vector_to_uint64(0, &EQ_u3_u1_1542)){bit_vector_cast_to_bit_vector(0, &(MUX_1545), &(p4_valid));\
-}else {bit_vector_clear(&konst_1544);\
-bit_vector_cast_to_bit_vector(0, &(MUX_1545), &(konst_1544));\
-}bit_vector_or(&(MUX_1539), &(MUX_1545), &(OR_u1_u1_1546));\
-bit_vector_or(&(OR_u1_u1_1533), &(OR_u1_u1_1546), &(OR_u1_u1_1547));\
-bit_vector_cast_to_bit_vector(0, &(send_flag), &(OR_u1_u1_1547));\
+#define _outputPort_4_Daemon_assign_stmt_1536_c_macro_ __declare_static_bit_vector(konst_1510,3);\
+bit_vector_clear(&konst_1510);\
+konst_1510.val.byte_array[0] = 1;\
+__declare_static_bit_vector(EQ_u3_u1_1511,1);\
+__declare_static_bit_vector(konst_1513,1);\
+bit_vector_clear(&konst_1513);\
+__declare_static_bit_vector(MUX_1514,1);\
+__declare_static_bit_vector(konst_1516,3);\
+bit_vector_clear(&konst_1516);\
+konst_1516.val.byte_array[0] = 2;\
+__declare_static_bit_vector(EQ_u3_u1_1517,1);\
+__declare_static_bit_vector(konst_1519,1);\
+bit_vector_clear(&konst_1519);\
+__declare_static_bit_vector(MUX_1520,1);\
+__declare_static_bit_vector(OR_u1_u1_1521,1);\
+__declare_static_bit_vector(konst_1523,3);\
+bit_vector_clear(&konst_1523);\
+konst_1523.val.byte_array[0] = 3;\
+__declare_static_bit_vector(EQ_u3_u1_1524,1);\
+__declare_static_bit_vector(konst_1526,1);\
+bit_vector_clear(&konst_1526);\
+__declare_static_bit_vector(MUX_1527,1);\
+__declare_static_bit_vector(konst_1529,3);\
+bit_vector_clear(&konst_1529);\
+konst_1529.val.byte_array[0] = 4;\
+__declare_static_bit_vector(EQ_u3_u1_1530,1);\
+__declare_static_bit_vector(konst_1532,1);\
+bit_vector_clear(&konst_1532);\
+__declare_static_bit_vector(MUX_1533,1);\
+__declare_static_bit_vector(OR_u1_u1_1534,1);\
+__declare_static_bit_vector(OR_u1_u1_1535,1);\
+bit_vector_clear(&konst_1510);\
+konst_1510.val.byte_array[0] = 1;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1510), &(EQ_u3_u1_1511));\
+if (has_undefined_bit(&EQ_u3_u1_1511)) {fprintf(stderr, "Error: variable EQ_u3_u1_1511 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1511));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1511)){bit_vector_cast_to_bit_vector(0, &(MUX_1514), &(p1_valid));\
+}else {bit_vector_clear(&konst_1513);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1514), &(konst_1513));\
+}bit_vector_clear(&konst_1516);\
+konst_1516.val.byte_array[0] = 2;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1516), &(EQ_u3_u1_1517));\
+if (has_undefined_bit(&EQ_u3_u1_1517)) {fprintf(stderr, "Error: variable EQ_u3_u1_1517 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1517));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1517)){bit_vector_cast_to_bit_vector(0, &(MUX_1520), &(p2_valid));\
+}else {bit_vector_clear(&konst_1519);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1520), &(konst_1519));\
+}bit_vector_or(&(MUX_1514), &(MUX_1520), &(OR_u1_u1_1521));\
+bit_vector_clear(&konst_1523);\
+konst_1523.val.byte_array[0] = 3;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1523), &(EQ_u3_u1_1524));\
+if (has_undefined_bit(&EQ_u3_u1_1524)) {fprintf(stderr, "Error: variable EQ_u3_u1_1524 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1524));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1524)){bit_vector_cast_to_bit_vector(0, &(MUX_1527), &(p3_valid));\
+}else {bit_vector_clear(&konst_1526);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1527), &(konst_1526));\
+}bit_vector_clear(&konst_1529);\
+konst_1529.val.byte_array[0] = 4;\
+bit_vector_equal(0, &(next_active_packet), &(konst_1529), &(EQ_u3_u1_1530));\
+if (has_undefined_bit(&EQ_u3_u1_1530)) {fprintf(stderr, "Error: variable EQ_u3_u1_1530 has undefined value (%s) at test point.\n", to_string(&EQ_u3_u1_1530));assert(0);} \
+if(bit_vector_to_uint64(0, &EQ_u3_u1_1530)){bit_vector_cast_to_bit_vector(0, &(MUX_1533), &(p4_valid));\
+}else {bit_vector_clear(&konst_1532);\
+bit_vector_cast_to_bit_vector(0, &(MUX_1533), &(konst_1532));\
+}bit_vector_or(&(MUX_1527), &(MUX_1533), &(OR_u1_u1_1534));\
+bit_vector_or(&(OR_u1_u1_1521), &(OR_u1_u1_1534), &(OR_u1_u1_1535));\
+bit_vector_cast_to_bit_vector(0, &(send_flag), &(OR_u1_u1_1535));\
 ;
 
-#define _outputPort_4_Daemon_assign_stmt_1552_c_macro_ if (has_undefined_bit(&send_flag)) {fprintf(stderr, "Error: variable send_flag has undefined value (%s) at test point.\n", to_string(&send_flag));assert(0);} \
+#define _outputPort_4_Daemon_assign_stmt_1540_c_macro_ if (has_undefined_bit(&send_flag)) {fprintf(stderr, "Error: variable send_flag has undefined value (%s) at test point.\n", to_string(&send_flag));assert(0);} \
 if (bit_vector_to_uint64(0, &send_flag)) {\
 write_bit_vector_to_pipe("out_data_4",&(data_to_out));\
 }
 ;
 ;
 
-#define _outputPort_4_Daemon_branch_block_stmt_1336_c_export_apply_macro_ ;
+#define _outputPort_4_Daemon_branch_block_stmt_1324_c_export_apply_macro_ ;
 
 #define _outputPort_4_Daemon_inner_outarg_prep_macro__ ;
 
@@ -2990,72 +2990,43 @@ bit_vector_or(&(OR_u3_u3_614), &(OR_u3_u3_638), &(OR_u3_u3_639));\
 bit_vector_cast_to_bit_vector(0, &(next_active_packet), &(OR_u3_u3_639));\
 ;
 
-#define _prioritySelect_assign_stmt_667_c_macro_ __declare_static_bit_vector(NOT_u1_u1_643,1);\
+#define _prioritySelect_assign_stmt_655_c_macro_ __declare_static_bit_vector(konst_643,3);\
+bit_vector_clear(&konst_643);\
+konst_643.val.byte_array[0] = 2;\
 __declare_static_bit_vector(konst_645,3);\
 bit_vector_clear(&konst_645);\
-__declare_static_bit_vector(MUX_646,3);\
-__declare_static_bit_vector(konst_648,3);\
-bit_vector_clear(&konst_648);\
-konst_648.val.byte_array[0] = 2;\
+konst_645.val.byte_array[0] = 3;\
+__declare_static_bit_vector(konst_647,3);\
+bit_vector_clear(&konst_647);\
+konst_647.val.byte_array[0] = 4;\
 __declare_static_bit_vector(konst_649,3);\
 bit_vector_clear(&konst_649);\
-__declare_static_bit_vector(MUX_650,3);\
-__declare_static_bit_vector(OR_u3_u3_651,3);\
-__declare_static_bit_vector(konst_653,3);\
-bit_vector_clear(&konst_653);\
-konst_653.val.byte_array[0] = 3;\
-__declare_static_bit_vector(konst_654,3);\
-bit_vector_clear(&konst_654);\
-__declare_static_bit_vector(MUX_655,3);\
-__declare_static_bit_vector(OR_u3_u3_656,3);\
-__declare_static_bit_vector(konst_658,3);\
-bit_vector_clear(&konst_658);\
-konst_658.val.byte_array[0] = 4;\
-__declare_static_bit_vector(konst_659,3);\
-bit_vector_clear(&konst_659);\
-__declare_static_bit_vector(MUX_660,3);\
-__declare_static_bit_vector(konst_662,3);\
-bit_vector_clear(&konst_662);\
-konst_662.val.byte_array[0] = 1;\
-__declare_static_bit_vector(konst_663,3);\
-bit_vector_clear(&konst_663);\
-__declare_static_bit_vector(MUX_664,3);\
-__declare_static_bit_vector(OR_u3_u3_665,3);\
-__declare_static_bit_vector(OR_u3_u3_666,3);\
-bit_vector_not( &(d0), &(NOT_u1_u1_643));\
-if (has_undefined_bit(&NOT_u1_u1_643)) {fprintf(stderr, "Error: variable NOT_u1_u1_643 has undefined value (%s) at test point.\n", to_string(&NOT_u1_u1_643));assert(0);} \
-if(bit_vector_to_uint64(0, &NOT_u1_u1_643)){bit_vector_cast_to_bit_vector(0, &(MUX_646), &(pkt_priority));\
-}else {bit_vector_clear(&konst_645);\
-bit_vector_cast_to_bit_vector(0, &(MUX_646), &(konst_645));\
-}if (has_undefined_bit(&select_1)) {fprintf(stderr, "Error: variable select_1 has undefined value (%s) at test point.\n", to_string(&select_1));assert(0);} \
-if(bit_vector_to_uint64(0, &select_1)){bit_vector_clear(&konst_648);\
-konst_648.val.byte_array[0] = 2;\
-bit_vector_cast_to_bit_vector(0, &(MUX_650), &(konst_648));\
-}else {bit_vector_clear(&konst_649);\
-bit_vector_cast_to_bit_vector(0, &(MUX_650), &(konst_649));\
-}bit_vector_or(&(MUX_646), &(MUX_650), &(OR_u3_u3_651));\
-if (has_undefined_bit(&select_2)) {fprintf(stderr, "Error: variable select_2 has undefined value (%s) at test point.\n", to_string(&select_2));assert(0);} \
-if(bit_vector_to_uint64(0, &select_2)){bit_vector_clear(&konst_653);\
-konst_653.val.byte_array[0] = 3;\
-bit_vector_cast_to_bit_vector(0, &(MUX_655), &(konst_653));\
-}else {bit_vector_clear(&konst_654);\
-bit_vector_cast_to_bit_vector(0, &(MUX_655), &(konst_654));\
-}bit_vector_or(&(OR_u3_u3_651), &(MUX_655), &(OR_u3_u3_656));\
-if (has_undefined_bit(&select_3)) {fprintf(stderr, "Error: variable select_3 has undefined value (%s) at test point.\n", to_string(&select_3));assert(0);} \
-if(bit_vector_to_uint64(0, &select_3)){bit_vector_clear(&konst_658);\
-konst_658.val.byte_array[0] = 4;\
-bit_vector_cast_to_bit_vector(0, &(MUX_660), &(konst_658));\
-}else {bit_vector_clear(&konst_659);\
-bit_vector_cast_to_bit_vector(0, &(MUX_660), &(konst_659));\
-}if (has_undefined_bit(&select_4)) {fprintf(stderr, "Error: variable select_4 has undefined value (%s) at test point.\n", to_string(&select_4));assert(0);} \
-if(bit_vector_to_uint64(0, &select_4)){bit_vector_clear(&konst_662);\
-konst_662.val.byte_array[0] = 1;\
-bit_vector_cast_to_bit_vector(0, &(MUX_664), &(konst_662));\
-}else {bit_vector_clear(&konst_663);\
-bit_vector_cast_to_bit_vector(0, &(MUX_664), &(konst_663));\
-}bit_vector_or(&(MUX_660), &(MUX_664), &(OR_u3_u3_665));\
-bit_vector_or(&(OR_u3_u3_656), &(OR_u3_u3_665), &(OR_u3_u3_666));\
-bit_vector_cast_to_bit_vector(0, &(next_pkt_priority), &(OR_u3_u3_666));\
+konst_649.val.byte_array[0] = 1;\
+__declare_static_bit_vector(MUX_651,3);\
+__declare_static_bit_vector(MUX_652,3);\
+__declare_static_bit_vector(MUX_653,3);\
+__declare_static_bit_vector(MUX_654,3);\
+if (has_undefined_bit(&select_1)) {fprintf(stderr, "Error: variable select_1 has undefined value (%s) at test point.\n", to_string(&select_1));assert(0);} \
+if(bit_vector_to_uint64(0, &select_1)){bit_vector_clear(&konst_643);\
+konst_643.val.byte_array[0] = 2;\
+bit_vector_cast_to_bit_vector(0, &(MUX_654), &(konst_643));\
+}else {if (has_undefined_bit(&select_2)) {fprintf(stderr, "Error: variable select_2 has undefined value (%s) at test point.\n", to_string(&select_2));assert(0);} \
+if(bit_vector_to_uint64(0, &select_2)){bit_vector_clear(&konst_645);\
+konst_645.val.byte_array[0] = 3;\
+bit_vector_cast_to_bit_vector(0, &(MUX_653), &(konst_645));\
+}else {if (has_undefined_bit(&select_3)) {fprintf(stderr, "Error: variable select_3 has undefined value (%s) at test point.\n", to_string(&select_3));assert(0);} \
+if(bit_vector_to_uint64(0, &select_3)){bit_vector_clear(&konst_647);\
+konst_647.val.byte_array[0] = 4;\
+bit_vector_cast_to_bit_vector(0, &(MUX_652), &(konst_647));\
+}else {if (has_undefined_bit(&select_4)) {fprintf(stderr, "Error: variable select_4 has undefined value (%s) at test point.\n", to_string(&select_4));assert(0);} \
+if(bit_vector_to_uint64(0, &select_4)){bit_vector_clear(&konst_649);\
+konst_649.val.byte_array[0] = 1;\
+bit_vector_cast_to_bit_vector(0, &(MUX_651), &(konst_649));\
+}else {bit_vector_cast_to_bit_vector(0, &(MUX_651), &(pkt_priority));\
+}bit_vector_cast_to_bit_vector(0, &(MUX_652), &(MUX_651));\
+}bit_vector_cast_to_bit_vector(0, &(MUX_653), &(MUX_652));\
+}bit_vector_cast_to_bit_vector(0, &(MUX_654), &(MUX_653));\
+}bit_vector_cast_to_bit_vector(0, &(next_pkt_priority), &(MUX_654));\
 ;
 
 #define _prioritySelect_inner_outarg_prep_macro__ bit_vector_cast_to_bit_vector(0, &((*__pnext_active_packet)), &(next_active_packet));\

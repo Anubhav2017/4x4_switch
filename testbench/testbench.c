@@ -70,7 +70,6 @@ void input_port_core(int port_id)
 		send_buffer[i] = i;
 	}
 
-	// odd sequence id means from port 1 even sequence id means from port 2.
 	uint8_t seq_id =  (port_id == 4) ? 3 : (port_id == 3) ? 2 : (port_id == 2) ? 1 : 0;
 	while(1)
 	{
@@ -175,11 +174,8 @@ void output_port_core(int port_id)
 		int dest = (packet[0] >> 24);
 		int input_port = (((packet[0] & 0x3)==0) ? 1 : ((packet[0] & 0x3)==1) ? 2 : ((packet[0] & 0x3)==2) ? 3: 4);
 
-		//
-		// check the destination?
-		//
 
-		fprintf(stderr, "\nsending packet %d from %d to %d\n",PCOUNT, input_port, port_id);
+		//fprintf(stderr, "\nsending packet %d from %d to %d\n",PCOUNT, input_port, port_id);
 		if(dest != port_id)
 		{
 			fprintf(stderr,"Error: at port %d, packet number %d from input port %d,"

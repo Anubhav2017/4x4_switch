@@ -1,19 +1,27 @@
 v 4
-file . "hw/vhdl/ahir_system.vhdl" "44c2c2c218e971f6c50e27585aae3dc6e7f7f3f9" "20201105182955.397":
+file . "hw/vhdl/ahir_system.vhdl" "e1c63ee39f2575cec11758433db8bd2d9da6b366" "20201116194320.098":
   entity inputport_1_daemon at 2( 67) + 0 on 14;
   architecture inputport_1_daemon_arch of inputport_1_daemon at 50( 2082) + 0 on 15;
-  entity inputport_2_daemon at 1855( 111771) + 0 on 16;
-  architecture inputport_2_daemon_arch of inputport_2_daemon at 1903( 113786) + 0 on 17;
-  entity outputport_1_daemon at 3708( 224709) + 0 on 18;
-  architecture outputport_1_daemon_arch of outputport_1_daemon at 3756( 226720) + 0 on 19;
-  entity outputport_2_daemon at 7214( 437625) + 0 on 20;
-  architecture outputport_2_daemon_arch of outputport_2_daemon at 7262( 439636) + 0 on 21;
-  entity priorityselect_volatile at 10720( 651260) + 0 on 22;
-  architecture priorityselect_volatile_arch of priorityselect_volatile at 10753( 652359) + 0 on 23;
-  entity ahir_system at 11652( 692446) + 0 on 24;
-  architecture ahir_system_arch of ahir_system at 11713( 695580) + 0 on 25;
-file . "hw/vhdl/ahir_system_global_package.vhdl" "2bbc5ebce4b47c36c3fff809f26ec1b48df5bd4b" "20201105182954.828":
+  entity inputport_2_daemon at 1855( 111779) + 0 on 16;
+  architecture inputport_2_daemon_arch of inputport_2_daemon at 1903( 113794) + 0 on 17;
+  entity inputport_3_daemon at 3708( 224717) + 0 on 18;
+  architecture inputport_3_daemon_arch of inputport_3_daemon at 3756( 226732) + 0 on 19;
+  entity inputport_4_daemon at 5561( 337655) + 0 on 20;
+  architecture inputport_4_daemon_arch of inputport_4_daemon at 5609( 339670) + 0 on 21;
+  entity outputport_1_daemon at 7414( 450593) + 0 on 22;
+  architecture outputport_1_daemon_arch of outputport_1_daemon at 7462( 452604) + 0 on 23;
+  entity outputport_2_daemon at 10960( 665187) + 0 on 24;
+  architecture outputport_2_daemon_arch of outputport_2_daemon at 11008( 667198) + 0 on 25;
+  entity outputport_3_daemon at 14506( 880531) + 0 on 26;
+  architecture outputport_3_daemon_arch of outputport_3_daemon at 14554( 882542) + 0 on 27;
+  entity outputport_4_daemon at 18052( 1097725) + 0 on 28;
+  architecture outputport_4_daemon_arch of outputport_4_daemon at 18100( 1099736) + 0 on 29;
+  entity priorityselect_volatile at 21598( 1314918) + 0 on 30;
+  architecture priorityselect_volatile_arch of priorityselect_volatile at 21631( 1316017) + 0 on 31;
+  entity ahir_system at 22474( 1353491) + 0 on 32;
+  architecture ahir_system_arch of ahir_system at 22523( 1355691) + 0 on 33;
+file . "hw/vhdl/ahir_system_global_package.vhdl" "0e5e6880c03ef5d4c82b0be508237e06bd9f6505" "20201116194319.656":
   package ahir_system_global_package at 2( 82) + 0 on 11;
-file . "hw/vhdl/ahir_system_test_bench.vhdl" "e137c8e783946b1d91c8c18e5fd2a8cfe0258283" "20201105182955.096":
+file . "hw/vhdl/ahir_system_test_bench.vhdl" "c4e3a8f140d320ebf661fb01848370d4ee5e5daf" "20201116194319.884":
   entity ahir_system_test_bench at 1( 0) + 0 on 12;
   architecture vhpilink of ahir_system_test_bench at 26( 662) + 0 on 13;
