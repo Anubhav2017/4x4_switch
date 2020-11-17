@@ -1,71 +1,63 @@
 $volatile $module [prioritySelect]
-	$in (down_counter: $uint<8> active_packet pkt_priority: $uint<3>
+	$in (down_counter: $uint<8> active_packet: $uint<3>
 			 p1_valid p2_valid p3_valid p4_valid: $uint<1>) 
-	$out (next_active_packet: $uint<3> next_pkt_priority: $uint<3>)
+	$out (next_active_packet: $uint<3>)
 $is
-//
-// if down_counter is 0, then it is time to decide which should be
-// the new active packet.
+
 {
 	d0 := (down_counter == 0)
 	select_1 := ($reduce & 
 			d0
 			p1_valid
-			($reduce | (pkt_priority == 1)
+			($reduce | (active_packet == 0) 
+								  (active_packet == 4)
                                   ($reduce & (~p4_valid) (~p2_valid) (~p3_valid))
-                                  ($reduce & (pkt_priority == 3) (~p3_valid) (~p4_valid))
-                                  ($reduce & (pkt_priority == 4) (~p4_valid)))
+                                  ($reduce & (active_packet == 2) (~p3_valid) (~p4_valid))
+                                  ($reduce & (active_packet == 3) (~p4_valid)))
                          )
 
 	select_2 := ($reduce & 
 			d0
 			p2_valid
-			($reduce | (pkt_priority == 2) 
+			($reduce | 	(active_packet == 0) 
+								   (active_packet == 1) 
                                    ($reduce & (~p4_valid) (~p1_valid) (~p3_valid))
-                                   ($reduce & (pkt_priority == 4) (~p4_valid) (~p1_valid))
-                                   ($reduce & (pkt_priority == 1) (~p1_valid)))
+                                   ($reduce & (active_packet == 3) (~p4_valid) (~p1_valid))
+                                   ($reduce & (active_packet == 4) (~p1_valid)))
                      )
 
 	select_3 := ($reduce & 
 			d0
 			p3_valid
-			($reduce | (pkt_priority == 3)
+			($reduce | (active_packet == 0) 
+								   (active_packet == 2)
                                    ($reduce & (~p4_valid) (~p2_valid) (~p1_valid))
-                                   ($reduce & (pkt_priority == 1) (~p1_valid) (~p2_valid))
-                                   ($reduce & (pkt_priority == 2) (~p2_valid)))
+                                   ($reduce & (active_packet == 4) (~p1_valid) (~p2_valid))
+                                   ($reduce & (active_packet == 1) (~p2_valid)))
                         )
 
 	select_4 := ($reduce & 
 			d0
 			p4_valid
-			($reduce | (pkt_priority == 4) 
+			($reduce | (active_packet == 0) 
+			                     (active_packet == 3) 
                                  ($reduce & (~p1_valid) (~p2_valid) (~p3_valid))
-                                 ($reduce & (pkt_priority == 2) (~p2_valid) (~p3_valid))
-                                 ($reduce & (pkt_priority == 3) (~p3_valid)))
+                                 ($reduce & (active_packet == 1) (~p2_valid) (~p3_valid))
+                                 ($reduce & (active_packet == 2) (~p3_valid)))
                         )
 
-	next_active_packet := ($excmux 
-					(~d0)	active_packet 
+	next_active_packet := ($prioritymux
 					select_1 1
 					select_2 2
 					select_3 3
 					select_4 4
-                                        ($reduce & (~select_1) (~select_2) (~select_3) (~select_4)) active_packet
+					d0 0
+                    $default active_packet
 				)
 
-	// priority rotates on every selection.
-	// next_pkt_priority := ($mux select_4 pkt_1_has_priority
-	//                        ($mux select_1 pkt_2_has_priority
-	//                          $mux select_2 pkt_3_has_priority 1))
-	//next_pkt_priority := ($prioritymux select_4 pkt_1_has_priority select_1 pkt_2_has_priority select_2 pkt_3_has_priority
-    //             $default((~pkt_1_has_priority) & ((~pkt_2_has_priority) & (~pkt_3_has_priority))))
-    next_pkt_priority := ($prioritymux 
-                         select_1 2 
-                         select_2 3 
-                         select_3 4 
-                         select_4 1 
-                         $default pkt_priority
-                     )
+	//$rreport ( utils 
+	//		   priorityinfo select_1 select_2 select_3 select_4 active_packet down_counter p1_valid p2_valid p3_valid p4_valid )
+
 
 }
 
